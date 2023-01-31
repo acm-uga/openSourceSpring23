@@ -1,3 +1,3 @@
 # ACM Open Source Project Spring 2023
 
-Welcome!
+Welcome to the Open Source Project!
