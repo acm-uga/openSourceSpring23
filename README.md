@@ -26,3 +26,5 @@ Steven Tran - Discord: @steventran#6575
 Cooper Bocko - Discord: @Cooperbok
 
 Jason Waryold - Discord: @Saarhi#9647
+
+Chase Pitser - Discord: @MarstonMania#1624
