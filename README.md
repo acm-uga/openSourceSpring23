@@ -12,3 +12,5 @@ Raymond Feckoury - Discord: @RaymondFeckoury
 Jake Hubbard - Discord: @Jacobo#5346 
 
 Jeffrey Li - Discord: @bigballslmao#6075 
+
+Steven Tran - Discord: @steventran#6575
