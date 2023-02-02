@@ -3,4 +3,4 @@
 Welcome to the Open Source Project! We meet every Wednesday on Discord at 5:30pm. We're excited to build something amazing!
 
 Contributors:
-William Sirotkin - @williamsirotkin, Raymond Feckoury - @RaymondFeckoury, Steven Tran - @Tran-Steven
+William Sirotkin - @williamsirotkin, Raymond Feckoury - @RaymondFeckoury, Steven Tran - @steventran#6575
