@@ -8,7 +8,7 @@ Youtube Channel: https://www.youtube.com/channel/UCfNIrfKtb6fut7t3OrJvnJA
 
 GroupMe: https://groupme.com/join_group/91593550/RZdbkV1g
 
-Discord: https://discord.gg/Spzs3fJ2
+Discord: https://discord.gg/4YgPUWwQkM
 
 
 Contributors: 
