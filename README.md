@@ -28,3 +28,5 @@ Cooper Bocko - Discord: @Cooperbok
 Jason Waryold - Discord: @Saarhi#9647
 
 Chase Pitser - Discord: @MarstonMania#1624
+
+Vansh Arora - Discord: @vansharora03#7809
