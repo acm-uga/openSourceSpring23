@@ -5,3 +5,7 @@ Welcome to the Open Source Project! We meet every Wednesday on Discord at 5:30pm
 
 Contributors:
 William Sirotkin - @williamsirotkin, Raymond Feckoury - @RaymondFeckoury, 
+
+
+Jeffrey Li 
+Discord : bigballslmao#6075
