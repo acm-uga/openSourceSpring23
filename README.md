@@ -4,6 +4,8 @@ Welcome to the Open Source Project! We meet every Wednesday on Discord at 5:30pm
 
 Project Google Doc: https://docs.google.com/document/d/1mQmhqu-vUGuBPI9OOYplPoU0yFRHXkM2SMmblyB4Oes/edit
 
+Youtube Channel: https://www.youtube.com/channel/UCfNIrfKtb6fut7t3OrJvnJA
+
 GroupMe: https://groupme.com/join_group/91593550/RZdbkV1g
 
 Discord: https://discord.gg/Spzs3fJ2
