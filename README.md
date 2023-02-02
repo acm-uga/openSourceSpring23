@@ -24,3 +24,5 @@ Jeffrey Li - Discord: @bigballslmao#6075
 Steven Tran - Discord: @steventran#6575
 
 Cooper Bocko - Discord: @Cooperbok
+
+Jason Waryold - Discord: @Saarhi#9647
