@@ -10,14 +10,13 @@ GroupMe: https://groupme.com/join_group/91593550/RZdbkV1g
 
 Discord: https://discord.gg/4YgPUWwQkM
 
+Contributors:
 
-Contributors: 
+William Sirotkin - Discord: @williamsirotkin
 
-William Sirotkin - Discord: @williamsirotkin 
+Raymond Feckoury - Discord: @RaymondFeckoury
 
-Raymond Feckoury - Discord: @RaymondFeckoury 
-
-Jake Hubbard - Discord: @Jacobo#5346 
+Jake Hubbard - Discord: @Jacobo#5346
 
 Jeffrey Li - Discord: @bigballslmao#6075
 
@@ -34,3 +33,5 @@ Chase Pitser - Discord: @MarstonMania#1624
 Vansh Arora - Discord: @vansharora03#7809
 
 Deepesh Nimma - Discord: @nottcurious#4351
+
+Dhruv Patel - Discord: @dhruvthepatel#3120
