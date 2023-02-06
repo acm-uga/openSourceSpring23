@@ -19,7 +19,9 @@ Raymond Feckoury - Discord: @RaymondFeckoury
 
 Jake Hubbard - Discord: @Jacobo#5346 
 
-Jeffrey Li - Discord: @bigballslmao#6075 
+Jeffrey Li - Discord: @bigballslmao#6075
+
+Shahbin (SHA) Hossain - Discord: @KnightKi113RX#7372
 
 Steven Tran - Discord: @steventran#6575
 
