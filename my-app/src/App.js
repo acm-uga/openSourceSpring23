@@ -1,7 +1,13 @@
+import Navbar from './components/Navbar/Navbar';
 import logo from './logo.svg';
 import './App.css';
 
+
 function App() {
+  return (
+    <Navbar />
+  )
+  /*
   return (
     <div className="App">
       <header className="App-header">
@@ -19,7 +25,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  );*/
 }
 
 export default App;
