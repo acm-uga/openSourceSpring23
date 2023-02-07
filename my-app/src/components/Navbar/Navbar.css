@@ -1,0 +1,42 @@
+.navbar {
+    position: fixed;
+    background-color : #F64141;
+    height: 11%;
+    width: 100%
+}
+
+.container {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 5px
+}
+
+.nav-image {
+    width: 60px
+}
+
+.nav-image2 {
+    width: 80px
+}
+
+.searchbar {
+    background-color: #F8F8F8;
+    height: 53%;
+    width: 42%;
+    font-size: 40%;
+    display: inline-flex;
+    top: 50%
+}
+
+.searchbar-input {
+    width: 95%;
+    height: 100%;
+    border: none;
+    font-size: 30px;
+    background: F8F8F8
+}
+
+.searchbar-input:focus {
+    outline: none
+}
