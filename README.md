@@ -2,19 +2,27 @@
 
 Welcome to the Open Source Project! We meet every Wednesday on Discord at 5:30pm. We're excited to build something amazing!
 
-Project Google Doc: https://docs.google.com/document/d/1mQmhqu-vUGuBPI9OOYplPoU0yFRHXkM2SMmblyB4Oes/edit
+<br>
 
-Youtube Channel: https://www.youtube.com/channel/UCfNIrfKtb6fut7t3OrJvnJA
+<b>Project Google Doc</b>: https://docs.google.com/document/d/1mQmhqu-vUGuBPI9OOYplPoU0yFRHXkM2SMmblyB4Oes/edit
 
-GroupMe: https://groupme.com/join_group/91593550/RZdbkV1g
+<b>Youtube Channel</b>: https://www.youtube.com/channel/UCfNIrfKtb6fut7t3OrJvnJA
 
-Discord: https://discord.gg/4YgPUWwQkM
+<b>GroupMe</b>: https://groupme.com/join_group/91593550/RZdbkV1g
 
-Contributors:
+<b>Discord</b>: https://discord.gg/4YgPUWwQkM
+
+<br>
+
+<b>Admin</b>:
 
 William Sirotkin - Discord: @williamsirotkin
 
 Raymond Feckoury - Discord: @RaymondFeckoury
+
+<br>
+
+<b>Contributors:</b>
 
 Jake Hubbard - Discord: @Jacobo#5346
 
