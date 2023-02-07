@@ -5,6 +5,7 @@ import search from '../../assets/search.png'
 import house from "../../assets/house.png"
 import book from "../../assets/book.png"
 import bed from "../../assets/bed.png"
+import profile from "../../assets/blank-profile.png"
 
 import './Navbar.css'
 
@@ -32,6 +33,9 @@ const Navbar = () => {
                     </button>
                     <button className='icon-button'>
                         <img className="nav-image" src={bed} alt='Bed'/>
+                    </button>
+                    <button className='icon-button'>
+                        <img className='nav-image-profile' src={profile} alt='Blank Profile' />
                     </button>
                 </div>
             </div>
