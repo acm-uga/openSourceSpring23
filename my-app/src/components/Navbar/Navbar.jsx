@@ -12,14 +12,28 @@ const Navbar = () => {
     return (
         <div className='navbar'>
             <div className='container'>
-                <img className="nav-image2" src={bulldawg} />
-                <div className="searchbar">
-                    <input className='searchbar-input' type='text' placeholder='Search...'></input>
-                    <img src={search} />
+                <div className='div1'>
+                    <button className='home-button'>
+                        <img className="nav-image2" src={bulldawg} alt='Bulldawg'/>
+                    </button>
+                    <div className="searchbar">
+                        <input className='searchbar-input' type='text' placeholder='Search...'></input>
+                        <button className='searchbutton'>
+                            <img src={search} alt='Search Icon'/>
+                        </button>
+                    </div>
                 </div>
-                <img className="nav-image" src={house} />
-                <img className="nav-image" src={book} />
-                <img className="nav-image" src={bed} />
+                <div className='div2'>
+                    <button className='icon-button'>
+                        <img className="nav-image" src={house} alt='House'/>
+                    </button>
+                    <button className='icon-button'>
+                        <img className="nav-image" src={book} alt='Book'/>
+                    </button>
+                    <button className='icon-button'>
+                        <img className="nav-image" src={bed} alt='Bed'/>
+                    </button>
+                </div>
             </div>
         </div>
     )
