@@ -30,6 +30,11 @@
     width: 60px
 }
 
+.nav-image-profile {
+    width: 60px;
+    border-radius: 50%;
+}
+
 .nav-image2 {
     width: 80px
 }
@@ -75,3 +80,4 @@
     border: none;
     padding-right: 20px
 }
+
