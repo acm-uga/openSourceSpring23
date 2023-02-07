@@ -43,3 +43,5 @@ Vansh Arora - Discord: @vansharora03#7809
 Deepesh Nimma - Discord: @nottcurious#4351
 
 Dhruv Patel - Discord: @dhruvthepatel#3120
+
+Stephen Nemeth - Discord: @stephennemeth_#5071
