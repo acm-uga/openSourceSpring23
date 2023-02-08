@@ -4,6 +4,17 @@ Welcome to the Open Source Project! We meet every Wednesday on Discord at 5:30pm
 
 <br>
 
+> To run the react application after cloning your fork of the repo and opening in VS Code:
+
+1. Execute: cd my-app
+- This is the directory that was created after creating the react application with the “npx create-react-app my-app” command.
+You must be inside this directory to run the application
+
+2. Execute: npm install
+- This installs all of the packages and dependencies in the node_modules folder. This will take a few seconds
+Execute: npm start
+
+
 <b>Project Google Doc</b>: https://docs.google.com/document/d/1mQmhqu-vUGuBPI9OOYplPoU0yFRHXkM2SMmblyB4Oes/edit
 
 <b>Youtube Channel</b>: https://www.youtube.com/channel/UCfNIrfKtb6fut7t3OrJvnJA
