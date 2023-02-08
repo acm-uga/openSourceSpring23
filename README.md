@@ -66,3 +66,5 @@ Austin Perales - Discord: @austin-perales#3947
 
 Jack Fletcher - Discord: Box Fletcher-east-1#0001
 
+Nikita Jha - Discord: @nikita-jha#6879
+
