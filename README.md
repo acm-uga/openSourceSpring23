@@ -14,7 +14,7 @@ You must be inside this directory to run the application
 - This installs all of the packages and dependencies in the node_modules folder. This will take a few seconds
 Execute: npm start
 
-3. Exectue: npm start dev 
+3. Execute: npm start dev 
 - This runs the application in development mode, so you don't have to re-run application to see changes everytime
 
 
