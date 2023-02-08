@@ -45,3 +45,5 @@ Deepesh Nimma - Discord: @nottcurious#4351
 Dhruv Patel - Discord: @dhruvthepatel#3120
 
 Stephen Nemeth - Discord: @stephennemeth_#5071
+
+Turjoy Paul - Discord: @Firedynex#9301
