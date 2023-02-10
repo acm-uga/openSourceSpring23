@@ -1,12 +1,33 @@
+import React from 'react'
 import Navbar from './components/Navbar/Navbar';
+import LoginPage from './components/LoginPage/LoginPage';
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 
 
 function App() {
   return (
+    <div className="App">
+    <Router>
     <Navbar />
-  )
+    <Routes>
+
+    <Route path = "/" element={
+      <React.Fragment> 
+      </React.Fragment>
+    }></Route>
+
+      <Route path = "/login" element={
+          <React.Fragment>
+              <LoginPage />
+          </React.Fragment>
+      }></Route>
+    </Routes>
+
+    </Router>
+    </div>
+  );
   /*
   return (
     <div className="App">
