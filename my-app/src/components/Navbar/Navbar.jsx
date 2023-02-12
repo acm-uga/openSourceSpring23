@@ -9,7 +9,7 @@ import profile from "../../assets/blank-profile.png"
 
 import './Navbar.css'
 
-const Navbar = () => {
+function Navbar() {
     return (
         <div className='navbar'>
             <div className='container'>
@@ -35,7 +35,9 @@ const Navbar = () => {
                         <img className="nav-image" src={bed} alt='Bed'/>
                     </button>
                     <button className='icon-button'>
-                        <img className='nav-image-profile' src={profile} alt='Blank Profile' />
+                        <Link  className = "login-button" to = "/login">
+                            <img className='nav-image-profile' src={profile} alt='Blank Profile' />
+                        </Link>
                     </button>
                 </div>
             </div>
