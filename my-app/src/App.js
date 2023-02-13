@@ -1,14 +1,9 @@
-
 import React from 'react'
 import Navbar from './components/Navbar/Navbar';
 import LoginPage from './components/LoginPage/LoginPage';
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
-
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-
-import Login from "./components/Login/login";
 
 function App() {
   return (

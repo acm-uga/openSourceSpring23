@@ -5,20 +5,18 @@ import './LoginPage.css'
 
 function LoginPage() {
     return (
-        <div className = "login-page">
-            <h1> Login </h1>
-            <br></br>
-            <h3> Username </h3>
-            <input type="text" name="Username"/>
-            <br></br>
-            <h3> Password </h3>
-            <input type="text" name="Password"/>
-            <br></br>
-            <br></br>
-            <button type="button" className="login">
-                <Link  className = "login-button" to = "/"> Login </Link>
-            </button>
+        <div className="main-container">
+        <div className='inner-container'>
+            <form>
+                <label htmlFor="email">Email</label><br />
+                <input type="text" name='email' placeholder='John.Doe@example.com'/><br /><br />
+                <label htmlFor="password">Password</label><br />
+                <input type="password" name="password"/><br /><br />
+                <button type='submit'>Login</button>
+                
+            </form>
         </div>
+    </div>
     )
 }
 
