@@ -15,7 +15,7 @@ function Navbar() {
             <div className='container'>
                 <div className='div1'>
                     <button className='home-button'>
-                        <img className="nav-image2" src={bulldawg} alt='Bulldawg'/>
+                        <Link to = "/"> <img className="nav-image2" src={bulldawg} alt='Bulldawg'/></Link>
                     </button>
                     <div className="searchbar">
                         <input className='searchbar-input' type='text' placeholder='Search...'></input>
