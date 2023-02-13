@@ -1,7 +1,10 @@
-import Navbar from "./components/Navbar/Navbar";
-// import logo from "./logo.svg";
-import "./App.css";
-import React from "react";
+
+import React from 'react'
+import Navbar from './components/Navbar/Navbar';
+import LoginPage from './components/LoginPage/LoginPage';
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import logo from './logo.svg';
+import './App.css';
 
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
@@ -9,16 +12,26 @@ import Login from "./components/Login/login";
 
 function App() {
   return (
-    <React.Fragment>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route exact path="/login" element={<Login />}></Route>
-        </Routes>
-      </BrowserRouter>
-    </React.Fragment>
-  );
+    <div className="App">
+    <Router>
+    <Navbar />
+    <Routes>
 
+    <Route path = "/" element={
+      <React.Fragment> 
+      </React.Fragment>
+    }></Route>
+
+      <Route path = "/login" element={
+          <React.Fragment>
+              <LoginPage />
+          </React.Fragment>
+      }></Route>
+    </Routes>
+
+    </Router>
+    </div>
+  );
   /*
   return (
     <div className="App">
