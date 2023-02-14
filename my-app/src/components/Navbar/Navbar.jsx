@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import bulldawg from '../../assets/bulldawg.png';
 import search from '../../assets/search.png';
 import house from '../../assets/house.png';
@@ -9,17 +9,19 @@ import profile from '../../assets/blank-profile.png';
 
 import './Navbar.css';
 
-const Navbar = () => {
+function Navbar() {
   return (
     <div className='navbar'>
       <div className='container'>
         <div className='div1'>
           <button className='home-button'>
-            <img
-              className='nav-image2'
-              src={bulldawg}
-              alt='Bulldawg'
-            />
+            <Link to='/'>
+              <img
+                className='nav-image2'
+                src={bulldawg}
+                alt='Bulldawg'
+              />
+            </Link>
           </button>
           <div className='searchbar'>
             <input
@@ -58,16 +60,21 @@ const Navbar = () => {
             />
           </button>
           <button className='icon-button'>
-            <img
-              className='nav-image-profile'
-              src={profile}
-              alt='Blank Profile'
-            />
+            <Link
+              className='login-button'
+              to='/login'
+            >
+              <img
+                className='nav-image-profile'
+                src={profile}
+                alt='Blank Profile'
+              />
+            </Link>
           </button>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Navbar;

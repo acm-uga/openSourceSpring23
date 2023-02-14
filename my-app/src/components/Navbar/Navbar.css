@@ -1,83 +1,82 @@
 .navbar {
-    position: fixed;
-    background-color : #F64141;
-    height: 11%;
-    width: 100%
+  position: fixed;
+  background-color: #f64141;
+  height: 11%;
+  width: 100%;
 }
 
 .container {
-    display: inline-flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 5px
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 5px;
 }
 
 .div1 {
-    display: inline-flex;
-    justify-content: space-between;
-    margin: 5px;
-    width: 50%
+  display: inline-flex;
+  justify-content: space-between;
+  margin: 5px;
+  width: 50%;
 }
 
 .div2 {
-    display: inline-flex;
-    justify-content: space-around;
-    float: right;
-    width: 30%;
+  display: inline-flex;
+  justify-content: space-around;
+  float: right;
+  width: 30%;
 }
 
 .nav-image {
-    width: 60px
+  width: 60px;
 }
 
 .nav-image-profile {
-    width: 60px;
-    border-radius: 50%;
+  width: 60px;
+  border-radius: 50%;
 }
 
 .nav-image2 {
-    width: 80px
+  width: 80px;
 }
 
 .searchbar {
-    background-color: #F8F8F8;
-    height: 53%;
-    width: 42%;
-    font-size: 40%;
-    display: inline-flex;
-    top: 50%;
-    flex-grow: 1
+  background-color: #f8f8f8;
+  height: 53%;
+  width: 42%;
+  font-size: 40%;
+  display: inline-flex;
+  top: 50%;
+  flex-grow: 1;
 }
 
 .searchbar-input {
-    width: 100%;
-    height: 90%;
-    border: none;
-    font-size: 30px;
-    background: #F8F8F8
+  width: 100%;
+  height: 90%;
+  border: none;
+  font-size: 30px;
+  background: #f8f8f8;
 }
 
 .searchbar-input:focus {
-    outline: none
+  outline: none;
 }
 
 .searchbutton {
-    background-color: #F8F8F8;
-    border: none
+  background-color: #f8f8f8;
+  border: none;
 }
 
 .icon-button {
-    background-color: #F64141;
-    border: none
+  background-color: #f64141;
+  border: none;
 }
 
 .icon-button:hover {
-    border: solid
+  border: solid;
 }
 
 .home-button {
-    background-color: #F64141;
-    border: none;
-    padding-right: 20px
+  background-color: #f64141;
+  border: none;
+  padding-right: 20px;
 }
-
