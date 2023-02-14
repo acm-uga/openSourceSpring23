@@ -17,9 +17,10 @@ Welcome to the Open Source Project! We meet every Wednesday on Discord at 5:30pm
 
 This is a hub of information and services made specifically for UGA students by UGA students. Our goal is to build features that offer solutions to common issues that students face, and to continue adding features as new needs arise. We reserve access to UGA students only by requiring a @uga.edu email address to sign up.
 <br>
-
+<br>
 <b> <h2> How it Works </h2></b>
 <img width="950" alt="Screen Shot 2023-02-14 at 3 02 25 PM" src="https://user-images.githubusercontent.com/87153798/218848652-0940c29d-f03c-44f9-8f91-1c24b80f2f76.png">
+<br>
 
 <b> <h2> Initial features </h2></b>
 
