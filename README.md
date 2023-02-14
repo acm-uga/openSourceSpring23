@@ -1,30 +1,31 @@
 # ACM Open Source Project Spring 2023
 
-Welcome to the Open Source Project! We meet every Wednesday on Discord at 5:30pm. We're excited to build something amazing together!
+Welcome to the Open Source Project! We meet every Wednesday on Discord at 5:30pm - 6:00pm. We're excited to build something amazing together!
 
 <br>
 
-Project Name: UGA Marketplace
+<b>> Project Name: UGA Marketplace</b>
 
-	This is a hub of information and services made specifically for UGA students by UGA students. Our goal is to build features that offer solutions to common issues that students face, and to continue adding features as new needs arise. We reserve access to UGA students only by requiring a @uga.edu email address to sign up.
+This is a hub of information and services made specifically for UGA students by UGA students. Our goal is to build features that offer solutions to common issues that students face, and to continue adding features as new needs arise. We reserve access to UGA students only by requiring a @uga.edu email address to sign up.
 
-Initial features:
+<b>> Initial features:</b>
 
-Market Page: 
+<b>- Market Page: </b>
 A place to buy and sell common goods that college students need, like textbooks and dorm items.
 Security is often an issue when using other sites. Here, you know that the person you are making the exchange with is also a student at UGA.
 
-Student Housing Page:
+<b>- Student Housing Page:</b>
 Finding the right on and off campus housing for you can be difficult. This feature has all on and off campus housing options in one place so that you don’t have to explore multiple websites.
 Students can comment on each dorm or apartment complex to let others know about their experience living there.
 Subleases can be advertised here similar to how it is done on Facebook marketplace, but with better filters, information, and security. 
 
-Course Swap Page:
+<b>- Course Swap Page:</b>
 This is for situations where you realize a different class / section would work better for your schedule, but both sections are full.
 Users would advertise which class they would like to drop and which classe(s) they would be willing to swap their spot for. 
 
+<br>
 
-<b>To run the react application after cloning your fork of the repo and opening in VS Code:</b>
+<b>> To run the react application after cloning your fork of the repo and opening in VS Code:</b>
 
 1. Execute: <b>cd my-app</b>
 - This is the directory that was created after creating the react application with the “npx create-react-app my-app” command.
