@@ -17,7 +17,6 @@ function Navbar() {
           <div className='div1'>
             <button className='home-button'>
               <Link to='/'>
-                {' '}
                 <img
                   className='nav-image2'
                   src={bulldawg}

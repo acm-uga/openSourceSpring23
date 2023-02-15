@@ -18,8 +18,6 @@ const HomeNavbar = () => {
         <div className='nav-flexbox'>
           <div className='home-navbar--top'>
             <h1>UGA Marketplace</h1>
-            {/* TODO add top navbar elements -> notifications, login button */}
-            {/* add login and sign up buttons */}
             <div className='home-navbar--top-buttons'>
               <Link to='/login'>
                 <button className='login-button'>Login</button>
