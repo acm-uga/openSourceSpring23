@@ -6,8 +6,8 @@ import './HomeNavbar.css';
 const HomeNavbar = () => {
   return (
     <>
-      <div className='navbar'>
-        <div className='logo'>
+      <div className='home-navbar'>
+        <div className='home-navbar--logo'>
           <Link to='/'>
             <img
               src={logo}
@@ -16,11 +16,17 @@ const HomeNavbar = () => {
           </Link>
         </div>
         <div className='nav-flexbox'>
-          <div className='top-nav'>
+          <div className='home-navbar--top'>
             <h1>UGA Marketplace</h1>
             {/* TODO add top navbar elements -> notifications, login button */}
+            {/* add login and sign up buttons */}
+            <div className='home-navbar--top-buttons'>
+              <Link to='/login'>
+                <button className='login-button'>Login</button>
+              </Link>
+            </div>
           </div>
-          <div className='bottom-nav'>
+          <nav className='home-navbar--bottom'>
             {/* list of links */}
             <ul>
               <li>
@@ -33,10 +39,10 @@ const HomeNavbar = () => {
                 <Link to='/course-swap'>Course Swap</Link>
               </li>
               <li>
-                <Link to='/housing'>Housing </Link>
+                <Link to='/housing'>Student Housing</Link>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
       </div>
     </>
