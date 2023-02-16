@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import LoginPage from "./components/LoginPage/LoginPage";
+import HousingPage from "./components/HousingPage/HousingPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import logo from "./logo.svg";
 import "./App.css";
@@ -21,6 +22,16 @@ function App() {
               </React.Fragment>
             }
           ></Route>
+
+          <Route 
+            path="/housing" 
+            element={
+              <React.Fragment> 
+                <HousingPage /> 
+              </React.Fragment>
+            }
+            ></Route>
+
         </Routes>
       </Router>
     </div>

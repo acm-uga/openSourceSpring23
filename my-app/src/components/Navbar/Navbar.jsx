@@ -26,13 +26,17 @@ function Navbar() {
                 </div>
                 <div className='div2'>
                     <button className='icon-button'>
+                        <Link className = "home-button" to = "/">
                         <img className="nav-image" src={house} alt='House'/>
+                        </Link>
                     </button>
                     <button className='icon-button'>
                         <img className="nav-image" src={book} alt='Book'/>
                     </button>
                     <button className='icon-button'>
-                        <img className="nav-image" src={bed} alt='Bed'/>
+                        <Link className='housing-button' to = "/housing">
+                            <img className="nav-image" src={bed} alt='Bed'/>
+                        </Link>
                     </button>
                     <button className='icon-button'>
                         <Link  className = "login-button" to = "/login">

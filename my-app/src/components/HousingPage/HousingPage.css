@@ -2,8 +2,8 @@
   height: 90vh;
   width: 98vw;
   display: grid;
-  grid-template-columns: 98vw/5;
-  grid-template-rows: 90vh/5;
+  grid-template-columns: repeat(98vw/5,5);
+  grid-template-rows: repeat(90vh/5,3);
   padding-top: 0px;
   position: absolute;
   top: 20%;
@@ -28,20 +28,9 @@
   background-color:aliceblue;
 }
 
-.container-of-posts {
-  /*
-  position: absolute;
-  top: 50%;
-  left: 80%;
-  */
-  border-spacing: 10px;
-  grid-area: "right";
-}
-
 .post-display {
   background-color:#d3d3d3;
   box-shadow: 0px 0px 20px #d3d3d3;
-  grid-area: "left";
 }
 
 label {
