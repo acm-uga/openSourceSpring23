@@ -4,12 +4,13 @@ import LoginPage from './components/LoginPage/LoginPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import logo from "./logo.svg";
 import './App.css';
+import HomeNavbar from './components/HomeNavbar/HomeNavbar'
 
 function App() {
   return (
     <div className='App'>
       <Router>
-        <Navbar />
+        <HomeNavbar />
         <Routes>
           <Route
             path='/'
