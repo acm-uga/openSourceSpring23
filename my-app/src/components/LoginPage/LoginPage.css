@@ -30,7 +30,7 @@ input {
   margin-top: 5px;
 }
 
-button[type="submit"] {
+button[type='submit'] {
   background-color: var(--color-primary);
   border: none;
   color: white;
@@ -40,7 +40,7 @@ button[type="submit"] {
   transition: 0.3s;
 }
 
-button[type="submit"]:hover {
+button[type='submit']:hover {
   /* box-shadow: 0px 0px 20px #d3d3d3; */
   background-color: white;
   border: 1px solid var(--color-primary);
