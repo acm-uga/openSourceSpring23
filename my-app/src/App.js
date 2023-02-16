@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import logo from "./logo.svg";
 import './App.css';
 import HomeNavbar from './components/HomeNavbar/HomeNavbar'
+import TrendingItems from './components/TrendingItems/TrendingItems';
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
         <Routes>
           <Route
             path='/'
-            element={<React.Fragment></React.Fragment>}
+            element={<React.Fragment>
+              <TrendingItems/>
+            </React.Fragment>}
           ></Route>
 
           <Route
