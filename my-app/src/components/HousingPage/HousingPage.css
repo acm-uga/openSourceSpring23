@@ -1,6 +1,7 @@
 .main-container {
   height: 100vh;
   width: 100vw;
+  border: 5px red;
 }
 
 .posts-container {
@@ -10,8 +11,8 @@
   grid-template-columns: repeat(5,220px);
   grid-template-rows: repeat(3,220px);
   position: absolute;
-  top: 20%;
-  left: 14%;
+  left: 12%;
+  top: 40%;
   /*border: 5px solid red;*/
   justify-items: center;
 }
