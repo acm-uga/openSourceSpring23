@@ -7,6 +7,7 @@ function HousingPage() {
   return (
     <div className="main-container">
 
+
       <div className="posts-container">
         <div className="post post-1">
           <table>

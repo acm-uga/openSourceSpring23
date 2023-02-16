@@ -1,6 +1,7 @@
-/*.main-container {
-
-}*/
+.main-container {
+  height: 100vh;
+  width: 100vw;
+}
 
 .posts-container {
   height: 75vh;
