@@ -2,42 +2,86 @@
   height: 100vh;
   width: 100vw;
   border: 5px red;
+  position: relative;
+}
+
+.previous {
+  height: 5vh;
+  width: 10vw;
+  position: absolute;
+  top: 3.5%;
+  left: 49.5%;
+  box-shadow: 0px 0px 20px #707070;
+  border-radius: 15px;
+}
+
+.next {
+  height: 5vh;
+  width: 10vw;
+  position: absolute;
+  top: 3.5%;
+  left: 57.5%;
+  box-shadow: 0px 0px 20px #707070;
+  border-radius: 15px;
+}
+
+.page-num {
+  border-radius: 15px;
+  background-color: lightgray;
+  position: absolute;
+  width: 3vw;
+  top: 3.4%;
+  left: 53.5%
+}
+
+.filters-tab {
+  box-shadow: 0px 0px 20px #707070;
+  height: 80vh;
+  width: 10vw;
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  padding-top: 20px;
+  border-radius: 15px;
+  display: inline-grid;
+  grid-template-rows: auto;
 }
 
 .posts-container {
-  height: 75vh;
-  width: 85vw;
+  box-shadow: 0px 0px 20px #707070;
+  border-radius: 15px;
+  height: 80vh;
+  width: 86vw;
   display: inline-grid;
   grid-template-columns: repeat(5,220px);
   grid-template-rows: repeat(3,220px);
   position: absolute;
+  padding-top: 20px;
+  padding-left: 10px;
   left: 12%;
-  top: 40%;
-  /*border: 5px solid red;*/
-  justify-items: center;
+  top: 10%;
 }
 
 .post {
-  box-shadow: 0px 0px 20px #d3d3d3;
-  /*transform: translate(-50%, -50%);*/
-  /*padding: 10px;
-  margin: 10px;*/
-  width: 200px;
-  height: 200px;
-  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px grey;
+  background-color: lightgray;
+  padding-top: 15px;
+  width: 15.625vw;
+  height: 35vh;
+  position:relative;
+  display: inline-grid;
+  grid-template-rows: 30% 70%;
+  justify-items: center;
 }
 
-.post-1 {
-  background-color:#d3d3d3;
+.post-title {
+  font-size: medium;
+  font-weight: 600
 }
 
-.post-2 {
-  background-color:aliceblue;
-}
-
-.post-display {
-  background-color:#d3d3d3;
-  box-shadow: 0px 0px 20px #d3d3d3;
+.description {
+  font-size: small;
 }
 
 label {
@@ -51,9 +95,14 @@ button[type="submit"] {
   border: none;
   color: white;
   padding: 2px 5px;
+  height:4vh;
+  width:3vw;
   cursor: pointer;
   border-radius: 5px;
   transition: 0.3s;
+  font-size: smaller;
+  position: absolute;
+  bottom: 5%;
 }
 
 button[type="submit"]:hover {
