@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import HomeNavbar from './components/HomeNavbar/HomeNavbar'
 import TrendingItems from './components/TrendingItems/TrendingItems';
+import HousingPage from './components/HousingPage/HousingPage';
 
 function App() {
   return (
@@ -28,6 +29,16 @@ function App() {
               </React.Fragment>
             }
           ></Route>
+
+          <Route 
+            path="/housing" 
+            element={
+              <React.Fragment> 
+                <HousingPage /> 
+              </React.Fragment>
+            }
+            ></Route>
+
         </Routes>
       </Router>
     </div>
