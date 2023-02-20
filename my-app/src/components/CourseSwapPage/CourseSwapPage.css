@@ -1,0 +1,52 @@
+.swap-container {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border: 5px red;
+  position: relative;
+}
+
+.search {
+  height: 20vh;
+  max-width: 100%;
+  padding-top: 20px;
+  margin-left: 5%;
+  position: relative;
+}
+
+#search-input {
+  min-width: 60%;
+}
+
+#sort {
+  min-width: 10%;
+}
+
+#filter {
+  min-width: 10%;
+}
+
+.side-tab {
+  box-shadow: 0px 0px 20px #707070;
+  height: 80vh;
+  width: 10vw;
+  justify-self: center;
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  padding-top: 20px;
+  align-content: center;
+  border-radius: 15px;
+}
+
+.side-list {
+  height: 40vh;
+  width: 10vw;
+  position: relative;
+  left: 1%;
+  padding-top: 20px;
+  border-radius: 15px;
+  display: inline-grid;
+  grid-template-rows: auto;
+  font-size: 150%;
+}
