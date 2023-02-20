@@ -7,6 +7,7 @@ import './App.css';
 import HomeNavbar from './components/HomeNavbar/HomeNavbar'
 import TrendingItems from './components/TrendingItems/TrendingItems';
 import HousingPage from './components/HousingPage/HousingPage';
+import CourseSwapPage from './components/CourseSwapPage/CourseSwapPage';
 
 function App() {
   return (
@@ -29,6 +30,15 @@ function App() {
               </React.Fragment>
             }
           ></Route>
+
+          <Route 
+            path="/course-swap" 
+            element={
+              <React.Fragment> 
+                <CourseSwapPage /> 
+              </React.Fragment>
+            }
+            ></Route>
 
           <Route 
             path="/housing" 
