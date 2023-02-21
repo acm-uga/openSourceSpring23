@@ -25,6 +25,28 @@ These additional references should also help you:
 * [Configure AOT settings in Build Plugin](https://docs.spring.io/spring-boot/docs/3.0.2/maven-plugin/reference/htmlsingle/#aot)
 * [R2DBC Homepage](https://r2dbc.io)
 
+## Getting started for UGA students
+
+One of the easiest ways to run the backend is with intellij IDEA. I highly recommend you make a student account and snag the ultimate version; you'll get a bunch of Spring related tooling, along with warnings (sometimes) when you accidentally write blocking code in a nonblocking context. Helpful!
+
+To actually run the backend, just clone and open this repo with intellij, and click the popup in the bottom right.
+
+![image](https://user-images.githubusercontent.com/50535827/220209420-2fbb1c86-b464-47b2-8bb9-a7660f0f1114.png)
+
+The Spring app is almost ready to run! Now we just need a postgres db running, or the application will crash at runtime.
+
+Make sure [psql](https://docs.timescale.com/timescaledb/latest/how-to-guides/connecting/psql/) and [docker](https://www.docker.com/products/docker-desktop/) are installed, then call `./backend/scripts/init_db.sh`.
+
+If you've got a postgres container running, smash the button in the top right
+
+![image](https://user-images.githubusercontent.com/50535827/220210741-e4628c41-0fcc-4f69-a40e-e577da11bcba.png)
+
+And then [make a request](https://www.postman.com/) to any of the available routes in Routers.java. See below for two examples
+
+![image](https://user-images.githubusercontent.com/50535827/220211118-60773195-a306-4abd-8c3c-e3937dcc2edb.png)
+
+![image](https://user-images.githubusercontent.com/50535827/220211183-68e003ca-13c2-48d4-ac6a-43b104f3b3b7.png)
+
 ## GraalVM Native Support
 
 This project has been configured to let you generate either a lightweight container or a native executable.
