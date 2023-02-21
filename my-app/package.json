@@ -25,6 +25,23 @@
     "prettier:check": "npx prettier --check src/**/*.{js,jsx,ts,tsx,json,css,scss,md}",
     "format": "npx prettier --write src/**/*.{js,jsx,ts,tsx,json,css,scss,md} && npm run lint:fix"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.{js,jsx,css}": [
+        "prettier --write",
+        "git add"
+      ],
+      "*.md": [
+        "prettier --write",
+        "git add"
+      ]
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -51,6 +68,8 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
     "prettier": "2.8.4"
   }
 }
