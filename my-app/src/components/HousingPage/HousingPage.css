@@ -31,7 +31,7 @@
   position: absolute;
   width: 3vw;
   top: 3.4%;
-  left: 53.5%
+  left: 53.5%;
 }
 
 .filters-tab {
@@ -53,8 +53,8 @@
   height: 80vh;
   width: 86vw;
   display: inline-grid;
-  grid-template-columns: repeat(5,220px);
-  grid-template-rows: repeat(3,220px);
+  grid-template-columns: repeat(5, 220px);
+  grid-template-rows: repeat(3, 220px);
   position: absolute;
   padding-top: 20px;
   padding-left: 10px;
@@ -69,7 +69,7 @@
   padding-top: 15px;
   width: 15.625vw;
   height: 35vh;
-  position:relative;
+  position: relative;
   display: inline-grid;
   grid-template-rows: 30% 70%;
   justify-items: center;
@@ -77,7 +77,7 @@
 
 .post-title {
   font-size: medium;
-  font-weight: 600
+  font-weight: 600;
 }
 
 .description {
@@ -90,13 +90,13 @@ label {
   font-size: 1.6em;
 }
 
-button[type="submit"] {
+button[type='submit'] {
   background-color: var(--color-primary);
   border: none;
   color: white;
   padding: 2px 5px;
-  height:4vh;
-  width:3vw;
+  height: 4vh;
+  width: 3vw;
   cursor: pointer;
   border-radius: 5px;
   transition: 0.3s;
@@ -105,7 +105,7 @@ button[type="submit"] {
   bottom: 5%;
 }
 
-button[type="submit"]:hover {
+button[type='submit']:hover {
   /* box-shadow: 0px 0px 20px #d3d3d3; */
   background-color: white;
   border: 1px solid var(--color-primary);

@@ -1,24 +1,26 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import "./HousingPage.css";
+import './HousingPage.css';
 
+// TODO: add functionality to buttons
+// disable eslint for now
+/* eslint-disable */
 function HousingPage() {
   return (
     <div className="main-container">
-
-      <button type="submit" className="previous">
+      <button type="button" className="previous">
         Prev
       </button>
 
       <div className="page-num">1</div>
 
-      <button type="submit" className="next">
+      <button type="button" className="next">
         Next
       </button>
 
       <div className="filters-tab">
-        <h4 style={{textDecorationLine: "underline"}}>Filters</h4>
+        <h4 style={{ textDecorationLine: 'underline' }}>Filters</h4>
         <Link>Housing Type</Link>
         <Link>Roommates</Link>
         <Link>Location</Link>
@@ -29,7 +31,6 @@ function HousingPage() {
       </div>
 
       <div className="posts-container">
-
         <div className="post">
           <p className="post-title">Riverclub Apartments</p>
           <p className="description">
@@ -41,7 +42,9 @@ function HousingPage() {
             <br />
             Time Left: 3 days
           </p>
-          <button type="submit" className="view-post-button">View</button>
+          <button type="submit" className="view-post-button">
+            View
+          </button>
         </div>
 
         <div className="post">
@@ -55,7 +58,9 @@ function HousingPage() {
             <br />
             Time Left: 2 weeks
           </p>
-          <button type="submit" className="view-post-button">View</button>
+          <button type="submit" className="view-post-button">
+            View
+          </button>
         </div>
 
         <div className="post">
@@ -69,7 +74,9 @@ function HousingPage() {
             <br />
             Time Left: 1 day
           </p>
-          <button type="submit" className="view-post-button">View</button>
+          <button type="submit" className="view-post-button">
+            View
+          </button>
         </div>
 
         <div className="post">
@@ -83,7 +90,9 @@ function HousingPage() {
             <br />
             Time Left: 12 hours
           </p>
-          <button type="submit" className="view-post-button">View</button>
+          <button type="submit" className="view-post-button">
+            View
+          </button>
         </div>
 
         <div className="post">
@@ -97,7 +106,9 @@ function HousingPage() {
             <br />
             Time Left: 1 month
           </p>
-          <button type="submit" className="view-post-button">View</button>
+          <button type="submit" className="view-post-button">
+            View
+          </button>
         </div>
 
         <div className="post">
@@ -111,7 +122,9 @@ function HousingPage() {
             <br />
             Time Left: 5 weeks
           </p>
-          <button type="submit" className="view-post-button">View</button>
+          <button type="submit" className="view-post-button">
+            View
+          </button>
         </div>
 
         <div className="post">
@@ -125,7 +138,9 @@ function HousingPage() {
             <br />
             Time Left: 3 days
           </p>
-          <button type="submit" className="view-post-button">View</button>
+          <button type="submit" className="view-post-button">
+            View
+          </button>
         </div>
 
         <div className="post">
@@ -139,7 +154,9 @@ function HousingPage() {
             <br />
             Time Left: 3 days
           </p>
-          <button type="submit" className="view-post-button">View</button>
+          <button type="submit" className="view-post-button">
+            View
+          </button>
         </div>
 
         <div className="post">
@@ -153,24 +170,22 @@ function HousingPage() {
             <br />
             Time Left: 3 days
           </p>
-          <button type="submit" className="view-post-button">View</button>
+          <button type="submit" className="view-post-button">
+            View
+          </button>
         </div>
 
         <div className="post">
-          <p className="post-title"></p>
+          <p className="post-title" />
           <p className="description">
-            
             <br />
-            
+
             <br />
-            
+
             <br />
-            
           </p>
         </div>
-        
       </div>
-
     </div>
   );
 }
