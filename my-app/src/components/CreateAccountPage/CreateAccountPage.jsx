@@ -82,7 +82,7 @@ const CreateAccountPage = () => {
             type="text"
             name="number"
             placeholder="XXX-XXX-XXXX"
-            onChange={event => setEmail(event.target.value)}
+            onChange={event => setNumber(event.target.value)}
           />
         </label>
         <label htmlFor="password">
