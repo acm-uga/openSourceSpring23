@@ -7,7 +7,7 @@ import HomeNavbar from './components/HomeNavbar/HomeNavbar';
 import TrendingItems from './components/TrendingItems/TrendingItems';
 import HousingPage from './components/HousingPage/HousingPage';
 import CourseSwapPage from './components/CourseSwapPage/CourseSwapPage';
-import CreateAccountPage from './components/CreatAccountPage/CreateAccountPage';
+import CreateAccountPage from './components/CreateAccountPage/CreateAccountPage';
 
 function App() {
   return (
