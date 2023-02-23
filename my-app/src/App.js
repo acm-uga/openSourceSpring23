@@ -7,6 +7,7 @@ import HomeNavbar from './components/HomeNavbar/HomeNavbar';
 import TrendingItems from './components/TrendingItems/TrendingItems';
 import HousingPage from './components/HousingPage/HousingPage';
 import CourseSwapPage from './components/CourseSwapPage/CourseSwapPage';
+import CreateAccountPage from './components/CreatAccountPage/CreateAccountPage';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           <Route path="/course-swap" element={<CourseSwapPage />} />
 
           <Route path="/housing" element={<HousingPage />} />
+
+          <Route path="/register" element={<CreateAccountPage />} />
         </Routes>
       </Router>
     </div>
