@@ -1,0 +1,26 @@
+.text-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.side-tab {
+    background-color:#8B1911;
+    box-shadow: 0px 0px 20px #707070;
+    height: 80vh;
+    width: 10vw;
+    justify-self: center;
+    position: absolute;
+    align-content: center;
+  }
+
+.side-list {
+    height: 40vh;
+    width: 10vw;
+    position: relative;
+    left: 1%;
+    padding-top: 20px;
+    border-radius: 15px;
+    display: inline-grid;
+    grid-template-rows: auto;
+    font-size: 150%;
+}

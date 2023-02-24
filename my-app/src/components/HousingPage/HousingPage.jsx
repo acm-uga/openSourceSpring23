@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './HousingPage.css';
+import '../MainTheme.css';
 
 // TODO: add functionality to buttons
 // disable eslint for now
@@ -19,15 +20,18 @@ function HousingPage() {
         Next
       </button>
 
-      <div className="filters-tab">
+      <div className="side-tab">
         <h4 style={{ textDecorationLine: 'underline' }}>Filters</h4>
-        <Link>Housing Type</Link>
-        <Link>Roommates</Link>
-        <Link>Location</Link>
-        <Link>Price</Link>
-        <Link>Amenities</Link>
-        <Link>Bedrooms</Link>
-        <Link>Bathrooms</Link>
+        <div className="side-list">
+          <Link className='text-link'>Housing Type</Link>
+          <Link className='text-link'>Roommates</Link>
+          <Link className='text-link'>Location</Link>
+          <Link className='text-link'>Price</Link>
+          <Link className='text-link'>Amenities</Link>
+          <Link className='text-link'>Bedrooms</Link>
+          <Link className='text-link'>Bathrooms</Link>
+        </div>
+        
       </div>
 
       <div className="posts-container">
