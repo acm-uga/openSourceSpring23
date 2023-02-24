@@ -4,6 +4,7 @@ import logo from '../../assets/book-swap.png';
 import search from '../../assets/search.png';
 
 import './CourseSwapPage.css';
+import '../MainTheme.css';
 
 // disable eslint for Links right now
 /* eslint-disable */
@@ -11,13 +12,13 @@ function CourseSwapPage() {
   return (
     <div className="swap-container">
       <div className="side-tab">
-        <img src={logo} alt="course-swap-logo" width="50%" />
+        <img src={logo} alt="course-swap-logo" width={"50%"}/>
         <div className="side-list">
           {/* TODO: fix links/buttons */}
-          <Link>Find</Link>
-          <Link>Offer</Link>
-          <Link>Schedule</Link>
-          <Link>Saved</Link>
+          <Link className='text-link'>Find</Link>
+          <Link className='text-link'>Offer</Link>
+          <Link className='text-link'>Schedule</Link>
+          <Link className='text-link'>Saved</Link>
         </div>
       </div>
 

@@ -1,11 +1,22 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 import './TrendingItems.css';
+import '../MainTheme.css';
 
 function TrendingItems() {
   return (
     <div className="trending-items">
+      <div className="side-tab">
+        <div className="side-list">
+          <h4 style={{ textDecorationLine: 'underline' }}>Info</h4>
+          {/* TODO: fix links/buttons */}
+          <Link className='text-link'>Textbooks</Link>
+          <Link className='text-link'>Course Swap</Link>
+          <Link className='text-link'>Student Housing</Link>
+        </div>
+      </div>
       <br />
       <div className="trending-items-row">
         <Card style={{ width: '22rem' }}>
