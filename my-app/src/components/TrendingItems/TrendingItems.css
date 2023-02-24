@@ -1,9 +1,9 @@
 .trending-items-row {
   display: flex;
   justify-content: space-evenly;
-}
-
-.trending-items {
   float: right;
   width: 75%;
 }
+
+/*.trending-items {
+}*/

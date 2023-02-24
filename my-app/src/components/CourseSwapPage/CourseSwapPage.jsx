@@ -12,7 +12,7 @@ function CourseSwapPage() {
   return (
     <div className="swap-container">
       <div className="side-tab">
-        <img src={logo} alt="course-swap-logo" width="50%" />
+        <img src={logo} alt="course-swap-logo" width={"50%"}/>
         <div className="side-list">
           {/* TODO: fix links/buttons */}
           <Link className='text-link'>Find</Link>

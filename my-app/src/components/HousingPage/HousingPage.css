@@ -1,7 +1,7 @@
 .main-container {
   height: 100vh;
   width: 100vw;
-  border: 5px red;
+  border: 500px red;
   position: relative;
 }
 
@@ -34,7 +34,7 @@
   left: 53.5%;
 }
 
-.filters-tab {
+/*.filters-tab {
   box-shadow: 0px 0px 20px #707070;
   height: 80vh;
   width: 10vw;
@@ -45,7 +45,7 @@
   border-radius: 15px;
   display: inline-grid;
   grid-template-rows: auto;
-}
+}*/
 
 .posts-container {
   box-shadow: 0px 0px 20px #707070;
