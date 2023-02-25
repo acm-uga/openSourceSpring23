@@ -1,11 +1,80 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 import "./HousingPage.css";
 
 function HousingPage() {
+
+  const [housingFilterTab, setHousing] = useState("false");
+  const [roommatesFilterTab, setRoommates] = useState("false");
+  const [locationFilterTab, setLocation] = useState("false");
+  const [priceFilterTab, setPrice] = useState("false");
+  const [amenitiesFilterTab, setAmenities] = useState("false");
+  const [bedroomsFilterTab, setBedrooms] = useState("false");
+  const [bathroomsFilterTab, setBathrooms] = useState("false");
+  const ToggleHousing = () => {
+    ToggleAll();
+    setHousing(!housingFilterTab); 
+  };
+  const ToggleRoommates = () => {
+    ToggleAll();
+    setRoommates(!roommatesFilterTab); 
+  };
+  const ToggleLocation = () => {
+    ToggleAll();
+    setLocation(!locationFilterTab); 
+  };
+  const TogglePrice = () => {
+    ToggleAll();
+    setPrice(!priceFilterTab); 
+  };
+  const ToggleAmenities = () => {
+    ToggleAll();
+    setAmenities(!amenitiesFilterTab); 
+  };
+  const ToggleBedrooms = () => {
+    ToggleAll();
+    setBedrooms(!bedroomsFilterTab); 
+  };
+  const ToggleBathrooms = () => {
+    ToggleAll();
+    setBathrooms(!bathroomsFilterTab); 
+  };
+  const ToggleAll = () => {
+    if (!housingFilterTab) {
+      setHousing(!housingFilterTab);
+    }
+    if (!roommatesFilterTab) {
+      setRoommates(!roommatesFilterTab);
+    }
+    if (!locationFilterTab) {
+      setLocation(!locationFilterTab);
+    }
+    if (!priceFilterTab) {
+      setPrice(!priceFilterTab);
+    }
+    if (!amenitiesFilterTab) {
+      setAmenities(!amenitiesFilterTab);
+    }
+    if (!bedroomsFilterTab) {
+      setBedrooms(!bedroomsFilterTab);
+    }
+    if (!bathroomsFilterTab) {
+      setBathrooms(!bathroomsFilterTab);
+    }
+  }
+
   return (
     <div className="main-container">
+
+      <div className={housingFilterTab ? "hide popup" : "show popup"}>Housing filters</div>
+      <div className={roommatesFilterTab ? "hide popup" : "show popup"}>Roommates filters</div>
+      <div className={locationFilterTab ? "hide popup" : "show popup"}>Location filters</div>
+      <div className={priceFilterTab ? "hide popup" : "show popup"}>Price filters</div>
+      <div className={amenitiesFilterTab ? "hide popup" : "show popup"}>Amenities filters</div>
+      <div className={bedroomsFilterTab ? "hide popup" : "show popup"}>Bedrooms filters</div>
+      <div className={bathroomsFilterTab ? "hide popup" : "show popup"}>Bathrooms filters</div>
 
       <button type="submit" className="previous">
         Prev
@@ -19,13 +88,13 @@ function HousingPage() {
 
       <div className="filters-tab">
         <h4 style={{textDecorationLine: "underline"}}>Filters</h4>
-        <Link>Housing Type</Link>
-        <Link>Roommates</Link>
-        <Link>Location</Link>
-        <Link>Price</Link>
-        <Link>Amenities</Link>
-        <Link>Bedrooms</Link>
-        <Link>Bathrooms</Link>
+        <button className="filter-button" type="button" onClick={ToggleHousing}>Housing Type</button>
+        <button className="filter-button" type="button" onClick={ToggleRoommates}>Roommates</button>
+        <button className="filter-button" type="button" onClick={ToggleLocation}>Location</button>
+        <button className="filter-button" type="button" onClick={TogglePrice}>Price</button>
+        <button className="filter-button" type="button" onClick={ToggleAmenities}>Amenities</button>
+        <button className="filter-button" type="button" onClick={ToggleBedrooms}>Bedrooms</button>
+        <button className="filter-button" type="button" onClick={ToggleBathrooms}>Bathrooms</button>
       </div>
 
       <div className="posts-container">
