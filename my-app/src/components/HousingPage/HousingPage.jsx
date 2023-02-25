@@ -201,7 +201,7 @@ function HousingPage() {
         </div>
 
         <div className="post">
-          <p className="post-title">___ Townhome</p>
+          <p className="post-title"> Townhome</p>
           <p className="description">
             4 bedrooms, 2 bathrooms
             <br />
@@ -217,7 +217,7 @@ function HousingPage() {
         </div>
 
         <div className="post">
-          <p className="post-title">___ Apartments</p>
+          <p className="post-title"> Apartments</p>
           <p className="description">
             4 bedrooms, 2 bathrooms
             <br />
@@ -233,7 +233,7 @@ function HousingPage() {
         </div>
 
         <div className="post">
-          <p className="post-title">___ Studio Apartment</p>
+          <p className="post-title"> Studio Apartment</p>
           <p className="description">
             4 bedrooms, 2 bathrooms
             <br />
@@ -249,14 +249,19 @@ function HousingPage() {
         </div>
 
         <div className="post">
-          <p className="post-title" />
+          <p className="post-title"> House </p>
           <p className="description">
+            3 bedrooms, 3 bathrooms
             <br />
-
+            Looking for: 1 male
             <br />
-
+            Spot Secured? yes
             <br />
+            Time Left: 4 weeks
           </p>
+          <button type="submit" className="view-post-button">
+            View
+          </button>
         </div>
       </div>
     </div>
