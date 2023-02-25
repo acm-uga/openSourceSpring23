@@ -80,7 +80,7 @@ function HousingPage() {
       <div className={bedroomsFilterTab ? "hide popup" : "show popup"}>Bedrooms filters</div>
       <div className={bathroomsFilterTab ? "hide popup" : "show popup"}>Bathrooms filters</div>
 
-      <button type="submit" className="previous">
+      <button type="button" className="previous">
         Prev
       </button>
 
@@ -90,15 +90,17 @@ function HousingPage() {
         Next
       </button>
 
-      <div className="filters-tab">
-        <h4 style={{textDecorationLine: "underline"}}>Filters</h4>
-        <button className="filter-button" type="button" onClick={ToggleHousing}>Housing Type</button>
-        <button className="filter-button" type="button" onClick={ToggleRoommates}>Roommates</button>
-        <button className="filter-button" type="button" onClick={ToggleLocation}>Location</button>
-        <button className="filter-button" type="button" onClick={TogglePrice}>Price</button>
-        <button className="filter-button" type="button" onClick={ToggleAmenities}>Amenities</button>
-        <button className="filter-button" type="button" onClick={ToggleBedrooms}>Bedrooms</button>
-        <button className="filter-button" type="button" onClick={ToggleBathrooms}>Bathrooms</button>
+      <div className="side-tab">
+        <div className="side-list">
+          <h4 style={{textDecorationLine: "underline"}}>Filters</h4>
+          <button className="filter-button" type="button" onClick={ToggleHousing}>Housing Type</button>
+          <button className="filter-button" type="button" onClick={ToggleRoommates}>Roommates</button>
+          <button className="filter-button" type="button" onClick={ToggleLocation}>Location</button>
+          <button className="filter-button" type="button" onClick={TogglePrice}>Price</button>
+          <button className="filter-button" type="button" onClick={ToggleAmenities}>Amenities</button>
+          <button className="filter-button" type="button" onClick={ToggleBedrooms}>Bedrooms</button>
+          <button className="filter-button" type="button" onClick={ToggleBathrooms}>Bathrooms</button>
+        </div>
       </div>
 
       <div className="posts-container">
