@@ -56,8 +56,8 @@
   height: 80vh;
   width: 86vw;
   display: inline-grid;
-  grid-template-columns: repeat(5, 280px);
-  grid-template-rows: repeat(2, 350px);
+  grid-template-columns: repeat(5, 17.1vw);
+  grid-template-rows: repeat(2, 35vh);
   position: absolute;
   padding-left: 0.75%;
   left: 12%;
