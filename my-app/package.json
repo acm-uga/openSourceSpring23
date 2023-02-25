@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
@@ -17,7 +18,22 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "npx eslint src",
+    "lint:fix": "npx eslint src --fix",
+    "prettier": "npx prettier --write src/**/*.{js,jsx,ts,tsx,json,css,scss,md}",
+    "prettier:check": "npx prettier --check src/**/*.{js,jsx,ts,tsx,json,css,scss,md}",
+    "format": "npx prettier --write src/**/*.{js,jsx,ts,tsx,json,css,scss,md} && npm run lint:fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,css}": "prettier --write",
+    "*.md": "prettier --write",
+    "*.json": "prettier --write"
   },
   "eslintConfig": {
     "extends": [
@@ -36,5 +52,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^13.1.2",
+    "prettier": "2.8.4"
   }
 }
