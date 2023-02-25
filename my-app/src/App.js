@@ -7,6 +7,7 @@ import HomeNavbar from './components/HomeNavbar/HomeNavbar';
 import TrendingItems from './components/TrendingItems/TrendingItems';
 import HousingPage from './components/HousingPage/HousingPage';
 import CourseSwapPage from './components/CourseSwapPage/CourseSwapPage';
+import FAQPage from './components/FAQPage/FAQPage';
 import CreateAccountPage from './components/CreateAccountPage/CreateAccountPage';
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
           <Route path="/housing" element={<HousingPage />} />
 
           <Route path="/register" element={<CreateAccountPage />} />
+
+          <Route path="/faq" element={<FAQPage />} />
         </Routes>
       </Router>
     </div>
