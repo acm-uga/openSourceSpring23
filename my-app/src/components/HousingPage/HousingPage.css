@@ -9,8 +9,8 @@
   height: 5vh;
   width: 10vw;
   position: absolute;
-  top: 3.5%;
-  left: 49.5%;
+  top: 2%;
+  left: 41.5%;
   box-shadow: 0px 0px 20px #707070;
   border-radius: 15px;
 }
@@ -19,8 +19,8 @@
   height: 5vh;
   width: 10vw;
   position: absolute;
-  top: 3.5%;
-  left: 57.5%;
+  top: 2%;
+  left: 58.5%;
   box-shadow: 0px 0px 20px #707070;
   border-radius: 15px;
 }
@@ -36,11 +36,13 @@
 
 /*.filters-tab {
   box-shadow: 0px 0px 20px #707070;
+  background-color: lightgrey;
   height: 80vh;
   width: 10vw;
   position: absolute;
   top: 10%;
   left: 1%;
+  border: 2px solid var(--color-primary);
   padding-top: 20px;
   border-radius: 15px;
   display: inline-grid;
@@ -48,6 +50,7 @@
 }*/
 
 .posts-container {
+  border: 2px solid var(--color-primary);
   box-shadow: 0px 0px 20px #707070;
   border-radius: 15px;
   height: 80vh;
@@ -56,8 +59,7 @@
   grid-template-columns: repeat(5, 220px);
   grid-template-rows: repeat(3, 220px);
   position: absolute;
-  padding-top: 20px;
-  padding-left: 10px;
+  padding-left: 0.75%;
   left: 12%;
   top: 10%;
 }
@@ -110,4 +112,35 @@ button[type='submit']:hover {
   background-color: white;
   border: 1px solid var(--color-primary);
   color: var(--color-primary);
+}
+
+.show {
+  visibility: visible;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.popup {
+  z-index: 1000;
+  position: absolute;
+  left: 11%;
+  top: 15%;
+  height: 70vh;
+  width: 15vw;
+  background-color: lightgray;
+  padding-top: 20px;
+  border-radius: 15px;
+  border: 2px solid var(--color-primary);
+}
+
+.filter-button {
+  background-color:#8B1911;
+  border-radius: 0px;
+  position: relative;
+  bottom: 0%;
+  padding: 20px;
+  border: 0px;
+  color: white
 }
