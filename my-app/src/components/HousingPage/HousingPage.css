@@ -9,8 +9,8 @@
   height: 5vh;
   width: 10vw;
   position: absolute;
-  top: 3.5%;
-  left: 49.5%;
+  top: 2%;
+  left: 41.5%;
   box-shadow: 0px 0px 20px #707070;
   border-radius: 15px;
 }
@@ -19,8 +19,8 @@
   height: 5vh;
   width: 10vw;
   position: absolute;
-  top: 3.5%;
-  left: 57.5%;
+  top: 2%;
+  left: 58.5%;
   box-shadow: 0px 0px 20px #707070;
   border-radius: 15px;
 }
@@ -59,7 +59,6 @@
   grid-template-columns: repeat(5, 220px);
   grid-template-rows: repeat(3, 220px);
   position: absolute;
-  padding-top: 1.5%;
   padding-left: 0.75%;
   left: 12%;
   top: 10%;
@@ -137,10 +136,11 @@ button[type='submit']:hover {
 }
 
 .filter-button {
-  background-color: lightgray;
-  border-radius: 15px;
+  background-color:#8B1911;
+  border-radius: 0px;
   position: relative;
-  bottom: 40%;
-  padding: 2px;
-  border: 10px;
+  bottom: 0%;
+  padding: 20px;
+  border: 0px;
+  color: white
 }
