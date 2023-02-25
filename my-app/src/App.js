@@ -1,44 +1,32 @@
 import React from 'react';
-import Navbar from './components/Navbar/Navbar';
-import LoginPage from './components/LoginPage/LoginPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginPage from './components/LoginPage/LoginPage';
 // import logo from "./logo.svg";
 import './App.css';
-import HomeNavbar from './components/HomeNavbar/HomeNavbar'
+import HomeNavbar from './components/HomeNavbar/HomeNavbar';
 import TrendingItems from './components/TrendingItems/TrendingItems';
 import HousingPage from './components/HousingPage/HousingPage';
+import CourseSwapPage from './components/CourseSwapPage/CourseSwapPage';
+import FAQPage from './components/FAQPage/FAQPage';
+import CreateAccountPage from './components/CreateAccountPage/CreateAccountPage';
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Router>
         <HomeNavbar />
         <Routes>
-          <Route
-            path='/'
-            element={<React.Fragment>
-              <TrendingItems/>
-            </React.Fragment>}
-          ></Route>
+          <Route path="/" element={<TrendingItems />} />
 
-          <Route
-            path='/login'
-            element={
-              <React.Fragment>
-                <LoginPage />
-              </React.Fragment>
-            }
-          ></Route>
+          <Route path="/login" element={<LoginPage />} />
 
-          <Route 
-            path="/housing" 
-            element={
-              <React.Fragment> 
-                <HousingPage /> 
-              </React.Fragment>
-            }
-            ></Route>
+          <Route path="/course-swap" element={<CourseSwapPage />} />
 
+          <Route path="/housing" element={<HousingPage />} />
+
+          <Route path="/register" element={<CreateAccountPage />} />
+
+          <Route path="/faq" element={<FAQPage />} />
         </Routes>
       </Router>
     </div>
@@ -61,7 +49,7 @@ function App() {
         </a>
       </header>
     </div>
-  );*/
+  ); */
 }
 
 export default App;

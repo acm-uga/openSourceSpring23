@@ -1,0 +1,27 @@
+.swap-container {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border: 5px red;
+  position: absolute;
+}
+
+.search {
+  height: 20vh;
+  max-width: 100%;
+  padding-top: 20px;
+  margin-left: 5%;
+  position: relative;
+}
+
+#search-input {
+  min-width: 60%;
+}
+
+#sort {
+  min-width: 10%;
+}
+
+#filter {
+  min-width: 10%;
+}
