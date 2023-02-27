@@ -1,0 +1,46 @@
+name: ci-cd
+
+on:
+  push:
+    branches: [ "main" ]
+
+env:
+  FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3.6.0
+      with:
+        cache: 'npm'
+        cache-dependency-path: ./my-app/package-lock.json
+    - name: prettier-frontend
+      working-directory: ./my-app
+      run: npm run prettier:check
+    - name: prepare-frontend-deps
+      working-directory: ./my-app
+      run: npm install
+    - name: build-frontend
+      working-directory: ./my-app
+      run: npm run build
+    
+    - uses: graalvm/setup-graalvm@v1
+      with:
+        version: 'latest'
+        java-version: '17'
+        components: 'native-image'
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        cache: 'maven'
+    - name: test-backend
+      working-directory: ./backend
+      run: ./mvnw test -PnativeTest
+    - name: build-backend
+      working-directory: ./backend
+      run: ./mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=uga/uga-marketplace -Pnative
+      
+    - uses: superfly/flyctl-actions/setup-flyctl@master
+    - name: deploy-container
+      run: flyctl deploy --local-only --image uga/uga-marketplace:latest

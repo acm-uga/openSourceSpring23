@@ -1,0 +1,73 @@
+# flyctl launch added from .gitignore
+.idea
+
+# flyctl launch added from .idea/.gitignore
+# Default ignored files
+.idea/shelf
+.idea/workspace.xml
+# Editor-based HTTP Client requests
+.idea/httpRequests
+# Datasource local storage ignored files
+.idea/dataSources
+.idea/dataSources.local.xml
+
+# flyctl launch added from backend/.gitignore
+backend/**/target
+!backend/**/.mvn/wrapper/maven-wrapper.jar
+!backend/**/**/src/main/**/target
+!backend/**/**/src/test/**/target
+backend/src/main/resources/public
+
+### STS ###
+backend/**/.apt_generated
+backend/**/.classpath
+backend/**/.factorypath
+backend/**/.project
+backend/**/.settings
+backend/**/.springBeans
+backend/**/.sts4-cache
+
+### IntelliJ IDEA ###
+backend/**/.idea
+backend/**/*.iws
+backend/**/*.iml
+backend/**/*.ipr
+
+### NetBeans ###
+backend/nbproject/private
+backend/nbbuild
+backend/dist
+backend/nbdist
+backend/.nb-gradle
+backend/**/build
+!backend/**/**/src/main/**/build
+!backend/**/**/src/test/**/build
+
+### VS Code ###
+backend/**/.vscode
+
+# flyctl launch added from my-app/.gitignore
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+my-app/node_modules
+my-app/.pnp
+my-app/**/.pnp.js
+
+# testing
+my-app/coverage
+
+# production
+my-app/build
+
+# misc
+my-app/**/.DS_Store
+my-app/**/.env.local
+my-app/**/.env.development.local
+my-app/**/.env.test.local
+my-app/**/.env.production.local
+
+my-app/**/npm-debug.log*
+my-app/**/yarn-debug.log*
+my-app/**/yarn-error.log*
+fly.toml

@@ -1,0 +1,68 @@
+name: ci
+
+on:
+  pull_request:
+    branches: [ "*" ]
+    
+jobs:
+
+  prettier-check:
+    runs-on: ubuntu-latest
+    steps:
+  
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3.6.0
+      with:
+        cache: 'npm'
+        cache-dependency-path: ./my-app/package-lock.json
+    - name: prettier-frontend
+      working-directory: ./my-app
+      run: npm run prettier:check
+      
+  frontend-build-check:
+    runs-on: ubuntu-latest
+    steps:
+  
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3.6.0
+      with:
+        cache: 'npm'
+        cache-dependency-path: ./my-app/package-lock.json
+    - name: prepare-frontend-deps
+      working-directory: ./my-app
+      run: npm install
+    - name: build-frontend
+      working-directory: ./my-app
+      run: npm run build
+  
+  backend-build-check:
+    runs-on: ubuntu-latest
+    steps: 
+    
+    - uses: actions/checkout@v3
+    - uses: graalvm/setup-graalvm@v1
+      with:
+        version: 'latest'
+        java-version: '17'
+        components: 'native-image'
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        cache: 'maven'
+    - name: build-backend
+      working-directory: ./backend
+      run: ./mvnw native:compile -Pnative
+  
+  backend-test-check:
+    runs-on: ubuntu-latest
+    steps: 
+    
+    - uses: actions/checkout@v3
+    - uses: graalvm/setup-graalvm@v1
+      with:
+        version: 'latest'
+        java-version: '17'
+        components: 'native-image'
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        cache: 'maven'
+    - name: test-backend
+      working-directory: ./backend
+      run: ./mvnw test -PnativeTest
