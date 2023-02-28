@@ -18,6 +18,7 @@ public class Routers {
     // be sure to place all routes under "/api/"
     // we want to minimize the chance of namespace collision in url with frontend
     return RouterFunctions.route()
+            .GET("api/goodbye", req -> handlers.goodbye())
         .GET("/api/hello", req -> handlers.hello())
         .POST("/api/echo", accept(TEXT_PLAIN), handlers::echo)
         .POST("/api/yell", accept(TEXT_PLAIN), handlers::yell)

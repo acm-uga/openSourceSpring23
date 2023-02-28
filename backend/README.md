@@ -41,6 +41,8 @@ If you've got a postgres container running, smash the button in the top right
 
 ![image](https://user-images.githubusercontent.com/50535827/220210741-e4628c41-0fcc-4f69-a40e-e577da11bcba.png)
 
+Make sure your runtime configuration is running the BackendApplication.java file
+
 And then [make a request](https://www.postman.com/) to any of the available routes in Routers.java. See below for two examples
 
 ![image](https://user-images.githubusercontent.com/50535827/220211118-60773195-a306-4abd-8c3c-e3937dcc2edb.png)

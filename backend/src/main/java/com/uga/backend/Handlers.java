@@ -25,6 +25,20 @@ public class Handlers {
   }
 
   /**
+   * Responds with a simple goodbye message
+   *
+   * @return "Goodbye Reactive People!"
+   */
+  public Mono<ServerResponse> goodbye() {
+    return ServerResponse
+            .ok()
+            .contentType(MediaType.TEXT_PLAIN)
+            .bodyValue("Goodbye Reactive People!");
+  }
+
+
+
+  /**
    * Takes the request body and responds with the same body
    *
    * @param req the incoming request
