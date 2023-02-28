@@ -136,11 +136,11 @@ button[type='submit']:hover {
 }
 
 .filter-button {
-  background-color:#8B1911;
+  background-color: #8b1911;
   border-radius: 0px;
   position: relative;
   bottom: 0%;
   padding: 20px;
   border: 0px;
-  color: white
+  color: white;
 }
