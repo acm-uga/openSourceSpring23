@@ -12,9 +12,9 @@ function TrendingItems() {
         <div className="side-list">
           <h4 style={{ textDecorationLine: 'underline' }}>Info</h4>
           {/* TODO: fix links/buttons */}
-          <Link className='text-link'>Textbooks</Link>
-          <Link className='text-link'>Course Swap</Link>
-          <Link className='text-link'>Student Housing</Link>
+          <Link className="text-link">Textbooks</Link>
+          <Link className="text-link">Course Swap</Link>
+          <Link className="text-link">Student Housing</Link>
         </div>
       </div>
       <br />

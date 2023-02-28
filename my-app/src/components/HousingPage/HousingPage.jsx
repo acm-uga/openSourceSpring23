@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 import './HousingPage.css';
 import '../MainTheme.css';
@@ -9,41 +9,40 @@ import '../MainTheme.css';
 // disable eslint for now
 /* eslint-disable */
 function HousingPage() {
-
-  const [housingFilterTab, setHousing] = useState("false");
-  const [roommatesFilterTab, setRoommates] = useState("false");
-  const [locationFilterTab, setLocation] = useState("false");
-  const [priceFilterTab, setPrice] = useState("false");
-  const [amenitiesFilterTab, setAmenities] = useState("false");
-  const [bedroomsFilterTab, setBedrooms] = useState("false");
-  const [bathroomsFilterTab, setBathrooms] = useState("false");
+  const [housingFilterTab, setHousing] = useState('false');
+  const [roommatesFilterTab, setRoommates] = useState('false');
+  const [locationFilterTab, setLocation] = useState('false');
+  const [priceFilterTab, setPrice] = useState('false');
+  const [amenitiesFilterTab, setAmenities] = useState('false');
+  const [bedroomsFilterTab, setBedrooms] = useState('false');
+  const [bathroomsFilterTab, setBathrooms] = useState('false');
   const ToggleHousing = () => {
     ToggleAll();
-    setHousing(!housingFilterTab); 
+    setHousing(!housingFilterTab);
   };
   const ToggleRoommates = () => {
     ToggleAll();
-    setRoommates(!roommatesFilterTab); 
+    setRoommates(!roommatesFilterTab);
   };
   const ToggleLocation = () => {
     ToggleAll();
-    setLocation(!locationFilterTab); 
+    setLocation(!locationFilterTab);
   };
   const TogglePrice = () => {
     ToggleAll();
-    setPrice(!priceFilterTab); 
+    setPrice(!priceFilterTab);
   };
   const ToggleAmenities = () => {
     ToggleAll();
-    setAmenities(!amenitiesFilterTab); 
+    setAmenities(!amenitiesFilterTab);
   };
   const ToggleBedrooms = () => {
     ToggleAll();
-    setBedrooms(!bedroomsFilterTab); 
+    setBedrooms(!bedroomsFilterTab);
   };
   const ToggleBathrooms = () => {
     ToggleAll();
-    setBathrooms(!bathroomsFilterTab); 
+    setBathrooms(!bathroomsFilterTab);
   };
   const ToggleAll = () => {
     if (!housingFilterTab) {
@@ -67,18 +66,31 @@ function HousingPage() {
     if (!bathroomsFilterTab) {
       setBathrooms(!bathroomsFilterTab);
     }
-  }
+  };
 
   return (
     <div className="main-container">
-
-      <div className={housingFilterTab ? "hide popup" : "show popup"}>Housing filters</div>
-      <div className={roommatesFilterTab ? "hide popup" : "show popup"}>Roommates filters</div>
-      <div className={locationFilterTab ? "hide popup" : "show popup"}>Location filters</div>
-      <div className={priceFilterTab ? "hide popup" : "show popup"}>Price filters</div>
-      <div className={amenitiesFilterTab ? "hide popup" : "show popup"}>Amenities filters</div>
-      <div className={bedroomsFilterTab ? "hide popup" : "show popup"}>Bedrooms filters</div>
-      <div className={bathroomsFilterTab ? "hide popup" : "show popup"}>Bathrooms filters</div>
+      <div className={housingFilterTab ? 'hide popup' : 'show popup'}>
+        Housing filters
+      </div>
+      <div className={roommatesFilterTab ? 'hide popup' : 'show popup'}>
+        Roommates filters
+      </div>
+      <div className={locationFilterTab ? 'hide popup' : 'show popup'}>
+        Location filters
+      </div>
+      <div className={priceFilterTab ? 'hide popup' : 'show popup'}>
+        Price filters
+      </div>
+      <div className={amenitiesFilterTab ? 'hide popup' : 'show popup'}>
+        Amenities filters
+      </div>
+      <div className={bedroomsFilterTab ? 'hide popup' : 'show popup'}>
+        Bedrooms filters
+      </div>
+      <div className={bathroomsFilterTab ? 'hide popup' : 'show popup'}>
+        Bathrooms filters
+      </div>
 
       <button type="button" className="previous">
         Prev
@@ -92,14 +104,46 @@ function HousingPage() {
 
       <div className="side-tab">
         <div className="side-list">
-          <h4 style={{textDecorationLine: "underline"}}>Filters</h4>
-          <button className="filter-button" type="button" onClick={ToggleHousing}>Housing Type</button>
-          <button className="filter-button" type="button" onClick={ToggleRoommates}>Roommates</button>
-          <button className="filter-button" type="button" onClick={ToggleLocation}>Location</button>
-          <button className="filter-button" type="button" onClick={TogglePrice}>Price</button>
-          <button className="filter-button" type="button" onClick={ToggleAmenities}>Amenities</button>
-          <button className="filter-button" type="button" onClick={ToggleBedrooms}>Bedrooms</button>
-          <button className="filter-button" type="button" onClick={ToggleBathrooms}>Bathrooms</button>
+          <h4 style={{ textDecorationLine: 'underline' }}>Filters</h4>
+          <button
+            className="filter-button"
+            type="button"
+            onClick={ToggleHousing}>
+            Housing Type
+          </button>
+          <button
+            className="filter-button"
+            type="button"
+            onClick={ToggleRoommates}>
+            Roommates
+          </button>
+          <button
+            className="filter-button"
+            type="button"
+            onClick={ToggleLocation}>
+            Location
+          </button>
+          <button className="filter-button" type="button" onClick={TogglePrice}>
+            Price
+          </button>
+          <button
+            className="filter-button"
+            type="button"
+            onClick={ToggleAmenities}>
+            Amenities
+          </button>
+          <button
+            className="filter-button"
+            type="button"
+            onClick={ToggleBedrooms}>
+            Bedrooms
+          </button>
+          <button
+            className="filter-button"
+            type="button"
+            onClick={ToggleBathrooms}>
+            Bathrooms
+          </button>
         </div>
       </div>
 
