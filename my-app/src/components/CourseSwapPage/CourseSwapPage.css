@@ -6,22 +6,85 @@
   position: absolute;
 }
 
+/*CSS for search tab */
 .search {
-  height: 20vh;
-  max-width: 100%;
-  padding-top: 20px;
-  margin-left: 5%;
-  position: relative;
+  margin-top: 20px;
+  margin-left: 15%;
+  height: 40px;
+  position: absolute;
 }
 
 #search-input {
-  min-width: 60%;
+  height: 100%;
+  width: 60vw;
 }
 
 #sort {
-  min-width: 10%;
+  height: 100%;
+  width: 10vw;
 }
 
 #filter {
-  min-width: 10%;
+  height: 100%;
+  width: 10vw;
+}
+
+/*CSS for cards*/
+.content {
+  width: 80vw;
+  height: 100px;
+  margin-top: 100px;
+  margin-left: 15vw;
+  position: absolute;
+  background-color: gray;
+}
+
+#user {
+  height: 20%;
+  position: relative;
+  background-color: inherit;
+}
+
+#tabs {
+  max-width: 50vw;
+  height: 20%;
+  background-position-x: 50;
+  position: relative;
+  background-color: greenyellow;
+}
+
+#name {
+  max-width: 50vw;
+  position: relative;
+  background-color: greenyellow;
+}
+
+#instructor {
+  max-width: 50vw;
+  position: relative;
+  background-color: greenyellow;
+}
+
+#crn {
+  max-width: 50vw;
+  position: relative;
+  background-color: greenyellow;
+}
+
+#time {
+  max-width: 50vw;
+  position: relative;
+  background-color: greenyellow;
+}
+
+#location {
+  max-width: 50vw;
+  position: relative;
+  background-color: greenyellow;
+}
+
+#option {
+  max-width: 50vw;
+  position: relative;
+  background-color: greenyellow;
 }
