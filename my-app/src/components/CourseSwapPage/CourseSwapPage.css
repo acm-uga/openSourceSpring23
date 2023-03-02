@@ -8,15 +8,22 @@
 
 /*CSS for search tab */
 .search {
-  margin-top: 20px;
-  margin-left: 15%;
   height: 40px;
-  position: absolute;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 12.5vw;
+  margin-right: 2.5vw;
+  width: 85vw;
 }
 
 #search-input {
   height: 100%;
-  width: 60vw;
+  width: 62.5vw;
+}
+
+#search-img {
+  width: 2.5vw; 
+  height: 100%;
 }
 
 #sort {
@@ -31,11 +38,12 @@
 
 /*CSS for cards*/
 .content {
-  width: 80vw;
+  width: 85vw;
   height: 100px;
-  margin-top: 100px;
-  margin-left: 15vw;
-  position: absolute;
+  margin-top: 20px;
+  margin-left: 12.5vw;
+  margin-right: 2.5vw;
+  position: relative;
   background-color: gray;
 }
 

@@ -26,7 +26,7 @@ function CourseSwapPage() {
       {/*div for search tab*/}
       <div className="search">
         <input type="text" placeholder="Search" id="search-input" />
-        <img id="search-img" src={search} alt="search" width="20vw" height="100%"/>
+        <img id="search-img" src={search} alt="search"/>
         <button type="button" id="sort">
           SORT
         </button>

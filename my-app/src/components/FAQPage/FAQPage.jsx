@@ -6,7 +6,7 @@ import './FAQPage.css';
 /* eslint-disable */
 function FAQPage() {
   return (
-    <div className="main-container">
+    <div className="main-container-faq">
       <u>
         <h1>Frequently Asked Questions</h1>
       </u>
