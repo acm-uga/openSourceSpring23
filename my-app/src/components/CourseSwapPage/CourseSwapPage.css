@@ -1,8 +1,6 @@
 .swap-container {
   height: 100%;
   width: 100%;
-  margin: 0;
-  border: 5px red;
   position: absolute;
 }
 
@@ -10,9 +8,10 @@
 .search {
   height: 40px;
   position: relative;
-  margin-top: 20px;
-  margin-left: 12.5vw;
-  margin-right: 2.5vw;
+  top: 20px;
+  margin-bottom: 20px;
+  left: 12.5vw;
+  right: 2.5vw;
   width: 85vw;
 }
 
@@ -40,59 +39,92 @@
 .content {
   width: 85vw;
   height: 100px;
-  margin-top: 20px;
-  margin-left: 12.5vw;
-  margin-right: 2.5vw;
+  top: 20px;
+  margin-bottom: 20px;
+  left: 12.5vw;
+  right: 2.5vw;
   position: relative;
   background-color: gray;
 }
 
 #user {
+  width: 25%;
   height: 20%;
-  position: relative;
-  background-color: inherit;
+  position: absolute;
+  background-color: red;
+}
+
+#gap {
+  width: 55%;
+  height: 20%;
+  left: 25%;
+  position: absolute;
+  background-color: white;
 }
 
 #tabs {
-  max-width: 50vw;
+  width: 20%;
   height: 20%;
-  background-position-x: 50;
-  position: relative;
+  position: absolute;
   background-color: greenyellow;
+  text-align: right;
+  right: 0;
+}
+
+.tab-links {
+  width: 50%;
+  position: relative;
+  background-color: orange;
 }
 
 #name {
-  max-width: 50vw;
-  position: relative;
-  background-color: greenyellow;
+  top: 20%;
+  width: 60%;
+  height: 40%;
+  position: absolute;
+  background-color: blue;
 }
 
 #instructor {
-  max-width: 50vw;
-  position: relative;
+  top: 20%;
+  left: 60%;
+  width: 20%;
+  height: 40%;
+  position: absolute;
   background-color: greenyellow;
 }
 
 #crn {
-  max-width: 50vw;
-  position: relative;
-  background-color: greenyellow;
+  bottom: 0%;
+  left: 80%;
+  width: 5%;
+  height: 40%;
+  position: absolute;
+  background-color: purple;
 }
 
 #time {
-  max-width: 50vw;
-  position: relative;
-  background-color: greenyellow;
+  top: 60%;
+  width: 60%;
+  height: 40%;
+  position: absolute;
+  background-color: pink;
 }
 
 #location {
-  max-width: 50vw;
-  position: relative;
-  background-color: greenyellow;
+  top: 60%;
+  width: 20%;
+  left: 60%;
+  height: 40%;
+  position: absolute;
+  background-color: magenta;
 }
 
 #option {
-  max-width: 50vw;
-  position: relative;
-  background-color: greenyellow;
+  top: 40%;
+  right: 2.5%;
+  width: 10%;
+  height: 40%;
+  position: absolute;
+  background-color: white;
 }

@@ -39,9 +39,10 @@ function CourseSwapPage() {
       <div className='content'>
         <div>
           <div id='user'>ShaHos348</div>
+          <div id='gap'></div>
           <div id='tabs'>
-            <button class="tablinks" onclick="open(event, 'Offer')">Offered</button>
-            <button class="tablinks" onclick="open(event, 'Request')">Requested</button>
+            <button class="tab-links" onclick="open(event, 'Offer')">Offered</button>
+            <button class="tab-links" onclick="open(event, 'Request')">Requested</button>
           </div>
         </div>
         <div id='name'>POLS 1101 - American Government</div>
@@ -49,7 +50,7 @@ function CourseSwapPage() {
         <div id='crn'>42069</div>
         <div id='time'>[------]</div>
         <div id='location'>Park Hall</div>
-        <div id='option'>DEAL</div>
+        <button id='option'>DEAL</button>
       </div>
       
     </div>
