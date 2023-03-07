@@ -1,5 +1,5 @@
 .swap-container {
-  height: 100%;
+  height: fit-content;
   width: 100%;
   position: absolute;
 }
@@ -33,6 +33,28 @@
 #filter {
   height: 100%;
   width: 10vw;
+}
+
+.showC {
+  visibility: visible;
+}
+
+.hideC {
+  visibility: hidden;
+}
+
+.popupC {
+  z-index: 1000;
+  position: absolute;
+  left: 12.5vw;
+  right: 2.5vw;
+  top: 70px;
+  height: 70vh;
+  width: 85vw;
+  background-color: lightgray;
+  padding-top: 20px;
+  border-radius: 15px;
+  border: 2px solid var(--color-primary);
 }
 
 /*CSS for cards*/

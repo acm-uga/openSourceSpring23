@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/book-swap.png';
 import search from '../../assets/search.png';
+import { useState } from 'react';
 
 import './CourseSwapPage.css';
 import '../MainTheme.css';
@@ -9,8 +10,34 @@ import '../MainTheme.css';
 // disable eslint for Links right now
 /* eslint-disable */
 function CourseSwapPage() {
+  const [courseFilterTab, setCourses] = useState('false');
+  const [courseSortTab, setSort] = useState('false');
+  const toggleCourses = () => {
+    ToggleAll();
+    setCourses(!courseFilterTab);
+  };
+  const toggleSort = () => {
+    ToggleAll();
+    setSort(!courseSortTab);
+  };
+  const ToggleAll = () => {
+    if (!courseFilterTab) {
+      setCourses(!courseFilterTab);
+    }
+    if (!courseSortTab) {
+      setSort(!courseSortTab);
+    }
+  };
+
   return (
     <div className="swap-container">
+      <div className={courseFilterTab ? 'hideC popupC' : 'showC popupC'}>
+        Course filters
+      </div>
+      <div className={courseSortTab ? 'hideC popupC' : 'showC popupC'}>
+        Course Sorts
+      </div>
+
       {/*div for sidebar with pages in CourseSwap*/}
       <div className="side-tab">
         <img src={logo} alt="course-swap-logo" width={'50%'} />
@@ -27,10 +54,10 @@ function CourseSwapPage() {
       <div className="search">
         <input type="text" placeholder="Search" id="search-input" />
         <img id="search-img" src={search} alt="search"/>
-        <button type="button" id="sort">
+        <button type="button" id="sort" onClick={toggleSort}>
           SORT
         </button>
-        <button type="button" id="filter">
+        <button type="button" id="filter" onClick={toggleCourses}>
           FILTER
         </button>
       </div>
