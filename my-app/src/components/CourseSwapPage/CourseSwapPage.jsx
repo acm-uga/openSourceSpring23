@@ -53,7 +53,7 @@ function CourseSwapPage() {
       {/*div for search tab*/}
       <div className="search">
         <input type="text" placeholder="Search" id="search-input" />
-        <img id="search-img" src={search} alt="search"/>
+        <img id="search-img" src={search} alt="search" />
         <button type="button" id="sort" onClick={toggleSort}>
           SORT
         </button>
@@ -63,23 +63,22 @@ function CourseSwapPage() {
       </div>
 
       {/*div for main course swap content*/}
-      <div className='content'>
+      <div className="content">
         <div>
-          <div id='user'>ShaHos348</div>
-          <div id='gap'></div>
-          <div id='tabs'>
-            <button class="tab-links" onclick="open(event, 'Offer')">Offered</button>
-            <button class="tab-links" onclick="open(event, 'Request')">Requested</button>
+          <div id="user">ShaHos348</div>
+          <div id="gap"></div>
+          <div id="tabs">
+            <button className="tab-links">Offered</button>
+            <button className="tab-links">Requested</button>
           </div>
         </div>
-        <div id='name'>POLS 1101 - American Government</div>
-        <div id='instructor'>Shahbin Hossain</div>
-        <div id='crn'>42069</div>
-        <div id='time'>[------]</div>
-        <div id='location'>Park Hall</div>
-        <button id='option'>DEAL</button>
+        <div id="name">POLS 1101 - American Government</div>
+        <div id="instructor">Shahbin Hossain</div>
+        <div id="crn">42069</div>
+        <div id="time">[------]</div>
+        <div id="location">Park Hall</div>
+        <button id="option">DEAL</button>
       </div>
-      
     </div>
   );
 }
