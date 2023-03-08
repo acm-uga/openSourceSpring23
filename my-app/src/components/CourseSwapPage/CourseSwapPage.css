@@ -46,9 +46,7 @@
 .popupC {
   z-index: 1000;
   position: absolute;
-  left: 12.5vw;
-  right: 2.5vw;
-  top: 70px;
+  top: 50px;
   height: 70vh;
   width: 85vw;
   background-color: lightgray;
