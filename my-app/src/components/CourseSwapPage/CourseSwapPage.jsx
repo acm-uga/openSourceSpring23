@@ -76,42 +76,47 @@ function SearchBar() {
 
   return (
     <div className="search">
-      <div className={courseFilterTab ? 'hideC popupC' : 'showC popupC'}>
-        Course Filters
-        <div>
-          <div>
+      <div className={courseFilterTab ? 'hide popupC' : 'show popupC'}>
+        <h3>Filters</h3>
+        <div id="filter-content">
+          <div className="filter-subcontent">
             <label>Subject</label>
             <input type="text" placeholder="Subject" />
           </div>
-          <div>
+          <div className="filter-subcontent">
             <label>Course Number</label>
             <input type="text" placeholder="Course Number" />
           </div>
-          <div>
+          <div className="filter-subcontent">
             <label>Location</label>
             <input type="text" placeholder="Location" />
           </div>
-          <div>
+          <div className="filter-subcontent">
             <label>Instructor</label>
             <input type="text" placeholder="Instructor" />
           </div>
+          <button className="filter-subcontent">FILTER</button>
         </div>
       </div>
-      <div className={courseSortTab ? 'hideC popupC' : 'showC popupC'}>
-        Course Sorts
-        <div>
-          <button>Title</button>
-          <button>Subject</button>
-          <button>Course Number</button>
-          <button>CRN</button>
+
+      <div className={courseSortTab ? 'hide popupC' : 'show popupC'}>
+        <h3>Sorts</h3>
+        <div id="sort-content">
+          <button className="sort-options">Title</button>
+          <button className="sort-options">Subject</button>
+          <button className="sort-options">Course Number</button>
+          <button className="sort-options">CRN</button>
         </div>
       </div>
+
       <input type="text" placeholder="Search" id="search-input" />
-      <img id="search-img" src={search} alt="search" />
-      <button type="button" id="sort" onClick={toggleSort}>
+      <button id="searchBtn">
+        <img src={search} alt="search" />
+      </button>
+      <button type="button" id="sortBtn" onClick={toggleSort}>
         SORT
       </button>
-      <button type="button" id="filter" onClick={toggleCourses}>
+      <button type="button" id="filterBtn" onClick={toggleCourses}>
         FILTER
       </button>
     </div>
