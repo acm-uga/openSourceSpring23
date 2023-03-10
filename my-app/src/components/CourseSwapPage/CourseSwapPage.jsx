@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/book-swap.png';
 import search from '../../assets/search.png';
 import { useState } from 'react';
-
 import './CourseSwapPage.css';
 import '../MainTheme.css';
 
@@ -19,22 +18,57 @@ function CourseSwapPage() {
       <SearchBar />
 
       {/*div for main course swap content*/}
-      <div className="content">
-        <div>
-          <div id="user">ShaHos348</div>
-          <div id="gap"></div>
-          <div id="tabs">
-            <button className="tab-links">Offered</button>
-            <button className="tab-links">Requested</button>
-          </div>
-        </div>
+      <CourseSwapContent />
+    </div>
+  );
+}
+
+function CourseSwapContent() {
+  const [offerContent, setOfferContent] = useState('false');
+  const [requestContent, setRequestContent] = useState('false');
+
+  const toggleCourseTab = which => {
+    if (which === 'offered' && !offerContent) {
+      setRequestContent(!requestContent);
+      setOfferContent(!offerContent);
+    }
+    if (which === 'requested' && requestContent) {
+      setRequestContent(!requestContent);
+      setOfferContent(!offerContent);
+    }
+  };
+
+  return (
+    <div className="content">
+      <div id="user">ShaHos348</div>
+      <div id="gap"></div>
+      <div id="tabs">
+        <button
+          className="tab-links"
+          onClick={() => toggleCourseTab('offered')}>
+          Offered
+        </button>
+        <button
+          className="tab-links"
+          onClick={() => toggleCourseTab('requested')}>
+          Requested
+        </button>
+      </div>
+      <div className={offerContent ? 'show' : 'hide'}>
         <div id="name">POLS 1101 - American Government</div>
         <div id="instructor">Shahbin Hossain</div>
         <div id="crn">42069</div>
         <div id="time">[------]</div>
         <div id="location">Park Hall</div>
-        <button id="option">DEAL</button>
       </div>
+      <div className={requestContent ? 'hide' : 'show'}>
+        <div id="name">CSCI 2610 - Discrete Mathematics</div>
+        <div id="instructor">Abraham Lincoln</div>
+        <div id="crn">66666</div>
+        <div id="time">[------]</div>
+        <div id="location">Terry Hall</div>
+      </div>
+      <button id="option">DEAL</button>
     </div>
   );
 }
@@ -55,11 +89,11 @@ function SideBar() {
 }
 
 function SearchBar() {
-  const [courseFilterTab, setCourses] = useState('false');
+  const [courseFilterTab, setFilter] = useState('false');
   const [courseSortTab, setSort] = useState('false');
   const toggleCourses = () => {
     ToggleAll();
-    setCourses(!courseFilterTab);
+    setFilter(!courseFilterTab);
   };
   const toggleSort = () => {
     ToggleAll();
@@ -67,7 +101,7 @@ function SearchBar() {
   };
   const ToggleAll = () => {
     if (!courseFilterTab) {
-      setCourses(!courseFilterTab);
+      setFilter(!courseFilterTab);
     }
     if (!courseSortTab) {
       setSort(!courseSortTab);
