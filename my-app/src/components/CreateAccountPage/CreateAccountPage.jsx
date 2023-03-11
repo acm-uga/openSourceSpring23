@@ -9,37 +9,43 @@ const CreateAccountPage = () => {
   const [password, setPassword] = useState();
   const [confirm, setConfirm] = useState();
 
-  const emailRegex = '^[A-Za-z0-9._%+-]+@uga.com$';
+  const emailRegex = '^[A-Za-z0-9._%+-]+@uga.edu$';
 
   const numberRegex =
     '/^(?:(?:(?(?:00|+)([1-4]dd|[1-9]d+))?)[-. \\/]?)?((?:(?d{1,})?[-. \\/]?)+)(?:[-. \\/]?(?:#|ext.?|extension|x)[-. \\/]?(d+))?$/i';
 
   const validCreation = () => {
-    if (!checkPasswords()) {
-      alert('Passwords need to be the same');
+    try {
+      checkPasswords();
+      checkEmail();
+      checkNumber();
+    } catch (error) {
+      alert(error.message);
+      return false;
     }
-
-    if (!checkEmail()) {
-      alert('Email must end with uga.edu');
-    }
-
-    if (!checkNumber()) {
-      alert(
-        'Phone Number must be in the form XXX-XXX-XXXX, XXXXXXXXX, or (XXX)-XXX-XXXX'
-      );
-    }
-
     return true;
   };
 
   const checkPasswords = () => {
-    return password === confirm;
+    if (password === confirm) {
+      return true;
+    }
+    throw new Error('Passwords must match');
   };
+
   const checkEmail = () => {
-    return emailRegex.test(email);
+    if (emailRegex.test(email)) {
+      return true;
+    }
+    throw new Error('Email must end with @uga.edu');
   };
   const checkNumber = () => {
-    return numberRegex.test(number);
+    if (numberRegex.test(number)) {
+      return true;
+    }
+    throw new Error(
+      'Phone number must be in the format XXX-XXX-XXXX or XXXXXXXXXX'
+    );
   };
 
   return (
