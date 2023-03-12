@@ -78,12 +78,20 @@
 /*CSS for cards*/
 
 .content {
-  width: 85vw;
-  height: 100px;
+  width: fit-content;
+  height: fit-content;
   top: 20px;
-  margin-bottom: 20px;
+  padding-left: 0;
   left: 12.5vw;
   right: 2.5vw;
+  position: relative;
+  list-style-type: none;
+}
+
+.subcontent {
+  width: 85vw;
+  height: 100px;
+  margin-bottom: 20px;
   position: relative;
   background-color: gray;
   border-radius: 20px;
@@ -123,6 +131,10 @@
   background-color: orange;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+.selected-tab {
+  background-color: orangered;
 }
 
 #name {

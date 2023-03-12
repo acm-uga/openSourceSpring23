@@ -5,6 +5,7 @@ import search from '../../assets/search.png';
 import { useState } from 'react';
 import './CourseSwapPage.css';
 import '../MainTheme.css';
+import { CardTab, TabSwitcher, TabContent } from '../Tab';
 
 // disable eslint for Links right now
 /* eslint-disable */
@@ -24,52 +25,164 @@ function CourseSwapPage() {
 }
 
 function CourseSwapContent() {
-  const [offerContent, setOfferContent] = useState('false');
-  const [requestContent, setRequestContent] = useState('false');
-
-  const toggleCourseTab = which => {
-    if (which === 'offered' && !offerContent) {
-      setRequestContent(!requestContent);
-      setOfferContent(!offerContent);
-    }
-    if (which === 'requested' && requestContent) {
-      setRequestContent(!requestContent);
-      setOfferContent(!offerContent);
-    }
-  };
-
   return (
-    <div className="content">
-      <div id="user">ShaHos348</div>
-      <div id="gap"></div>
-      <div id="tabs">
-        <button
-          className="tab-links"
-          onClick={() => toggleCourseTab('offered')}>
-          Offered
-        </button>
-        <button
-          className="tab-links"
-          onClick={() => toggleCourseTab('requested')}>
-          Requested
-        </button>
-      </div>
-      <div className={offerContent ? 'show' : 'hide'}>
-        <div id="name">POLS 1101 - American Government</div>
-        <div id="instructor">Shahbin Hossain</div>
-        <div id="crn">42069</div>
-        <div id="time">[------]</div>
-        <div id="location">Park Hall</div>
-      </div>
-      <div className={requestContent ? 'hide' : 'show'}>
-        <div id="name">CSCI 2610 - Discrete Mathematics</div>
-        <div id="instructor">Abraham Lincoln</div>
-        <div id="crn">66666</div>
-        <div id="time">[------]</div>
-        <div id="location">Terry Hall</div>
-      </div>
-      <button id="option">DEAL</button>
-    </div>
+    <ul className="content">
+      <li className="subcontent">
+        <div id="user">Terry Boi James</div>
+        <div id="gap"></div>
+        <CardTab>
+          <div id="tabs">
+            <TabSwitcher tabId={1}>Offered</TabSwitcher>
+            <TabSwitcher tabId={2}>Requested</TabSwitcher>
+          </div>
+          <div>
+            <TabContent id={1}>
+              <div>
+                <div id="name">POLS 1101 - American Government</div>
+                <div id="instructor">Shahbin Hossain</div>
+                <div id="crn">42069</div>
+                <div id="time">[------]</div>
+                <div id="location">Park Hall</div>
+              </div>
+            </TabContent>
+            <TabContent id={2}>
+              <div>
+                <div id="name">CSCI 2610 - Discrete Mathematics</div>
+                <div id="instructor">Abraham Lincoln</div>
+                <div id="crn">66666</div>
+                <div id="time">[------]</div>
+                <div id="location">Terry Hall</div>
+              </div>
+            </TabContent>
+          </div>
+        </CardTab>
+        <button id="option">DEAL</button>
+      </li>
+      <li className="subcontent">
+        <div id="user">No Girls Jeffrey</div>
+        <div id="gap"></div>
+        <CardTab>
+          <div id="tabs">
+            <TabSwitcher tabId={1}>Offered</TabSwitcher>
+            <TabSwitcher tabId={2}>Requested</TabSwitcher>
+          </div>
+          <div>
+            <TabContent id={1}>
+              <div>
+                <div id="name">CSCI 1302 - Software Development</div>
+                <div id="instructor">Shah Bin Hossain</div>
+                <div id="crn">69420</div>
+                <div id="time">[------]</div>
+                <div id="location">Park Hall</div>
+              </div>
+            </TabContent>
+            <TabContent id={2}>
+              <div>
+                <div id="name">CSCI 2610 - Discrete Mathematics</div>
+                <div id="instructor">Abraham Lincoln</div>
+                <div id="crn">66666</div>
+                <div id="time">[------]</div>
+                <div id="location">Terry Hall</div>
+              </div>
+            </TabContent>
+          </div>
+        </CardTab>
+        <button id="option">DEAL</button>
+      </li>
+      <li className="subcontent">
+        <div id="user">Downbad Augustin</div>
+        <div id="gap"></div>
+        <CardTab>
+          <div id="tabs">
+            <TabSwitcher tabId={1}>Offered</TabSwitcher>
+            <TabSwitcher tabId={2}>Requested</TabSwitcher>
+          </div>
+          <div>
+            <TabContent id={1}>
+              <div>
+                <div id="name">POLS 1101 - American Government</div>
+                <div id="instructor">Shahbin Hossain</div>
+                <div id="crn">42069</div>
+                <div id="time">[------]</div>
+                <div id="location">Park Hall</div>
+              </div>
+            </TabContent>
+            <TabContent id={2}>
+              <div>
+                <div id="name">CSCI 2610 - Discrete Mathematics</div>
+                <div id="instructor">Abraham Lincoln</div>
+                <div id="crn">66666</div>
+                <div id="time">[------]</div>
+                <div id="location">Terry Hall</div>
+              </div>
+            </TabContent>
+          </div>
+        </CardTab>
+        <button id="option">DEAL</button>
+      </li>
+      <li className="subcontent">
+        <div id="user">Engineer Eddie</div>
+        <div id="gap"></div>
+        <CardTab>
+          <div id="tabs">
+            <TabSwitcher tabId={1}>Offered</TabSwitcher>
+            <TabSwitcher tabId={2}>Requested</TabSwitcher>
+          </div>
+          <div>
+            <TabContent id={1}>
+              <div>
+                <div id="name">POLS 1101 - American Government</div>
+                <div id="instructor">Shahbin Hossain</div>
+                <div id="crn">42069</div>
+                <div id="time">[------]</div>
+                <div id="location">Park Hall</div>
+              </div>
+            </TabContent>
+            <TabContent id={2}>
+              <div>
+                <div id="name">CSCI 2610 - Discrete Mathematics</div>
+                <div id="instructor">Abraham Lincoln</div>
+                <div id="crn">66666</div>
+                <div id="time">[------]</div>
+                <div id="location">Terry Hall</div>
+              </div>
+            </TabContent>
+          </div>
+        </CardTab>
+        <button id="option">DEAL</button>
+      </li>
+      <li className="subcontent">
+        <div id="user">xxxDaddySha69</div>
+        <div id="gap"></div>
+        <CardTab>
+          <div id="tabs">
+            <TabSwitcher tabId={1}>Offered</TabSwitcher>
+            <TabSwitcher tabId={2}>Requested</TabSwitcher>
+          </div>
+          <div>
+            <TabContent id={1}>
+              <div>
+                <div id="name">POLS 1101 - American Government</div>
+                <div id="instructor">Shahbin Hossain</div>
+                <div id="crn">42069</div>
+                <div id="time">[------]</div>
+                <div id="location">Park Hall</div>
+              </div>
+            </TabContent>
+            <TabContent id={2}>
+              <div>
+                <div id="name">CSCI 2610 - Discrete Mathematics</div>
+                <div id="instructor">Abraham Lincoln</div>
+                <div id="crn">66666</div>
+                <div id="time">[------]</div>
+                <div id="location">Terry Hall</div>
+              </div>
+            </TabContent>
+          </div>
+        </CardTab>
+        <button id="option">DEAL</button>
+      </li>
+    </ul>
   );
 }
 
