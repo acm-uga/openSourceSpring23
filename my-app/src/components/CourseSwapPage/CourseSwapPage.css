@@ -1,27 +1,190 @@
 .swap-container {
-  height: 100%;
+  height: fit-content;
   width: 100%;
-  margin: 0;
-  border: 5px red;
   position: absolute;
 }
 
-.search {
-  height: 20vh;
-  max-width: 100%;
-  padding-top: 20px;
-  margin-left: 5%;
+/*CSS for search tab */
+.cs-search {
+  height: 40px;
   position: relative;
+  top: 20px;
+  margin-bottom: 20px;
+  left: 12.5vw;
+  right: 2.5vw;
+  width: 85vw;
 }
 
-#search-input {
-  min-width: 60%;
+#cs-search-input {
+  height: 100%;
+  width: 62.5vw;
 }
 
-#sort {
-  min-width: 10%;
+#cs-searchBtn {
+  width: 2.5vw;
+  height: 100%;
 }
 
-#filter {
-  min-width: 10%;
+#cs-sortBtn {
+  height: 100%;
+  width: 10vw;
+}
+
+#cs-sort-content {
+  display: inline-grid;
+  width: 90%;
+}
+
+.cs-sort-options {
+  margin-top: 10px;
+}
+
+#cs-filterBtn {
+  height: 100%;
+  width: 10vw;
+}
+
+#cs-filter-content {
+  width: fit-content;
+}
+
+.cs-filter-subcontent {
+  margin-top: 10px;
+}
+
+.show {
+  visibility: visible;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.cs-popup {
+  z-index: 1000;
+  position: absolute;
+  top: 40px;
+  height: fit-content;
+  right: 0;
+  width: 20vw;
+  background-color: lightgray;
+  padding-bottom: 20px;
+  border-radius: 15px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border: 2px solid var(--color-primary);
+}
+
+/*CSS for cards*/
+
+.cs-content {
+  width: fit-content;
+  height: fit-content;
+  top: 20px;
+  padding-left: 0;
+  left: 12.5vw;
+  right: 2.5vw;
+  position: relative;
+  list-style-type: none;
+}
+
+.cs-subcontent {
+  width: 85vw;
+  height: 100px;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: gray;
+  border-radius: 20px;
+  border-top-right-radius: 10px;
+  border-color: red;
+  overflow: hidden;
+}
+
+#user {
+  width: 25%;
+  height: 20%;
+  position: absolute;
+  background-color: red;
+}
+
+#gap {
+  width: 70%;
+  height: 20%;
+  left: 25%;
+  position: absolute;
+  background-color: white;
+}
+
+#tabs {
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  background-color: transparent;
+  text-align: right;
+  border-top-left-radius: 10px;
+  right: 0;
+}
+
+.cs-content-tab-links {
+  width: 50%;
+  position: relative;
+  background-color: orange;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.selected-tab {
+  background-color: orangered;
+}
+
+#name {
+  top: 20%;
+  width: 60%;
+  height: 40%;
+  position: absolute;
+  background-color: blue;
+}
+
+#instructor {
+  top: 20%;
+  left: 60%;
+  width: 20%;
+  height: 40%;
+  position: absolute;
+  background-color: greenyellow;
+}
+
+#crn {
+  bottom: 0%;
+  left: 80%;
+  width: 5%;
+  height: 40%;
+  position: absolute;
+  background-color: purple;
+}
+
+#time {
+  top: 60%;
+  width: 60%;
+  height: 40%;
+  position: absolute;
+  background-color: pink;
+}
+
+#location {
+  top: 60%;
+  width: 20%;
+  left: 60%;
+  height: 40%;
+  position: absolute;
+  background-color: magenta;
+}
+
+#option {
+  top: 40%;
+  right: 2.5%;
+  width: 10%;
+  height: 40%;
+  position: absolute;
+  background-color: white;
 }
