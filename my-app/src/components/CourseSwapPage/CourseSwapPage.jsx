@@ -5,7 +5,7 @@ import search from '../../assets/search.png';
 import { useState } from 'react';
 import './CourseSwapPage.css';
 import '../MainTheme.css';
-import { CardTab, TabSwitcher, TabContent } from '../Tab';
+import { CardTab, TabSwitcher, TabContent } from './Tab';
 
 // disable eslint for Links right now
 /* eslint-disable */
@@ -26,8 +26,8 @@ function CourseSwapPage() {
 
 function CourseSwapContent() {
   return (
-    <ul className="content">
-      <li className="subcontent">
+    <ul className="cs-content">
+      <li className="cs-subcontent">
         <div id="user">Terry Boi James</div>
         <div id="gap"></div>
         <CardTab>
@@ -58,7 +58,7 @@ function CourseSwapContent() {
         </CardTab>
         <button id="option">DEAL</button>
       </li>
-      <li className="subcontent">
+      <li className="cs-subcontent">
         <div id="user">No Girls Jeffrey</div>
         <div id="gap"></div>
         <CardTab>
@@ -89,7 +89,7 @@ function CourseSwapContent() {
         </CardTab>
         <button id="option">DEAL</button>
       </li>
-      <li className="subcontent">
+      <li className="cs-subcontent">
         <div id="user">Downbad Augustin</div>
         <div id="gap"></div>
         <CardTab>
@@ -120,7 +120,7 @@ function CourseSwapContent() {
         </CardTab>
         <button id="option">DEAL</button>
       </li>
-      <li className="subcontent">
+      <li className="cs-subcontent">
         <div id="user">Engineer Eddie</div>
         <div id="gap"></div>
         <CardTab>
@@ -151,7 +151,7 @@ function CourseSwapContent() {
         </CardTab>
         <button id="option">DEAL</button>
       </li>
-      <li className="subcontent">
+      <li className="cs-subcontent">
         <div id="user">xxxDaddySha69</div>
         <div id="gap"></div>
         <CardTab>
@@ -222,48 +222,48 @@ function SearchBar() {
   };
 
   return (
-    <div className="search">
-      <div className={courseFilterTab ? 'hide popupC' : 'show popupC'}>
+    <div className="cs-search">
+      <div className={courseFilterTab ? 'hide cs-popup' : 'show cs-popup'}>
         <h3>Filters</h3>
-        <div id="filter-content">
-          <div className="filter-subcontent">
+        <div id="cs-filter-content">
+          <div className="cs-filter-subcontent">
             <label>Subject</label>
             <input type="text" placeholder="Subject" />
           </div>
-          <div className="filter-subcontent">
+          <div className="cs-filter-subcontent">
             <label>Course Number</label>
             <input type="text" placeholder="Course Number" />
           </div>
-          <div className="filter-subcontent">
+          <div className="cs-filter-subcontent">
             <label>Location</label>
             <input type="text" placeholder="Location" />
           </div>
-          <div className="filter-subcontent">
+          <div className="cs-filter-subcontent">
             <label>Instructor</label>
             <input type="text" placeholder="Instructor" />
           </div>
-          <button className="filter-subcontent">FILTER</button>
+          <button className="cs-filter-subcontent">FILTER</button>
         </div>
       </div>
 
-      <div className={courseSortTab ? 'hide popupC' : 'show popupC'}>
+      <div className={courseSortTab ? 'hide cs-popup' : 'show cs-popup'}>
         <h3>Sorts</h3>
-        <div id="sort-content">
-          <button className="sort-options">Title</button>
-          <button className="sort-options">Subject</button>
-          <button className="sort-options">Course Number</button>
-          <button className="sort-options">CRN</button>
+        <div id="cs-sort-content">
+          <button className="cs-sort-options">Title</button>
+          <button className="cs-sort-options">Subject</button>
+          <button className="cs-sort-options">Course Number</button>
+          <button className="cs-sort-options">CRN</button>
         </div>
       </div>
 
-      <input type="text" placeholder="Search" id="search-input" />
-      <button id="searchBtn">
+      <input type="text" placeholder="Search" id="cs-search-input" />
+      <button id="cs-searchBtn">
         <img src={search} alt="search" />
       </button>
-      <button type="button" id="sortBtn" onClick={toggleSort}>
+      <button type="button" id="cs-sortBtn" onClick={toggleSort}>
         SORT
       </button>
-      <button type="button" id="filterBtn" onClick={toggleCourses}>
+      <button type="button" id="cs-filterBtn" onClick={toggleCourses}>
         FILTER
       </button>
     </div>

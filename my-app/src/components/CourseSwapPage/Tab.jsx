@@ -1,5 +1,4 @@
 import React from 'react';
-import './MainTheme.css';
 
 const TabContext = React.createContext();
 
@@ -22,7 +21,7 @@ function TabSwitcher({ children, tabId, activeClass = 'selected-tab' }) {
 
   const onClick = () => setTab(tabId);
 
-  const className = ['tab-links'];
+  const className = ['cs-content-tab-links'];
   if (activeTab === tabId) className.push(activeClass);
   return (
     <button className={className.join(' ')} onClick={onClick}>
