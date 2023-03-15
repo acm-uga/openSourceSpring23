@@ -53,8 +53,6 @@ const logout = () => {
 };
 
 const logInWithEmailAndPassword = async (email, password) => {
-  console.log(email);
-  console.log(password);
   try {
     await signInWithEmailAndPassword(auth, email, password);
     alert('Success');

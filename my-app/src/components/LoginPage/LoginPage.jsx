@@ -11,7 +11,7 @@ function LoginPage() {
   const handleSubmit = () => {
     console.log(email);
     console.log(password);
-    logInWithEmailAndPassword(email, setPassword);
+    logInWithEmailAndPassword(email, password);
   };
 
   return (
