@@ -2,6 +2,7 @@
 
 Welcome to the Open Source Project! We meet every Wednesday on Discord at 5:30pm - 6:00pm. We're excited to build something amazing together!
 
+<b> Project URL </b>: https://uga-marketplace.fly.dev/
 
 <b>Project Google Doc</b>: https://docs.google.com/document/d/1mQmhqu-vUGuBPI9OOYplPoU0yFRHXkM2SMmblyB4Oes/edit
 
