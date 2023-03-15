@@ -8,10 +8,8 @@ function LoginPage() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  const handleSubmit = () => {
-    console.log(email);
-    console.log(password);
-    logInWithEmailAndPassword(email, password);
+  const handleSubmit = async () => {
+    await logInWithEmailAndPassword(email, password);
   };
 
   return (

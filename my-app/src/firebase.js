@@ -17,15 +17,16 @@ import {
   addDoc,
 } from 'firebase/firestore';
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+console.log(process.env.REACT_APP_APIKEY);
+
 const firebaseConfig = {
-  apiKey: 'AIzaSyD0wnaD8SQZw9h2D0nJ0XRjUHS4nAxtf8s',
-  authDomain: 'uga-marketplace.firebaseapp.com',
-  projectId: 'uga-marketplace',
-  storageBucket: 'uga-marketplace.appspot.com',
-  messagingSenderId: '229277322852',
-  appId: '1:229277322852:web:5dc4f06b41a379da08d971',
-  measurementId: 'G-SKKXFXRG35',
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJID,
+  storageBucket: process.env.REACT_APP_STORAGE,
+  messagingSenderId: process.env.REACT_APP_SENDER,
+  appId: process.env.REACT_APP_APPID,
+  measurementId: process.env.REACT_APP_MEASURMENT,
 };
 
 const app = initializeApp(firebaseConfig);

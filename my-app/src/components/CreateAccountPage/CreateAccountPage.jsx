@@ -9,10 +9,10 @@ const CreateAccountPage = () => {
 
   const emailRegex = new RegExp('^[A-Za-z0-9._%+-]+@uga.edu$');
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (validCreation()) {
       console.log('Success');
-      registerWithEmailAndPassword(auth, email, password);
+      await registerWithEmailAndPassword(auth, email, password);
     }
   };
 
