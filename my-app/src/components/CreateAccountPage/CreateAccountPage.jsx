@@ -11,8 +11,7 @@ const CreateAccountPage = () => {
 
   const handleSubmit = async () => {
     if (validCreation()) {
-      console.log('Success');
-      await registerWithEmailAndPassword(auth, email, password);
+      registerWithEmailAndPassword(auth, email, password);
     }
   };
 
