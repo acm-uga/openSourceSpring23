@@ -66,3 +66,4 @@ Austin Perales - Discord: @austin-perales#3947
 
 Jack Fletcher - Discord: Box Fletcher-east-1#0001
 
+Suhani Patel - Discord: @Suhani#5775
