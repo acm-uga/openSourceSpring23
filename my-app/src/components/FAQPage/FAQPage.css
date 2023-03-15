@@ -1,0 +1,54 @@
+/*header*/
+u {
+  text-decoration-color: rgb(215, 87, 69);
+}
+
+/*body*/
+.main-container-faq {
+  margin-top: 3em;
+}
+
+.qa-container {
+  padding-left: 25%;
+  padding-right: 25%;
+  margin-top: 3em;
+}
+
+.question {
+  display: flex;
+  background-color: rgb(230, 230, 230);
+  border-left: 0.5em solid;
+  border-color: rgb(215, 87, 69);
+}
+
+.q {
+  margin: 0;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  color: rgb(215, 87, 69);
+  font-size: 3em;
+}
+
+.qText {
+  margin: 0;
+}
+
+.answer {
+  display: flex;
+  background-color: rgb(244, 244, 244);
+  border-left: 0.5em solid;
+  border-color: rgb(157, 157, 157);
+  color: rgb(102, 102, 102);
+}
+
+.a {
+  margin: 0;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  color: rgb(157, 157, 157);
+  font-size: 3em;
+}
+
+.aText {
+  margin: 0;
+}

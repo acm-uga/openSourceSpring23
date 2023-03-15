@@ -1,0 +1,146 @@
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  border: 500px red;
+  position: relative;
+}
+
+.previous {
+  height: 5vh;
+  width: 10vw;
+  position: absolute;
+  top: 2%;
+  left: 41.5%;
+  box-shadow: 0px 0px 20px #707070;
+  border-radius: 15px;
+}
+
+.next {
+  height: 5vh;
+  width: 10vw;
+  position: absolute;
+  top: 2%;
+  left: 58.5%;
+  box-shadow: 0px 0px 20px #707070;
+  border-radius: 15px;
+}
+
+.page-num {
+  border-radius: 15px;
+  background-color: lightgray;
+  position: absolute;
+  width: 3vw;
+  top: 3.4%;
+  left: 53.5%;
+}
+
+/*.filters-tab {
+  box-shadow: 0px 0px 20px #707070;
+  background-color: lightgrey;
+  height: 80vh;
+  width: 10vw;
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  border: 2px solid var(--color-primary);
+  padding-top: 20px;
+  border-radius: 15px;
+  display: inline-grid;
+  grid-template-rows: auto;
+}*/
+
+.posts-container {
+  border: 2px solid var(--color-primary);
+  box-shadow: 0px 0px 20px #707070;
+  border-radius: 15px;
+  height: 80vh;
+  width: 86vw;
+  display: inline-grid;
+  grid-template-columns: repeat(5, 17.1vw);
+  grid-template-rows: repeat(2, 35vh);
+  position: absolute;
+  padding-left: 0.75%;
+  left: 12%;
+  top: 10%;
+}
+
+.post {
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px grey;
+  background-color: lightgray;
+  padding-top: 15px;
+  width: 15.625vw;
+  height: 32vh;
+  position: relative;
+  display: inline-grid;
+  grid-template-rows: 30% 70%;
+  justify-items: center;
+}
+
+.post-title {
+  font-size: medium;
+  font-weight: 600;
+}
+
+.description {
+  font-size: small;
+}
+
+label {
+  /* color: #e74c3c; */
+  color: var(--color-primary);
+  font-size: 1.6em;
+}
+
+button[type='submit'] {
+  background-color: var(--color-primary);
+  border: none;
+  color: white;
+  padding: 2px 5px;
+  height: 4vh;
+  width: 3vw;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-size: smaller;
+  position: absolute;
+  bottom: 5%;
+}
+
+button[type='submit']:hover {
+  /* box-shadow: 0px 0px 20px #d3d3d3; */
+  background-color: white;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.show {
+  visibility: visible;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.popup {
+  z-index: 1000;
+  position: absolute;
+  left: 11%;
+  top: 15%;
+  height: 70vh;
+  width: 15vw;
+  background-color: lightgray;
+  padding-top: 20px;
+  border-radius: 15px;
+  border: 2px solid var(--color-primary);
+}
+
+.filter-button {
+  background-color: #8b1911;
+  border-radius: 0px;
+  position: relative;
+  bottom: 0%;
+  padding: 20px;
+  border: 0px;
+  color: white;
+}
