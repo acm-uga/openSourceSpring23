@@ -14,8 +14,7 @@ import com.google.firebase.FirebaseOptions;
 @Service
 public class FirebaseIntialization {
    
-    public void init() {
-
+    public void initialize() {
         try {
             FileInputStream serviceAccount = new FileInputStream (new File("./serviceAccount.json"));
             FirebaseOptions options = new FirebaseOptions.Builder()
