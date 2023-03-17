@@ -85,28 +85,40 @@ GraalVM is required to build any SpringBoot application.
 Some effort is reaquired to install GraalVM, if you want to skip this, then install
 IntelliJ IDEA. Otherwise, the following instructions work for Mac and most \*NIX users.
 
-###1.
-####Download GraalVM
+### 1.
+
+### Download GraalVM
+
 **NOTE: GraalVM 22.3+ is required, and use Java 17**
 Grab a release from [here](https://github.com/graalvm/graalvm-ce-builds/releases)
 
 -   aarch64 means ARM and Apple Silicon.
 -   amd64 means most Intel architectures.
 
-###2.
-####unzip
+### 2.
+
+### unzip
+
 `tar -xzf graalvm-ce-java<version>-darwin-<architecture>-<version>.tar.gz`
-###3.
-####Fix permissions
+
+### 3.
+
+### Fix permissions
+
 Catalina sometimes sandboxes files like this. Undo this sandboxing before using the image
 `sudo xattr -r -d com.apple.quarantine path/to/graalvm/folder/`
-###4.
-####Move to Java VM path
+
+### 4.
+
+### Move to Java VM path
+
 Sudo is usually necessary to modify /Library/\*
 `sudo mv /path/to/graalvm-ce-java<version> /Library/Java/JavaVirtualMachines/`
 
-###5.
-####Set $PATH and set Java Runtime
+### 5.
+
+### Set $PATH and set Java Runtime
+
 The image is installed, but java will use whatever other image is previously
 installed. To override and use this version, we have to export a few env variables.
 If you're familiar with env variables, then continue as you normally would. Otherwise
@@ -117,8 +129,10 @@ export PATH=/Library/Java/JavaVirtualMachines/<graalvm>/Contents/Home/bin:$PATH
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/<graalvm>/Contents/Home
 ```
 
-###6.
-####(OPTIONAL) Set runtime as permanent
+### 6.
+
+### (OPTIONAL) Set runtime as permanent
+
 Environment variables only affect the CURRENT terminal session. If this session or
 window closes, then the environment is reset to the defaults in your ~/.bashrc, ~/.zshrc, or other.
 
