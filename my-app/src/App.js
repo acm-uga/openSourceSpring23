@@ -9,6 +9,7 @@ import HousingPage from './components/HousingPage/HousingPage';
 import CourseSwapPage from './components/CourseSwapPage/CourseSwapPage';
 import FAQPage from './components/FAQPage/FAQPage';
 import CreateAccountPage from './components/CreateAccountPage/CreateAccountPage';
+import TextbookPage from './components/TextbookPage/TextbookPage';
 
 function App() {
   return (
@@ -27,29 +28,12 @@ function App() {
           <Route path="/register" element={<CreateAccountPage />} />
 
           <Route path="/faq" element={<FAQPage />} />
+
+          <Route path="/textbook" element={<TextbookPage />} />
         </Routes>
       </Router>
     </div>
   );
-  /*
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello World!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  ); */
 }
 
 export default App;
