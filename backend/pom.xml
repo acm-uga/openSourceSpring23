@@ -37,11 +37,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>io.projectreactor</groupId>
-			<artifactId>reactor-test</artifactId>
-			<scope>test</scope>
-		</dependency>
+		
 		<dependency>
 			<groupId>org.jetbrains</groupId>
 			<artifactId>annotations</artifactId>
@@ -60,6 +56,10 @@
 				<groupId>org.graalvm.buildtools</groupId>
 				<artifactId>native-maven-plugin</artifactId>
 				<version>0.9.20</version>
+				<configuration>
+					<buildArgs>--initialize-at-run-time=ch.qos.logback.classic.Logger</buildArgs>
+					<buildArgs>--trace-object-instantiation=ch.qos.logback.classic.Logger.</buildArgs>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -71,9 +71,6 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
-					<buildArgs>
-						<arg>--intialize-at-run-time=ch.qos.logback.classic.Logger</arg>
-					</buildArgs>
 				</configuration>
 			</plugin>
 		</plugins>

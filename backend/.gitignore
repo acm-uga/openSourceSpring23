@@ -3,6 +3,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 /src/main/resources/public/
+/backend/serviceAccount.json
 
 ### STS ###
 .apt_generated
