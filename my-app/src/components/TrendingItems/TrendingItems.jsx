@@ -19,7 +19,7 @@ function TrendingItems() {
       </div>
       <br />
       <div className="trending-items-row">
-        <Card style={{ width: '22rem' }}>
+        <Card style={{ width: '16rem' }}>
           <Card.Img
             variant="top"
             height={250}
@@ -34,7 +34,7 @@ function TrendingItems() {
             <Button variant="primary"> View More </Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: '22rem' }}>
+        <Card style={{ width: '16rem' }}>
           <Card.Img
             variant="top"
             height={250}
@@ -46,7 +46,7 @@ function TrendingItems() {
             <Button variant="primary"> View More </Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: '22rem' }}>
+        <Card style={{ width: '16rem' }}>
           <Card.Img
             variant="top"
             height={250}
@@ -64,7 +64,7 @@ function TrendingItems() {
       </div>
       <br />
       <div className="trending-items-row">
-        <Card style={{ width: '22rem' }}>
+        <Card style={{ width: '16rem' }}>
           <Card.Img
             variant="top"
             height={250}
@@ -76,7 +76,7 @@ function TrendingItems() {
             <Button variant="primary"> View More </Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: '22rem' }}>
+        <Card style={{ width: '16rem' }}>
           <Card.Img
             variant="top"
             height={250}
@@ -88,7 +88,7 @@ function TrendingItems() {
             <Button variant="primary"> View More </Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: '22rem' }}>
+        <Card style={{ width: '16rem' }}>
           <Card.Img
             variant="top"
             height={250}
