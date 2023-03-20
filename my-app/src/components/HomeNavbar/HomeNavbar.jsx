@@ -29,7 +29,7 @@ function HomeNavbar() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/textbooks">Textbooks</Link>
+              <Link to="/textbook">Textbooks</Link>
             </li>
             <li>
               <Link to="/course-swap">Course Swap</Link>
