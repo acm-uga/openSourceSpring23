@@ -1,10 +1,6 @@
 /.idea/
 .env
-<<<<<<< Updated upstream
-serviceAccount.json
-=======
 backend/serviceAccount.json
 backend/serviceAccount.json
 backend/serviceAccount.json
->>>>>>> Stashed changes
 backend/serviceAccount.json
