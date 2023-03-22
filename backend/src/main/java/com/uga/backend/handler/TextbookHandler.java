@@ -1,5 +1,7 @@
 package com.uga.backend.handler;
 
+import java.util.List;
+
 import org.jetbrains.annotations.NonBlocking;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -7,12 +9,15 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
+import org.w3c.dom.Text;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.uga.backend.entity.SearchByIdObject;
 import com.uga.backend.entity.SearchByNameObject;
 import com.uga.backend.entity.Textbook;
 import com.uga.backend.service.TextbookService;
 
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Component
