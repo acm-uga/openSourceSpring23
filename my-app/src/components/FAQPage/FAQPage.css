@@ -30,7 +30,7 @@ u {
 }
 
 .qText {
-  margin: 0;
+  margin: auto;
 }
 
 .answer {
@@ -50,5 +50,5 @@ u {
 }
 
 .aText {
-  margin: 0;
+  margin: auto;
 }
