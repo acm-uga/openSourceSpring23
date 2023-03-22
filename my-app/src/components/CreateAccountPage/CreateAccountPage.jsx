@@ -27,7 +27,7 @@ const CreateAccountPage = () => {
   const validCreation = () => {
     try {
       checkPasswords();
-      checkEmail();
+      //checkEmail();
     } catch (error) {
       alert(error.message);
       return false;

@@ -7,6 +7,7 @@ import {
   createUserWithEmailAndPassword,
   sendPasswordResetEmail,
   signOut,
+  sendEmailVerification,
 } from 'firebase/auth';
 import {
   getFirestore,
@@ -29,12 +30,19 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const db = getFirestore(app);
 
 const registerWithEmailAndPassword = async (email, password) => {
   try {
-    const res = await createUserWithEmailAndPassword(auth, email, password);
-    alert('Success');
+    createUserWithEmailAndPassword(auth, email, password).then(
+      userCredential => {
+        const user = userCredential.user;
+        sendEmailVerification(user).then(() => {
+          alert(
+            'A verification email was sent to your email, please check your inbox and confirm'
+          );
+        });
+      }
+    );
   } catch (err) {
     console.error(err);
     alert(err.message);
@@ -57,7 +65,6 @@ const logInWithEmailAndPassword = async (email, password) => {
 
 export {
   auth,
-  db,
   logInWithEmailAndPassword,
   registerWithEmailAndPassword,
   logout,

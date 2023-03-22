@@ -3,6 +3,9 @@ package com.uga.backend.service;
 import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.DocumentSnapshot;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import org.springframework.stereotype.Service;
@@ -43,6 +46,31 @@ public class TextbookService {
                 return null;
             }
         } catch (Exception e) {
+            return null;
+        }
+    }
+
+    public List<Textbook> getTextbooksAll() {
+        try {
+            Firestore db = FirestoreClient.getFirestore();
+
+            Iterable<DocumentReference> iterable = db.collection(COLLECTION_NAME).listDocuments();
+            Iterator<DocumentReference> iterator = iterable.iterator();
+
+            List<Textbook> textbookList = new ArrayList<>();
+
+            while (iterator.hasNext()) {
+                DocumentReference documentReferece = iterator.next();
+                ApiFuture<DocumentSnapshot> apiFuture = documentReferece.get();
+                DocumentSnapshot documentSnapshot = apiFuture.get();
+
+                Textbook book = documentSnapshot.toObject(Textbook.class);
+                textbookList.add(book);
+            }
+
+            return textbookList;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
             return null;
         }
     }
