@@ -1,3 +1,5 @@
 /.idea/
 .env
-serviceAccount.json
+backend/serviceAccount.json
+
+backend/serviceAccount.json
