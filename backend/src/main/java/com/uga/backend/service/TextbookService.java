@@ -1,5 +1,8 @@
 package com.uga.backend.service;
 
+import com.google.cloud.firestore.DocumentReference;
+import com.google.cloud.firestore.DocumentSnapshot;
+
 import java.util.concurrent.ExecutionException;
 
 import org.springframework.stereotype.Service;
@@ -23,6 +26,24 @@ public class TextbookService {
             return apiFutureWriteResult.get().getUpdateTime().toString();
         } catch (InterruptedException | ExecutionException e) {
             return e.getMessage();
+        }
+    }
+
+    public Textbook getTextbook(String name) {
+        Firestore db = FirestoreClient.getFirestore();
+        try {
+            DocumentReference document = db.collection(COLLECTION_NAME).document(name);
+            ApiFuture<DocumentSnapshot> future = document.get();
+
+            DocumentSnapshot doc = future.get();
+
+            if (doc.exists()) {
+                return doc.toObject(Textbook.class);
+            } else {
+                return null;
+            }
+        } catch (Exception e) {
+            return null;
         }
     }
 

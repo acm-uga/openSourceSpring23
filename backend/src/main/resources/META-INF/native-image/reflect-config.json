@@ -18,6 +18,26 @@
         {"name" : "setName", "parameterTypes" : ["java.lang.String"]},
         {"name" : "getName"}
       ]
+    },
+    {
+      "name": "com.uga.backend.entity.SearchByNameObject",
+      "queryAllDeclaredConstructors" : true,
+      "queryAllPublicConstructors" : true,
+      "queryAllDeclaredMethods" : true,
+      "queryAllPublicMethods" : true,
+      "allDeclaredConstructors": true,
+      "allPublicConstructors": true,
+      "allDeclaredMethods": true,
+      "allPublicMethods": true,
+      "fields" : [
+        {"name" : "name"}
+      ],
+      "methods" : [
+        {"name" : "<init>", "parameterTypes" : []},
+        {"name" : "<init>", "parameterTypes" : ["java.lang.String"]},
+        {"name" : "setName", "parameterTypes" : ["java.lang.String"]},
+        {"name" : "getName"}
+      ]
     }
 ]
   
