@@ -50,6 +50,7 @@ public class TextbookService {
         }
     }
 
+
     public List<Textbook> getTextbooksAll() {
         try {
             Firestore db = FirestoreClient.getFirestore();
@@ -67,6 +68,7 @@ public class TextbookService {
                 Textbook book = documentSnapshot.toObject(Textbook.class);
                 textbookList.add(book);
             }
+
 
             return textbookList;
         } catch (Exception e) {
