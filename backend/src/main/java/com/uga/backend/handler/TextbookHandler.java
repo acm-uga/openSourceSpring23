@@ -9,12 +9,15 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
+import org.w3c.dom.Text;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.uga.backend.entity.SearchByIdObject;
 import com.uga.backend.entity.SearchByNameObject;
 import com.uga.backend.entity.Textbook;
 import com.uga.backend.service.TextbookService;
 
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Component

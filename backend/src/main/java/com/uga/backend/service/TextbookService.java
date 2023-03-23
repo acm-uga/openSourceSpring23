@@ -50,28 +50,31 @@ public class TextbookService {
         }
     }
 
-    public List<Textbook> getTextbookAll() {
-        Firestore db = FirestoreClient.getFirestore();
+
+    public List<Textbook> getTextbooksAll() {
         try {
+            Firestore db = FirestoreClient.getFirestore();
+
             Iterable<DocumentReference> iterable = db.collection(COLLECTION_NAME).listDocuments();
             Iterator<DocumentReference> iterator = iterable.iterator();
 
-            List<Textbook> textbookList = new ArrayList<Textbook>();
+            List<Textbook> textbookList = new ArrayList<>();
 
             while (iterator.hasNext()) {
-                DocumentReference documentReference = iterator.next();
-                ApiFuture<DocumentSnapshot> future = documentReference.get();
-                DocumentSnapshot documentSnapshot = future.get();
+                DocumentReference documentReferece = iterator.next();
+                ApiFuture<DocumentSnapshot> apiFuture = documentReferece.get();
+                DocumentSnapshot documentSnapshot = apiFuture.get();
 
                 Textbook book = documentSnapshot.toObject(Textbook.class);
-
                 textbookList.add(book);
             }
-            
+
+
             return textbookList;
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return null;
         }
     }
+
 }
