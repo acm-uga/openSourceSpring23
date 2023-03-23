@@ -1,5 +1,7 @@
 package com.uga.backend.handler;
 
+import java.util.List;
+
 import org.jetbrains.annotations.NonBlocking;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -78,5 +80,21 @@ public class TextbookHandler {
                     .body(BodyInserters.fromValue("Error getting textbook"));
             }
         });
+    }
+
+    public Mono<ServerResponse> getTextbookAll(ServerRequest serverRequest) {
+        try {
+            List<Textbook> textbookList = textbookService.getTextbookAll();
+
+            return ServerResponse
+                .ok()
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(BodyInserters.fromValue(textbookList));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return ServerResponse
+                .badRequest()
+                .body(BodyInserters.fromValue("Error getting pricessing request"));
+        }
     }
 }

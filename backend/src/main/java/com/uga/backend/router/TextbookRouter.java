@@ -19,6 +19,7 @@ public class TextbookRouter {
         return RouterFunctions.route()
         .GET("/api/textbooks/getTextbookByName", RequestPredicates.accept(MediaType.APPLICATION_JSON), textbookHandler::getTextbookByName)
         .GET("/api/textbooks/getTextbookById", RequestPredicates.accept(MediaType.APPLICATION_JSON), textbookHandler::getTextbookById)
+        .GET("/api/textbooks/getTextbookAll", textbookHandler::getTextbookAll)
         .POST("/api/textbooks/save", RequestPredicates.accept(MediaType.APPLICATION_JSON), textbookHandler::saveTextbook)
         .build();
     }
