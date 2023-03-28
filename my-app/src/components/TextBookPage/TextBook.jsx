@@ -6,6 +6,48 @@ import './TextBook.css';
 import '../MainTheme.css';
 import Profile from '../ProfilePage/Profile';
 
+function BookBlock({ author, title, seller, price, condition, imageURL }) {
+  return (
+    <div className="bookblock" style={{ width: 12 + 'rem' }}>
+      <img
+        className="card-img-top"
+        height={200}
+        src={imageURL}
+        alt="Card image cap"></img>
+      <div className="card-body">
+        <h6 className="card-title">Title: {title}</h6>
+        <h6 className="card-subtitle">Author: {author}</h6>
+        <br />
+        <div className="col">
+          {/* <Router> 
+    <Routes>
+    <Route path="/Profile" element={<Profile />}> 
+      <img className="profile-pic"
+          src="https://www.seekpng.com/png/full/428-4287240_no-avatar-user-circle-icon-png.png"
+          width="100"
+          height="100" />
+    </Route>
+    </Routes>
+    </Router> */}
+          <img
+            className="profile-pic"
+            src="https://www.seekpng.com/png/full/428-4287240_no-avatar-user-circle-icon-png.png"
+            width="100"
+            height="100"></img>
+        </div>
+        <div>
+          <p className="card-text">Username: {seller}</p>
+        </div>
+        <p className="card-text">Price: ${price}</p> <br />
+        <p className="card-text">Condition: {condition}</p>
+        <a href="#" className="btn btn-primary">
+          View
+        </a>
+      </div>
+    </div>
+  );
+}
+
 /* eslint-disable */
 function TextBook() {
   return (
@@ -18,90 +60,44 @@ function TextBook() {
         </div>
       </div>
 
-      {/* <div className="searchbar"> */}
+      <div className="searchbar">
         <div className="search">
           <input type="text" placeholder="Search" id="search-input" />
           {/* <img id="search-img" src={search} alt="search" width="30vh" /> */}
         </div>
-        {/* <div className="search_dropdown">
+        <div className="search_dropdown">
           <select name="cars" id="cars">
             <option value="ISBN">ISBN</option>
             <option value="Title">Book Title</option>
             <option value="Version">Book Version</option>
             <option value="Author">Author Name</option>
           </select>
-        </div> */}
-      {/* </div> */}
+        </div>
+      </div>
 
       <div className="row px-4">
         <div className="col-sm-3">
-          <div className="card" style={{ width: 12 + 'rem' }}>
-            <img
-              className="card-img-top"
-              height={200}
-              src="https://media.wiley.com/product_data/coverImage300/38/11187713/1118771338.jpg"
-              alt="Card image cap"></img>
-            <div className="card-body">
-              <h6 className="card-title">Data Structures & Algos in Java</h6>
-              <h6 className="card-subtitle">Author: Bob Bobert</h6>
-              <br />
-              <div className="col">
-                {/* <Router> 
-              <Routes>
-              <Route path="/Profile" element={<Profile />}> 
-                <img className="profile-pic"
-                    src="https://www.seekpng.com/png/full/428-4287240_no-avatar-user-circle-icon-png.png"
-                    width="100"
-                    height="100" />
-              </Route>
-              </Routes>
-              </Router> */}
-                <img
-                  className="profile-pic"
-                  src="https://www.seekpng.com/png/full/428-4287240_no-avatar-user-circle-icon-png.png"
-                  width="100"
-                  height="100"></img>
-              </div>
-              <div>
-                <p className="card-text">Username: Yushus Komarlu</p>
-              </div>
-              <p className="card-text">Price: $57.00</p> <br />
-              <p className="card-text">Condition: New/Torn/Used/etc...</p>
-              <a href="#" className="btn btn-primary">
-                View
-              </a>
-            </div>
-          </div>
+          <BookBlock
+            author={'Bob Bobert'}
+            title={'Data Structures & Algos in Java'}
+            seller={'Yushus Komarlu'}
+            price={57.0}
+            condition={'New'}
+            imageURL={
+              'https://m.media-amazon.com/images/I/61s6zH2bbIL._SX260_.jpg'
+            }></BookBlock>
         </div>
 
         <div className="col-sm-3">
-          <div className="card" style={{ width: 12 + 'rem' }}>
-            <img
-              className="card-img-top"
-              height={200}
-              src="https://media.wiley.com/product_data/coverImage300/38/11187713/1118771338.jpg"
-              alt="Card image cap"></img>
-            <div className="card-body">
-              <h6 className="card-title">Data Structures & Algos in Java</h6>
-              <h6 className="card-subtitle">Author: Bob Bobert</h6>
-              <br />
-              <div className="col">
-                <img
-                  className="profile-pic"
-                  src="https://www.seekpng.com/png/full/428-4287240_no-avatar-user-circle-icon-png.png"
-                  width="100"
-                  height="100"></img>
-              </div>
-              <div>
-                <p className="card-text">Username: Yushus Komarlu</p>
-              </div>
-              <p className="card-text">Price: $57.00</p> <br />
-              <p className="card-text">Condition: New/Torn/Used/etc...</p>
-              <a href="#" className="btn btn-primary">
-                View
-              </a>
-            </div>
-          </div>
+          <BookBlock
+            author={'Bob Bobert'}
+            title={'Data Structures & Algos in Java'}
+            seller={'Yushus Komarlu'}
+            price={57.0}
+            condition={'New'}
+            imageURL={
+              'https://m.media-amazon.com/images/I/61s6zH2bbIL._SX260_.jpg'
+            }></BookBlock>
         </div>
       </div>
     </div>
