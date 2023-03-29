@@ -1,10 +1,7 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import { Link, Route, Router } from 'react-router-dom';
+import { React } from 'react';
+import { Link } from 'react-router-dom';
 import './TextBook.css';
 import '../MainTheme.css';
-import Profile from '../ProfilePage/Profile';
 
 function BookBlock({ author, title, seller, price, condition, imageURL }) {
   return (
@@ -49,7 +46,7 @@ function BookBlock({ author, title, seller, price, condition, imageURL }) {
 }
 
 /* eslint-disable */
-function TextBook() {
+function TextBookPage() {
   return (
     <div className="textbook-container">
       <div className="side-tab">
@@ -104,4 +101,4 @@ function TextBook() {
   );
 }
 
-export default TextBook;
+export default TextBookPage;
