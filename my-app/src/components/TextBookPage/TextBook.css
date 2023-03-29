@@ -1,0 +1,44 @@
+.textbook-container {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border: 5px red;
+  position: absolute;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.profile-pic:hover {
+  cursor: pointer;
+}
+
+.search {
+  height: 20vh;
+  max-width: 40%;
+  padding-top: 20px;
+  margin-left: 5%;
+  position: relative;
+}
+
+/*
+.search_dropdown {
+  height: 20vh;
+  max-width: 40%;
+  padding-top: 20px;
+  margin-left: 5%;
+  position: relative;
+} */
+/* 
+.searchbar {
+  display: flex;
+  height: 20vh;
+  max-width: 40%;
+  padding-top: 20px;
+  margin-left: 30%;
+  position: relative;
+} */
