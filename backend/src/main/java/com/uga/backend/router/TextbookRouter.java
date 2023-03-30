@@ -1,4 +1,5 @@
 package com.uga.backend.router;
+import org.springframework.web.reactive.function.server.RequestPredicate;
 import org.springframework.web.reactive.function.server.RequestPredicates;
 
 import org.springframework.context.annotation.Bean;
@@ -19,6 +20,7 @@ public class TextbookRouter {
         return RouterFunctions.route()
         .GET("/api/textbooks/getTextbookByName", RequestPredicates.accept(MediaType.APPLICATION_JSON), textbookHandler::getTextbookByName)
         .GET("/api/textbooks/getTextbookById", RequestPredicates.accept(MediaType.APPLICATION_JSON), textbookHandler::getTextbookById)
+        .GET("/api/textbooks/getTextbooksAll", RequestPredicates.accept(MediaType.APPLICATION_JSON), textbookHandler::getTextbooksAll)
         .POST("/api/textbooks/save", RequestPredicates.accept(MediaType.APPLICATION_JSON), textbookHandler::saveTextbook)
         .build();
     }

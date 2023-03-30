@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.jetbrains.annotations.NonBlocking;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.gcp.data.firestore.FirestoreTemplate;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.BodyInserters;
@@ -15,16 +16,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.uga.backend.entity.SearchByIdObject;
 import com.uga.backend.entity.SearchByNameObject;
 import com.uga.backend.entity.Textbook;
+import com.uga.backend.repo.TextbookRepository;
 import com.uga.backend.service.TextbookService;
 
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Component
 @NonBlocking
 public class TextbookHandler {
 
-    @Autowired 
+    @Autowired
     TextbookService textbookService;
     
     ObjectMapper mapper  = new ObjectMapper();
@@ -76,6 +77,24 @@ public class TextbookHandler {
                     .ok()
                     .contentType(MediaType.APPLICATION_JSON)
                     .body(BodyInserters.fromValue(textbook));
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+                return ServerResponse
+                    .badRequest()
+                    .body(BodyInserters.fromValue("Error getting textbook"));
+            }
+        });
+    }
+
+    public Mono<ServerResponse> getTextbooksAll(ServerRequest serverRequest) {
+        Mono<String> body = serverRequest.bodyToMono(String.class);
+        return body.flatMap(json -> {
+            try {
+                List<Textbook> textbookList = textbookService.getTextbooksAll();
+                return ServerResponse
+                    .ok()
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .body(BodyInserters.fromValue(textbookList));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
                 return ServerResponse
