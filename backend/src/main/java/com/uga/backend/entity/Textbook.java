@@ -5,38 +5,46 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 enum Condition {
     NEW,
+    EXCELLENT,
+    GOOD,
     USED,
-    DAMAGED
+    DAMAGED,
 }
 
 public class Textbook {
 
-    private String name;
+    private String title;
     private String author;
+    private String seller;
     private String course;
     private double price;
     private Condition condition;
+    private String imageURL;
 
     public Textbook() {
         //default constructor for deserialization
     }
 
     @JsonCreator
-    public Textbook(@JsonProperty("name") String name,
+    public Textbook(@JsonProperty("title") String title,
                     @JsonProperty("author") String author,
                     @JsonProperty("course") String course,
                     @JsonProperty("price") double price,
-                    @JsonProperty("condition") Condition condition) {
+                    @JsonProperty("condition") Condition condition,
+                    @JsonProperty("seller") String seller,
+                    @JsonProperty("imageURL") String imageURL) {
         super();
-        this.name = name;
+        this.title = title;
         this.author = author;
         this.course = course;
         this.price = price;
         this.condition = condition;
+        this.seller = seller;
+        this.imageURL = imageURL;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.title = name;
     }
 
     public void setAuthor(String author) {
@@ -55,8 +63,16 @@ public class Textbook {
         this.condition = condition;
     }
 
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
+
+    public void setSeller(String seller) {
+        this.seller = seller;
+    }
+
     public String getName() {
-        return this.name;
+        return this.title;
     }
 
     public String getAuthor() {
@@ -73,5 +89,13 @@ public class Textbook {
 
     public Condition getCondition() {
         return this.condition;
+    }
+
+    public String getSeller() {
+        return this.seller;
+    }
+
+    public String getImageURL() {
+        return this.imageURL;
     }
 }

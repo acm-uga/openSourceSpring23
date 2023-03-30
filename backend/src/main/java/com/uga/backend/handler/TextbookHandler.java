@@ -84,20 +84,4 @@ public class TextbookHandler {
             }
         });
     }
-
-    public Mono<ServerResponse> getTextbookAll(ServerRequest serverRequest) {
-        try {
-            List<Textbook> textbookList = textbookService.getTextbookAll();
-
-            return ServerResponse
-                .ok()
-                .contentType(MediaType.APPLICATION_JSON)
-                .body(BodyInserters.fromValue(textbookList));
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return ServerResponse
-                .badRequest()
-                .body(BodyInserters.fromValue("Error getting pricessing request"));
-        }
-    }
 }
