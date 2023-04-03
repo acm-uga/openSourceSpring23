@@ -28,7 +28,7 @@ public class TicketHandler {
     TicketService ticketService;
     
     ObjectMapper mapper  = new ObjectMapper();
-    public Mono<ServerResponse> saveTextbook(ServerRequest serverRequest) {
+    public Mono<ServerResponse> saveTicket(ServerRequest serverRequest) {
         Mono<String> body = serverRequest.bodyToMono(String.class);
         return body.flatMap(json -> {
             try {
@@ -47,7 +47,7 @@ public class TicketHandler {
         });
     }
 
-    public Mono<ServerResponse> getTextbookByName(ServerRequest serverRequest) {
+    public Mono<ServerResponse> getTicketByName(ServerRequest serverRequest) {
         Mono<String> body = serverRequest.bodyToMono(String.class);
         return body.flatMap(json -> {
             try {
@@ -66,26 +66,7 @@ public class TicketHandler {
         });
     }
 
-    public Mono<ServerResponse> getTextbookById(ServerRequest serverRequest) {
-        Mono<String> body = serverRequest.bodyToMono(String.class);
-        return body.flatMap(json -> {
-            try {
-                SearchByIdObject search = mapper.readValue(json, SearchByIdObject.class);
-                Ticket ticket = ticketService.getTicket(search.getId());
-                return ServerResponse
-                    .ok()
-                    .contentType(MediaType.APPLICATION_JSON)
-                    .body(BodyInserters.fromValue(ticket));
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-                return ServerResponse
-                    .badRequest()
-                    .body(BodyInserters.fromValue("Error getting textbook"));
-            }
-        });
-    }
-
-    public Mono<ServerResponse> getTextbooksAll() {
+    public Mono<ServerResponse> getTicketsAll() {
 
         try {
             List<Ticket> tickets = ticketService.getTicketsAll();

@@ -17,10 +17,9 @@ public class TicketRouter {
     public RouterFunction<ServerResponse> textbookRouter(TicketHandler ticketHandler) {
 
         return RouterFunctions.route()
-        .GET("/api/tickets/getTicketsByName", RequestPredicates.accept(MediaType.APPLICATION_JSON), ticketHandler::getTextbookByName)
-        .GET("/api/tickets/getTicketsById", RequestPredicates.accept(MediaType.APPLICATION_JSON), ticketHandler::getTextbookById)
-        .GET("/api/tickets/getTicketsAll", req -> ticketHandler.getTextbooksAll())
-        .POST("/api/tickets/save", RequestPredicates.accept(MediaType.APPLICATION_JSON), ticketHandler::saveTextbook)
+        .GET("/api/tickets/getTicketsByName", RequestPredicates.accept(MediaType.APPLICATION_JSON), ticketHandler::getTicketByName)
+        .GET("/api/tickets/getTicketsAll", req -> ticketHandler.getTicketsAll())
+        .POST("/api/tickets/save", RequestPredicates.accept(MediaType.APPLICATION_JSON), ticketHandler::saveTicket)
         .build();
     }
 }
