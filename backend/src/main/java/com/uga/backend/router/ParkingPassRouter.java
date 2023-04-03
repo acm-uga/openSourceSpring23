@@ -18,7 +18,7 @@ public class ParkingPassRouter {
 
         return RouterFunctions.route()
         .GET("/api/parking/getParkingPassById", RequestPredicates.accept(MediaType.APPLICATION_JSON), passHandler::getParkingPassById)
-        .GET("/api/parking/getParkingPassAll", req -> passHandler.getParkingPassAll())
+        .GET("/api/parking/getParkingPassAll", passHandler::getParkingPassAll)
         .POST("/api/parking/save", RequestPredicates.accept(MediaType.APPLICATION_JSON), passHandler::saveParkingPass)
         .build();
     }

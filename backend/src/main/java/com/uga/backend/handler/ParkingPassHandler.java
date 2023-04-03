@@ -62,7 +62,7 @@ public class ParkingPassHandler {
         });
     }
 
-    public Mono<ServerResponse> getParkingPassAll() {
+    public Mono<ServerResponse> getParkingPassAll(ServerRequest serverRequest) {
         Mono<String> body = serverRequest.bodyToMono(String.class);
         return body.flatMap(json -> {
             try {
