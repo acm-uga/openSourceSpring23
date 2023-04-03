@@ -8,6 +8,8 @@ import javax.annotation.PostConstruct;
 
 import java.io.File;
 
+import org.springframework.cloud.gcp.data.firestore.FirestoreTemplate;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import com.google.auth.oauth2.GoogleCredentials;
