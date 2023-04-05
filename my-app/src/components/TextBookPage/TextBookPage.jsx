@@ -49,7 +49,7 @@ function BookBlock({ author, title, seller, price, condition, imageURL }) {
 }
 
 /* eslint-disable */
-function TextBook() {
+function TextBookPage() {
   return (
     <div className="textbook-container">
       <div className="side-tab">
@@ -123,4 +123,4 @@ function TextBook() {
   );
 }
 
-export default TextBook;
+export default TextBookPage;
