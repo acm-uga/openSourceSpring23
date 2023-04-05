@@ -55,24 +55,43 @@ function TextBook() {
       <div className="side-tab">
         <div className="side-list">
           {/* TODO: fix links/buttons */}
-          <Link className="text-link">Price</Link>
-          <Link className="text-link">Condition</Link>
+          <button className="button" onClick={TogglePrice}>
+            Price
+          </button>
+          <button className="button" onClick={ToggleCondition}>
+            Condition
+          </button>
         </div>
       </div>
 
       <div className="searchbar">
-        <div className="search">
-          <input type="text" placeholder="Search" id="search-input" />
-          {/* <img id="search-img" src={search} alt="search" width="30vh" /> */}
-        </div>
         <div className="search_dropdown">
-          <select name="cars" id="cars">
+          <select className="dropdown">
             <option value="ISBN">ISBN</option>
             <option value="Title">Book Title</option>
             <option value="Version">Book Version</option>
             <option value="Author">Author Name</option>
           </select>
         </div>
+        <div className="search">
+          <input type="text" placeholder="Search" id="search-input" />
+          {/* <img id="search-img" src={search} alt="search" width="30vh" /> */}
+        </div>
+        <div className="search_dropdown">
+          <select className="dropdown">
+            <option value="ISBN">ISBN</option>
+            <option value="Title">Book Title</option>
+            <option value="Version">Book Version</option>
+            <option value="Author">Author Name</option>
+          </select>
+        </div>
+        <div className="search">
+          <input type="text" placeholder="Search" id="search-input" />
+          {/* <img id="search-img" src={search} alt="search" width="30vh" /> */}
+        </div>
+        <button type="button" className="search-button">
+          Search
+        </button>
       </div>
 
       <div className="row px-4">

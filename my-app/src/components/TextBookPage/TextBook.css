@@ -21,24 +21,27 @@
   height: 20vh;
   max-width: 40%;
   padding-top: 20px;
-  margin-left: 5%;
   position: relative;
 }
 
-/*
+.dropdown {
+  height: 7vh;
+}
+
 .search_dropdown {
   height: 20vh;
   max-width: 40%;
   padding-top: 20px;
-  margin-left: 5%;
   position: relative;
-} */
-/* 
+}
+
 .searchbar {
   display: flex;
-  height: 20vh;
-  max-width: 40%;
-  padding-top: 20px;
-  margin-left: 30%;
+  align-items: baseline;
   position: relative;
-} */
+  margin-left: 15%;
+}
+
+.search-button {
+  height: 7vh;
+}
