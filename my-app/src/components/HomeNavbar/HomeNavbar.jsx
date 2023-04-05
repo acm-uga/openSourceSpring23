@@ -38,6 +38,9 @@ function HomeNavbar() {
               <Link to="/housing">Student Housing</Link>
             </li>
             <li>
+              <Link to="tickets">Game Tickets</Link>
+            </li>
+            <li>
               <Link to="/faq">FAQ</Link>
             </li>
           </ul>

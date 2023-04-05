@@ -9,6 +9,8 @@ import HousingPage from './components/HousingPage/HousingPage';
 import CourseSwapPage from './components/CourseSwapPage/CourseSwapPage';
 import FAQPage from './components/FAQPage/FAQPage';
 import CreateAccountPage from './components/CreateAccountPage/CreateAccountPage';
+import TextBookPage from './components/TextBookPage/TextBook';
+import TicketPage from './components/TicketPage/TicketPage';
 
 function App() {
   return (
@@ -26,7 +28,12 @@ function App() {
 
           <Route path="/register" element={<CreateAccountPage />} />
 
+          <Route path="/textbooks" element={<TextBookPage />} />
+
           <Route path="/faq" element={<FAQPage />} />
+
+          <Route path="/tickets" element={<TicketPage />} />
+          {/* <Route path="/Profile" element={<Profile />} />  */}
         </Routes>
       </Router>
     </div>
