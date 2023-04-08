@@ -63,20 +63,16 @@ public class ParkingPassHandler {
     }
 
     public Mono<ServerResponse> getParkingPassAll(ServerRequest serverRequest) {
-        Mono<String> body = serverRequest.bodyToMono(String.class);
-        return body.flatMap(json -> {
-            try {
-                List<ParkingPass> textbookList = passService.getParkingPassAll();
-                return ServerResponse
+        try {
+            List<ParkingPass> parkingPassList = passService.getParkingPassAll();
+            return ServerResponse
                     .ok()
                     .contentType(MediaType.APPLICATION_JSON)
-                    .body(BodyInserters.fromValue(textbookList));
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-                return ServerResponse
+                    .body(BodyInserters.fromValue(parkingPassList));
+        } catch (Exception e) {
+            return ServerResponse
                     .badRequest()
-                    .body(BodyInserters.fromValue("Error getting textbook"));
-            }
-        });
+                    .body(BodyInserters.fromValue(e.getMessage()));
+        }
     }
 }
