@@ -20,6 +20,8 @@ function CourseSwapPage() {
 
       {/*div for main course swap content*/}
       <CourseSwapContent />
+      <CourseSwapContent />
+      <CourseSwapContent />
     </div>
   );
 }

@@ -20,7 +20,9 @@ const TicketPage = () => {
   }, []);
 
   if (tickets.length === 0) {
-    return <div>Loading Tickets...</div>;
+    return (
+      <div style={{ paddingTop: 'var(--top-height)' }}>Loading Tickets...</div>
+    );
   }
 
   return (

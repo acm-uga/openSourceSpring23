@@ -16,7 +16,7 @@ img {
   height: 100%;
   width: 10vw;
   justify-self: center;
-  position: absolute;
+  position: fixed;
   align-content: center;
   padding-top: 1%;
   color: white;
