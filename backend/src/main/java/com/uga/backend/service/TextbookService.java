@@ -4,14 +4,18 @@ import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.DocumentSnapshot;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.server.ServerRequest;
 
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.Firestore;
+import com.google.cloud.firestore.Query;
+import com.google.cloud.firestore.QuerySnapshot;
 import com.google.cloud.firestore.WriteResult;
 import com.google.firebase.cloud.FirestoreClient;
 import com.uga.backend.entity.Textbook;
@@ -49,8 +53,7 @@ public class TextbookService {
             return null;
         }
     }
-
-
+    
     public List<Textbook> getTextbooksAll() {
         try {
             Firestore db = FirestoreClient.getFirestore();
