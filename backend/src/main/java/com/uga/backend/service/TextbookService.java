@@ -4,6 +4,8 @@ import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.DocumentSnapshot;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -52,7 +54,7 @@ public class TextbookService {
 
 
     public List<Textbook> getTextbooksAll() {
-        try {
+       try {
             Firestore db = FirestoreClient.getFirestore();
 
             Iterable<DocumentReference> iterable = db.collection(COLLECTION_NAME).listDocuments();
@@ -66,14 +68,14 @@ public class TextbookService {
                 DocumentSnapshot documentSnapshot = apiFuture.get();
 
                 Textbook book = documentSnapshot.toObject(Textbook.class);
+                System.out.println(book.getName());
                 textbookList.add(book);
             }
-
 
             return textbookList;
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            return null;
+            return Collections.emptyList();
         }
     }
 
