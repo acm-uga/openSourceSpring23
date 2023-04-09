@@ -2,17 +2,20 @@ import React, { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link, Route, Router } from 'react-router-dom';
-import '../TextbookPage/TextBook.css';
 import '../MainTheme.css';
 import Profile from '../ProfilePage/Profile';
+import ParkingPass from './ParkingPass';
 
 const ParkingPassMain = () => {
   const [passes, setPasses] = useState([]);
 
   const getPasses = async () => {
-    await fetch('http://localhost:8080/api/ParkingPassGetAll')
-      .then(response => response.json())
-      .then(json => setPasses(json));
+    const response = await fetch(
+      'http://localhost:8080/api/parking/getParkingPassAll'
+    );
+    const json = await response.json();
+    console.log(json);
+    setPasses(json);
   };
 
   useEffect(() => {
@@ -20,9 +23,9 @@ const ParkingPassMain = () => {
   }, []);
 
   if (passes.length === 0) {
+    console.log(passes);
     return <div>Loading Passes</div>;
   }
-
   return (
     <div className="textbook-container">
       <div className="side-tab">
@@ -40,11 +43,23 @@ const ParkingPassMain = () => {
         </div>
         <div className="search_dropdown">
           <select name="cars" id="cars">
-            <option value="Lot">ISBN</option>
-            <option value="Price">Book Title</option>
+            <option value="Lot">Lot</option>
+            <option value="Price">Price</option>
           </select>
         </div>
       </div>
+      {passes.map((pass, index) => {
+        return (
+          <ParkingPass
+            key={index}
+            seller={pass.seller}
+            lot={pass.lot}
+            price={pass.price}
+          />
+        );
+      })}
     </div>
   );
 };
+
+export default ParkingPassMain;

@@ -62,7 +62,7 @@ public class ParkingPassHandler {
         });
     }
 
-    public Mono<ServerResponse> getParkingPassAll(ServerRequest serverRequest) {
+    public Mono<ServerResponse> getParkingPassAll() {
         try {
             List<ParkingPass> parkingPassList = passService.getParkingPassAll();
             return ServerResponse

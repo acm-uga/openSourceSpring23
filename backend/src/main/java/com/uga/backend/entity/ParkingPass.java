@@ -8,7 +8,6 @@ import com.google.cloud.firestore.annotation.DocumentId;
 @Document(collectionName = "parking")
 public class ParkingPass {
 
-    @DocumentId
     public String id;
     public String lot;
     public String seller;

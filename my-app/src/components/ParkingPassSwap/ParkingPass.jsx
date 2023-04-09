@@ -23,3 +23,5 @@ const ParkingPass = props => {
     </div>
   </div>;
 };
+
+export default ParkingPass;
