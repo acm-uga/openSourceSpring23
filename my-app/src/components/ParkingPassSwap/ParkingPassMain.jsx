@@ -14,7 +14,6 @@ const ParkingPassMain = () => {
       'http://localhost:8080/api/parking/getParkingPassAll'
     );
     const json = await response.json();
-    console.log(json);
     setPasses(json);
   };
 
@@ -23,7 +22,6 @@ const ParkingPassMain = () => {
   }, []);
 
   if (passes.length === 0) {
-    console.log(passes);
     return <div>Loading Parking Passes....</div>;
   }
   return (
@@ -49,14 +47,7 @@ const ParkingPassMain = () => {
         </div>
       </div>
       {passes.map((pass, index) => {
-        return (
-          <ParkingPass
-            key={index}
-            seller={pass.seller}
-            lot={pass.lot}
-            price={pass.price}
-          />
-        );
+        return <ParkingPass {...pass} key={index} />;
       })}
     </div>
   );
