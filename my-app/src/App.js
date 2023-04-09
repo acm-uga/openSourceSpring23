@@ -33,7 +33,6 @@ function App() {
           <Route path="/faq" element={<FAQPage />} />
 
           <Route path="/parking" element={<ParkingPassMain />} />
-
           {/* <Route path="/Profile" element={<Profile />} />  */}
         </Routes>
       </Router>

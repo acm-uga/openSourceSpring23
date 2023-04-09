@@ -24,7 +24,7 @@ const ParkingPassMain = () => {
 
   if (passes.length === 0) {
     console.log(passes);
-    return <div>Loading Passes</div>;
+    return <div>Loading Parking Passes....</div>;
   }
   return (
     <div className="textbook-container">
