@@ -1,0 +1,67 @@
+.parking-pass-container {
+  display: inline-block;
+  width: 100%;
+}
+
+.parking-pass-list {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+img {
+  max-width: 100%;
+  max-height: auto;
+}
+
+.text-link {
+  color: inherit;
+  text-decoration: inherit;
+  padding: 5%;
+}
+
+.side-tab {
+  box-shadow: 0px 0px 20px #707070;
+  height: 100%;
+  width: 100%;
+  color: white;
+  padding-top: 1%;
+}
+
+.side-list {
+  height: auto;
+  position: relative;
+  left: 1%;
+  border-radius: 15px;
+  display: inline-grid;
+  grid-template-rows: auto;
+  grid-gap: 10px; /* Add space between search objects */
+  float: left;
+}
+
+/* Add styles for the search input, sort button, and dropdown */
+input[type='text'] {
+  width: 100%;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+}
+
+.sort-btn {
+  width: 100%;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+select {
+  width: 100%;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
