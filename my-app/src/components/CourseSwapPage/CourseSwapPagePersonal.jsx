@@ -9,7 +9,7 @@ import { CardTab, TabSwitcher, TabContent } from './Tab';
 
 // disable eslint for Links right now
 /* eslint-disable */
-function CourseSwapPage() {
+function CourseSwapPagePersonal() {
   return (
     <div className="swap-container">
       {/*div for sidebar with pages in CourseSwap*/}
@@ -19,8 +19,6 @@ function CourseSwapPage() {
       <SearchBar />
 
       {/*div for main course swap content*/}
-      <CourseSwapContent />
-      <CourseSwapContent />
       <CourseSwapContent />
     </div>
   );
@@ -194,13 +192,13 @@ function SideBar() {
       <img src={logo} alt="course-swap-logo" width={'50%'} />
       <div className="side-list">
         {/* TODO: fix links/buttons */}
-        <Link to="" className="text-link">
+        <Link to="../course-swap" className="text-link">
           Find
         </Link>
-        <Link to="personal" className="text-link">
+        <Link to="" className="text-link">
           Offer
         </Link>
-        <Link to="saved" className="text-link">
+        <Link to="../course-swap/saved" className="text-link">
           Saved
         </Link>
       </div>
@@ -277,4 +275,4 @@ function SearchBar() {
   );
 }
 
-export default CourseSwapPage;
+export default CourseSwapPagePersonal;
