@@ -14,16 +14,6 @@ function BookBlock({ author, title, seller, price, condition, imageURL }) {
         <h6 className="card-subtitle">Author: {author}</h6>
         <br />
         <div className="col">
-          {/* <Router> 
-    <Routes>
-    <Route path="/Profile" element={<Profile />}> 
-      <img className="profile-pic"
-          src="https://www.seekpng.com/png/full/428-4287240_no-avatar-user-circle-icon-png.png"
-          width="100"
-          height="100" />
-    </Route>
-    </Routes>
-    </Router> */}
           <img
             className="profile-pic"
             src="https://www.seekpng.com/png/full/428-4287240_no-avatar-user-circle-icon-png.png"

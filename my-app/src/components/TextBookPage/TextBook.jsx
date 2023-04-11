@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './TextBook.css';
 import '../MainTheme.css';
@@ -44,6 +44,29 @@ const Bookshelf = () => {
 };
 
 function TextBookPage() {
+  /*
+  const [textbooks, setTextbooks] = useState([]);
+
+  const getTextbooks = async () => {
+    const response = await fetch(
+      'http://localhost:8080/api/tickets/getTextbooksAll'
+    );
+    const json = await response.json();
+    setTextbooks(json);
+  };
+
+  useEffect(() => {
+    getTextbooks();
+  }, []);
+
+  if (textbooks.length === 0) {
+    return (
+      <div style={{ paddingTop: 'var(--top-height)' }}>
+        Loading Textbooks...
+      </div>
+    );
+  }
+*/
   return (
     <div className="textbook-container">
       <div className="side-tab">
@@ -68,7 +91,16 @@ function TextBookPage() {
           </select>
         </div>
       </div>
-      <Bookshelf></Bookshelf>
+      {/*      <div className="textbook-list">
+        <p> dynamic textbooks (if they exist)</p>
+        {textbooks.map((textbook, index) => {
+          return <Bookshelf {...textbook} key={index}></Bookshelf>;
+        })}
+      </div>
+      */}
+      <div>
+        <Bookshelf></Bookshelf>
+      </div>
     </div>
   );
 }
