@@ -86,21 +86,17 @@ public class TextbookHandler {
         });
     }
 
-    public Mono<ServerResponse> getTextbooksAll(ServerRequest serverRequest) {
-        Mono<String> body = serverRequest.bodyToMono(String.class);
-        return body.flatMap(json -> {
-            try {
-                List<Textbook> textbookList = textbookService.getTextbooksAll();
-                return ServerResponse
+    public Mono<ServerResponse> getTextbooksAll() {
+       try {
+            List<Textbook> listOfTextbooks = textbookService.getTextbooksAll();
+            return ServerResponse
                     .ok()
                     .contentType(MediaType.APPLICATION_JSON)
-                    .body(BodyInserters.fromValue(textbookList));
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-                return ServerResponse
+                    .body(BodyInserters.fromValue(listOfTextbooks));
+       } catch (Exception e) {
+            return ServerResponse
                     .badRequest()
-                    .body(BodyInserters.fromValue("Error getting textbook"));
-            }
-        });
+                    .body(BodyInserters.fromValue(e.getMessage()));
+       }
     }
 }
