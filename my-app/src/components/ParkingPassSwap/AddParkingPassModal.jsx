@@ -66,14 +66,17 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
           </Form.Group>
           <Form.Group>
             <Form.Label>Lot</Form.Label>
-            <Form.Control
-              type="text"
+            <Form.Select
               value={lot}
               onChange={e => setLot(e.target.value)}
               style={{
                 width: '50%',
-              }}
-            />
+              }}>
+              <option>North Deck</option>
+              <option>South Deck</option>
+              <option>East Deck</option>
+              <option>STEM Deck</option>
+            </Form.Select>
           </Form.Group>
         </Form>
       </Modal.Body>
