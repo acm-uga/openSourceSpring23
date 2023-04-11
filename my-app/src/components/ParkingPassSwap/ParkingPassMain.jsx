@@ -1,17 +1,17 @@
-// TicketPage.js
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Button, Select, Form } from 'react-bootstrap';
 
 import ParkingPass from './ParkingPass';
 import AddParkingPassModal from './AddParkingPassModal.jsx';
 import './ParkingPassMain.css';
+import ParkingPassDetailsModal from './ParkingPassDetailsModal';
 
 const ParkingPassMain = () => {
   const [passes, setPasses] = useState([]);
   const [passesToShow, setPassesToShow] = useState([]);
   const [showAddModal, setShowAddModal] = useState(false);
   const [filterState, setFilterState] = useState({
-    maxPrice: Infinity,
+    maxPrice: 999,
     lot: 'Any',
   });
 
@@ -46,9 +46,9 @@ const ParkingPassMain = () => {
     setPassesToShow(filterPasses(filterState));
   };
 
-  const onClearClick = async () => {
+  const onClearClick = () => {
     const originalState = {
-      maxPrice: Infinity,
+      maxPrice: 999,
       lot: 'Any',
     };
     setFilterState(originalState);
@@ -144,7 +144,7 @@ const ParkingPassMain = () => {
             style={{
               justifyContent: 'space-around',
             }}>
-            {passesToShow.map((pass, index) => {
+            {passesToShow.map(pass => {
               return <ParkingPass {...pass} key={pass.id} />;
             })}
           </Row>

@@ -11,6 +11,8 @@ public class ParkingPass {
     public String lot;
     public String seller;
     public double price;
+    public String contactInfo;
+    public String additionalDetails;
 
     public ParkingPass() {
     }
@@ -18,11 +20,15 @@ public class ParkingPass {
     public ParkingPass(@JsonProperty("id") String id,
                        @JsonProperty("lot") String lot,
                        @JsonProperty("seller") String seller,
-                       @JsonProperty("price") double price) {
+                       @JsonProperty("price") double price,
+                       @JsonProperty("contactInfo") String contactInfo,
+                       @JsonProperty("additionalDetails") String additionalDetails) {
                         this.id = id;
                         this.lot = lot;
                         this.seller = seller;
                         this.price = price;
+                        this.contactInfo = contactInfo;
+                        this.additionalDetails = additionalDetails;
                        }
     
     public void setId(String id) {
@@ -41,6 +47,14 @@ public class ParkingPass {
         this.price = price;
     }
 
+    public void setContactInfo(String contactInfo) {
+        this.contactInfo = contactInfo;
+    }
+
+    public void setAdditionalDetails(String additionalDetails) {
+        this.additionalDetails = additionalDetails;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -55,5 +69,13 @@ public class ParkingPass {
 
     public double getPrice() {
         return this.price;
+    }
+
+    public String getContactInfo() {
+        return this.contactInfo;
+    }
+
+    public String getAdditionalDetails() {
+        return this.additionalDetails;
     }
 }
