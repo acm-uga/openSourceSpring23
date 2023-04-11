@@ -2,9 +2,8 @@ import { React } from 'react';
 import { Link } from 'react-router-dom';
 import './TextBook.css';
 import '../MainTheme.css';
-import './BookBlock.jsx';
+import BookBlock from './BookBlock.jsx';
 
-/* eslint-disable */
 function TextBookPage() {
   return (
     <div className="textbook-container">
@@ -41,7 +40,8 @@ function TextBookPage() {
             condition={'New'}
             imageURL={
               'https://m.media-amazon.com/images/I/61s6zH2bbIL._SX260_.jpg'
-            }></BookBlock>
+            }
+          />
         </div>
 
         <div className="col-sm-3">
@@ -53,7 +53,8 @@ function TextBookPage() {
             condition={'New'}
             imageURL={
               'https://m.media-amazon.com/images/I/61s6zH2bbIL._SX260_.jpg'
-            }></BookBlock>
+            }
+          />
         </div>
       </div>
     </div>
