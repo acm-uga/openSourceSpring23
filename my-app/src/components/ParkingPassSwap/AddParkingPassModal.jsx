@@ -48,6 +48,9 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
               type="number"
               value={price}
               onChange={e => setPrice(e.target.value)}
+              style={{
+                width: '50%',
+              }}
             />
           </Form.Group>
           <Form.Group>
@@ -56,6 +59,9 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
               type="text"
               value={seller}
               onChange={e => setSeller(e.target.value)}
+              style={{
+                width: '50%',
+              }}
             />
           </Form.Group>
           <Form.Group>
@@ -64,11 +70,17 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
               type="text"
               value={lot}
               onChange={e => setLot(e.target.value)}
+              style={{
+                width: '50%',
+              }}
             />
           </Form.Group>
         </Form>
       </Modal.Body>
-      <Modal.Footer>
+      <Modal.Footer
+        style={{
+          justifyContent: 'center',
+        }}>
         <Button variant="secondary" onClick={onHide}>
           Cancel
         </Button>

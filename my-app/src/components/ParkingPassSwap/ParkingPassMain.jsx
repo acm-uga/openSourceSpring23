@@ -31,21 +31,17 @@ const ParkingPassMain = () => {
   };
 
   return (
-    <Container fluid className="parking-pass-container">
+    <Container fluid>
       <Row>
-        <Col>
-          <Col md={2} className="side-tab">
-            <Button
-              className="add-pass-btn"
-              onClick={() => setShowAddModal(true)}>
-              Add Parking Pass
-            </Button>
-          </Col>
+        <Col className="side-tab-container" xs={2}>
+          <Button onClick={() => setShowAddModal(true)}>
+            Add Parking Pass
+          </Button>
         </Col>
-        <Col md={10}>
+        <Col className="parking-pass-list-container" xs={10}>
           <Row className="parking-pass-list">
             {passes.map((pass, index) => {
-              return <ParkingPass {...pass} key={index} />;
+              return <ParkingPass {...pass} key={pass.id} />;
             })}
           </Row>
         </Col>

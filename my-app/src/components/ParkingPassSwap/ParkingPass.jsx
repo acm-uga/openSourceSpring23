@@ -8,7 +8,7 @@ const ParkingPass = props => {
       <Card.Body>
         <Card.Title>Lot: {props.lot}</Card.Title>
         <Card.Text>
-          Price: {props.price}
+          Price: ${props.price}
           <br />
           Seller: {props.seller}
           <br />
