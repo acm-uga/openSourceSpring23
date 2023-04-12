@@ -90,14 +90,6 @@
   width: 100%;
 }
 
-#cs-addBtn {
-  height: 100%;
-  position: absolute;
-  right: 0;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-
 /*CSS for cards*/
 
 .cs-content {
@@ -217,4 +209,43 @@
   line-height: 0;
   position: absolute;
   background-color: rgb(255, 230, 0);
+}
+
+/* Add Course css*/
+#cs-addBtn {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+#add-option {
+  background-color: white;
+}
+
+.add-tabs {
+  height: 25px;
+  position: relative;
+  left: 10%;
+  width: 80%;
+}
+
+.cs-add-popup {
+  z-index: 1000;
+  position: absolute;
+  top: 60px;
+  height: fit-content;
+  width: 50%;
+  background-color: lightgray;
+  text-align: center;
+  left: 25%;
+  right: 25%;
+  padding-bottom: 20px;
+  border-radius: 15px;
+  border: 2px solid var(--color-primary);
+}
+
+#add-input {
+  width: fit-content;
 }
