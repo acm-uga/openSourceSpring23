@@ -11,7 +11,7 @@ import CourseSwapPagePersonal from './components/CourseSwapPage/CourseSwapPagePe
 import CourseSwapPageSaved from './components/CourseSwapPage/CourseSwapPageSaved';
 import FAQPage from './components/FAQPage/FAQPage';
 import CreateAccountPage from './components/CreateAccountPage/CreateAccountPage';
-import TextBookPage from './components/TextBookPage/TextBook';
+import TextBookPage from './components/TextBookPage/TextBookPage';
 import ParkingPassMain from './components/ParkingPassSwap/ParkingPassMain';
 import TicketPage from './components/TicketPage/TicketPage';
 
