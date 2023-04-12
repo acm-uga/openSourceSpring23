@@ -3,14 +3,26 @@ import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 
 const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
-  const [price, setPrice] = useState('');
-  const [seller, setSeller] = useState('');
-  const [lot, setLot] = useState('');
+  const [addPassState, setAddPassState] = useState({
+    lot: '',
+    price: 0,
+    seller: '',
+    contactInfo: '',
+    additionalDetails: '',
+  });
 
   const handleSubmit = () => {
-    onSubmit({ price, seller, lot });
+    onSubmit({ addPassState });
     onHide();
     postPass();
+  };
+
+  const handleChange = event => {
+    const { name, value } = event.target;
+    setAddPassState(prevState => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
 
   const uniqueId = () => {
@@ -28,9 +40,7 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
       },
       body: JSON.stringify({
         id: uniqueId(),
-        price: price,
-        seller: seller,
-        lot: lot,
+        ...addPassState,
       }),
     });
   };
@@ -43,11 +53,12 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
       <Modal.Body>
         <Form>
           <Form.Group>
-            <Form.Label>Price</Form.Label>
+            <Form.Label>Price ($)</Form.Label>
             <Form.Control
+              name="price"
               type="number"
-              value={price}
-              onChange={e => setPrice(e.target.value)}
+              value={addPassState.price}
+              onChange={handleChange}
               style={{
                 width: '50%',
               }}
@@ -56,9 +67,10 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
           <Form.Group>
             <Form.Label>Seller</Form.Label>
             <Form.Control
+              name="seller"
               type="text"
-              value={seller}
-              onChange={e => setSeller(e.target.value)}
+              value={addPassState.seller}
+              onChange={handleChange}
               style={{
                 width: '50%',
               }}
@@ -67,8 +79,9 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
           <Form.Group>
             <Form.Label>Lot</Form.Label>
             <Form.Select
-              value={lot}
-              onChange={e => setLot(e.target.value)}
+              name="lot"
+              value={addPassState.lot}
+              onChange={handleChange}
               style={{
                 width: '50%',
               }}>
@@ -77,6 +90,30 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
               <option>East Deck</option>
               <option>STEM Deck</option>
             </Form.Select>
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Contact Info</Form.Label>
+            <Form.Control
+              name="contactInfo"
+              type="text"
+              value={addPassState.contactInfo}
+              onChange={handleChange}
+              style={{
+                width: '50%',
+              }}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Additional Details</Form.Label>
+            <Form.Control
+              name="additionalDetails"
+              type="text"
+              value={addPassState.additionalDetails}
+              onChange={handleChange}
+              style={{
+                width: '50%',
+              }}
+            />
           </Form.Group>
         </Form>
       </Modal.Body>
