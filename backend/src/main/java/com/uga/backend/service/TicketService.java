@@ -25,17 +25,17 @@ public class TicketService {
         Firestore db = FirestoreClient.getFirestore();
         
         try {
-            ApiFuture<WriteResult> apiFutureWriteResult = db.collection(COLLECTION_NAME).document(ticket.getName()).set(ticket);
+            ApiFuture<WriteResult> apiFutureWriteResult = db.collection(COLLECTION_NAME).document(ticket.getId()).set(ticket);
             return apiFutureWriteResult.get().getUpdateTime().toString();
         } catch (InterruptedException | ExecutionException e) {
             return e.getMessage();
         }
     }
 
-    public Ticket getTicket(String name) {
+    public Ticket getTicket(String id) {
         Firestore db = FirestoreClient.getFirestore();
         try {
-            DocumentReference document = db.collection(COLLECTION_NAME).document(name);
+            DocumentReference document = db.collection(COLLECTION_NAME).document(id);
             ApiFuture<DocumentSnapshot> future = document.get();
 
             DocumentSnapshot doc = future.get();

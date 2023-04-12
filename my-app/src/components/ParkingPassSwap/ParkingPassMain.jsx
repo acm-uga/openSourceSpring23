@@ -62,10 +62,6 @@ const ParkingPassMain = () => {
     setPassesToShow(filterPasses(filterState));
   }, [passes]);
 
-  if (passes.length === 0) {
-    return <div>Loading Parking Passes...</div>;
-  }
-
   const handleAddPass = newPass => {
     setPasses([...passes, newPass]);
   };
