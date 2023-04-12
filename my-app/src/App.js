@@ -12,6 +12,7 @@ import CourseSwapPageSaved from './components/CourseSwapPage/CourseSwapPageSaved
 import FAQPage from './components/FAQPage/FAQPage';
 import CreateAccountPage from './components/CreateAccountPage/CreateAccountPage';
 import TextBookPage from './components/TextBookPage/TextBook';
+import ParkingPassMain from './components/ParkingPassSwap/ParkingPassMain';
 import TicketPage from './components/TicketPage/TicketPage';
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
 
           <Route path="/faq" element={<FAQPage />} />
 
+          <Route path="/parking" element={<ParkingPassMain />} />
           <Route path="/tickets" element={<TicketPage />} />
           {/* <Route path="/Profile" element={<Profile />} />  */}
         </Routes>
