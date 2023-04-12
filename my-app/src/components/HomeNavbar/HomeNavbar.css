@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 10em;
-  box-shadow: 0 0 25px 0 black;
+  height: var(--top-height);
+  position: fixed;
+  z-index: 100;
 }
 
 .nav-flexbox {

@@ -41,6 +41,9 @@ function HomeNavbar() {
               <Link to="/parking">Parking Pass Swap</Link>
             </li>
             <li>
+              <Link to="tickets">Game Tickets</Link>
+            </li>
+            <li>
               <Link to="/faq">FAQ</Link>
             </li>
           </ul>

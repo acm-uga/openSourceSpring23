@@ -1,0 +1,7 @@
+.ticket-list {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: flex-end;
+  color: black;
+  top: var(--top-height);
+}
