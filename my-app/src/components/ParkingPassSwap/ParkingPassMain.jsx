@@ -67,14 +67,16 @@ const ParkingPassMain = () => {
   }
 
   const handleAddPass = newPass => {
-    const newPasses = [...passes, newPass];
-    setPasses(newPasses);
+    setPasses([...passes, newPass]);
   };
 
   return (
     <Container fluid>
       <Row>
-        <Col className="side-tab-container" xs={2}>
+        <Col
+          className="side-tab-container"
+          xs={2}
+          style={{ marginTop: '150px' }}>
           <Button
             onClick={() => setShowAddModal(true)}
             style={{
@@ -143,7 +145,10 @@ const ParkingPassMain = () => {
             </Col>
           </Row>
         </Col>
-        <Col className="parking-pass-list-container" xs={10}>
+        <Col
+          className="parking-pass-list-container"
+          xs={10}
+          style={{ marginTop: '150px' }}>
           <Row
             className="parking-pass-list"
             style={{
