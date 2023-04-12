@@ -7,6 +7,8 @@ import HomeNavbar from './components/HomeNavbar/HomeNavbar';
 import TrendingItems from './components/TrendingItems/TrendingItems';
 import HousingPage from './components/HousingPage/HousingPage';
 import CourseSwapPage from './components/CourseSwapPage/CourseSwapPage';
+import CourseSwapPagePersonal from './components/CourseSwapPage/CourseSwapPagePersonal';
+import CourseSwapPageSaved from './components/CourseSwapPage/CourseSwapPageSaved';
 import FAQPage from './components/FAQPage/FAQPage';
 import CreateAccountPage from './components/CreateAccountPage/CreateAccountPage';
 import TextBookPage from './components/TextBookPage/TextBook';
@@ -24,6 +26,11 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
 
           <Route path="/course-swap" element={<CourseSwapPage />} />
+          <Route
+            path="/course-swap/personal"
+            element={<CourseSwapPagePersonal />}
+          />
+          <Route path="/course-swap/saved" element={<CourseSwapPageSaved />} />
 
           <Route path="/housing" element={<HousingPage />} />
 

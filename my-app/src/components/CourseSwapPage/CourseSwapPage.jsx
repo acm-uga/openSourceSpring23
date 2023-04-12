@@ -31,7 +31,6 @@ function CourseSwapContent() {
     <ul className="cs-content">
       <li className="cs-subcontent">
         <div id="user">Terry Boi James</div>
-        <div id="gap"></div>
         <CardTab>
           <div id="tabs">
             <TabSwitcher tabId={1}>Offered</TabSwitcher>
@@ -43,7 +42,7 @@ function CourseSwapContent() {
                 <div id="name">POLS 1101 - American Government</div>
                 <div id="instructor">Shahbin Hossain</div>
                 <div id="crn">42069</div>
-                <div id="time">[------]</div>
+                <div id="time">[M] [Tu] [W] [Th] [F] 11:50AM - 12:30PM</div>
                 <div id="location">Park Hall</div>
               </div>
             </TabContent>
@@ -52,17 +51,17 @@ function CourseSwapContent() {
                 <div id="name">CSCI 2610 - Discrete Mathematics</div>
                 <div id="instructor">Abraham Lincoln</div>
                 <div id="crn">66666</div>
-                <div id="time">[------]</div>
+                <div id="time">[M] [Tu] [W] [Th] [F] 11:50AM - 12:30PM</div>
                 <div id="location">Terry Hall</div>
               </div>
             </TabContent>
           </div>
         </CardTab>
         <button id="option">DEAL</button>
+        <button id="save">SAVE</button>
       </li>
       <li className="cs-subcontent">
         <div id="user">No Girls Jeffrey</div>
-        <div id="gap"></div>
         <CardTab>
           <div id="tabs">
             <TabSwitcher tabId={1}>Offered</TabSwitcher>
@@ -74,7 +73,7 @@ function CourseSwapContent() {
                 <div id="name">CSCI 1302 - Software Development</div>
                 <div id="instructor">Shah Bin Hossain</div>
                 <div id="crn">69420</div>
-                <div id="time">[------]</div>
+                <div id="time">[M] [Tu] [W] [Th] [F] 11:50AM - 12:30PM</div>
                 <div id="location">Park Hall</div>
               </div>
             </TabContent>
@@ -83,17 +82,17 @@ function CourseSwapContent() {
                 <div id="name">CSCI 2610 - Discrete Mathematics</div>
                 <div id="instructor">Abraham Lincoln</div>
                 <div id="crn">66666</div>
-                <div id="time">[------]</div>
+                <div id="time">[M] [Tu] [W] [Th] [F] 11:50AM - 12:30PM</div>
                 <div id="location">Terry Hall</div>
               </div>
             </TabContent>
           </div>
         </CardTab>
         <button id="option">DEAL</button>
+        <button id="save">SAVE</button>
       </li>
       <li className="cs-subcontent">
         <div id="user">Downbad Augustin</div>
-        <div id="gap"></div>
         <CardTab>
           <div id="tabs">
             <TabSwitcher tabId={1}>Offered</TabSwitcher>
@@ -105,7 +104,7 @@ function CourseSwapContent() {
                 <div id="name">POLS 1101 - American Government</div>
                 <div id="instructor">Shahbin Hossain</div>
                 <div id="crn">42069</div>
-                <div id="time">[------]</div>
+                <div id="time">[M] [Tu] [W] [Th] [F] 11:50AM - 12:30PM</div>
                 <div id="location">Park Hall</div>
               </div>
             </TabContent>
@@ -114,17 +113,17 @@ function CourseSwapContent() {
                 <div id="name">CSCI 2610 - Discrete Mathematics</div>
                 <div id="instructor">Abraham Lincoln</div>
                 <div id="crn">66666</div>
-                <div id="time">[------]</div>
+                <div id="time">[M] [Tu] [W] [Th] [F] 11:50AM - 12:30PM</div>
                 <div id="location">Terry Hall</div>
               </div>
             </TabContent>
           </div>
         </CardTab>
         <button id="option">DEAL</button>
+        <button id="save">SAVE</button>
       </li>
       <li className="cs-subcontent">
         <div id="user">Engineer Eddie</div>
-        <div id="gap"></div>
         <CardTab>
           <div id="tabs">
             <TabSwitcher tabId={1}>Offered</TabSwitcher>
@@ -136,7 +135,7 @@ function CourseSwapContent() {
                 <div id="name">POLS 1101 - American Government</div>
                 <div id="instructor">Shahbin Hossain</div>
                 <div id="crn">42069</div>
-                <div id="time">[------]</div>
+                <div id="time">[M] [Tu] [W] [Th] [F] 11:50AM - 12:30PM</div>
                 <div id="location">Park Hall</div>
               </div>
             </TabContent>
@@ -145,17 +144,17 @@ function CourseSwapContent() {
                 <div id="name">CSCI 2610 - Discrete Mathematics</div>
                 <div id="instructor">Abraham Lincoln</div>
                 <div id="crn">66666</div>
-                <div id="time">[------]</div>
+                <div id="time">[M] [Tu] [W] [Th] [F] 11:50AM - 12:30PM</div>
                 <div id="location">Terry Hall</div>
               </div>
             </TabContent>
           </div>
         </CardTab>
         <button id="option">DEAL</button>
+        <button id="save">SAVE</button>
       </li>
       <li className="cs-subcontent">
         <div id="user">xxxDaddySha69</div>
-        <div id="gap"></div>
         <CardTab>
           <div id="tabs">
             <TabSwitcher tabId={1}>Offered</TabSwitcher>
@@ -167,7 +166,7 @@ function CourseSwapContent() {
                 <div id="name">POLS 1101 - American Government</div>
                 <div id="instructor">Shahbin Hossain</div>
                 <div id="crn">42069</div>
-                <div id="time">[------]</div>
+                <div id="time">[M] [Tu] [W] [Th] [F] 11:50AM - 12:30PM</div>
                 <div id="location">Park Hall</div>
               </div>
             </TabContent>
@@ -176,13 +175,14 @@ function CourseSwapContent() {
                 <div id="name">CSCI 2610 - Discrete Mathematics</div>
                 <div id="instructor">Abraham Lincoln</div>
                 <div id="crn">66666</div>
-                <div id="time">[------]</div>
+                <div id="time">[M] [Tu] [W] [Th] [F] 11:50AM - 12:30PM</div>
                 <div id="location">Terry Hall</div>
               </div>
             </TabContent>
           </div>
         </CardTab>
         <button id="option">DEAL</button>
+        <button id="save">SAVE</button>
       </li>
     </ul>
   );
@@ -194,10 +194,15 @@ function SideBar() {
       <img src={logo} alt="course-swap-logo" width={'50%'} />
       <div className="side-list">
         {/* TODO: fix links/buttons */}
-        <Link className="text-link">Find</Link>
-        <Link className="text-link">Offer</Link>
-        <Link className="text-link">Schedule</Link>
-        <Link className="text-link">Saved</Link>
+        <Link to="" className="text-link">
+          Find
+        </Link>
+        <Link to="personal" className="text-link">
+          Offer
+        </Link>
+        <Link to="saved" className="text-link">
+          Saved
+        </Link>
       </div>
     </div>
   );
@@ -254,7 +259,6 @@ function SearchBar() {
           <button className="cs-sort-options">Title</button>
           <button className="cs-sort-options">Subject</button>
           <button className="cs-sort-options">Course Number</button>
-          <button className="cs-sort-options">CRN</button>
         </div>
       </div>
 
