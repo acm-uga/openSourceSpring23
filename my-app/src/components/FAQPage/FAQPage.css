@@ -5,7 +5,9 @@ u {
 
 /*body*/
 .main-container-faq {
-  margin-top: 3em;
+  /*margin-top: 3em;*/
+  position: relative;
+  top: var(--top-height);
 }
 
 .qa-container {

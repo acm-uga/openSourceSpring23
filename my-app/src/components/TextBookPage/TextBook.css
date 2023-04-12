@@ -4,6 +4,7 @@
   margin: 0;
   border: 5px red;
   position: absolute;
+  top: var(--top-height);
 }
 
 .row {

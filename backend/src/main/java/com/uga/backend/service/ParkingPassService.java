@@ -4,49 +4,44 @@ import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.DocumentSnapshot;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.reactive.function.server.ServerRequest;
 
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.Firestore;
-import com.google.cloud.firestore.Query;
-import com.google.cloud.firestore.QuerySnapshot;
 import com.google.cloud.firestore.WriteResult;
 import com.google.firebase.cloud.FirestoreClient;
-import com.uga.backend.entity.Textbook;
+import com.uga.backend.entity.ParkingPass;
 
 @Service
-public class TextbookService {
+public class ParkingPassService {
     
-    private static final String COLLECTION_NAME = "textbooks";
+    private static final String COLLECTION_NAME = "parking";
 
-    public String saveTextbook(Textbook textbook) {
+    public String saveParkingPass(ParkingPass pass) {
         Firestore db = FirestoreClient.getFirestore();
         
         try {
-            ApiFuture<WriteResult> apiFutureWriteResult = db.collection(COLLECTION_NAME).document(textbook.getName()).set(textbook);
+            ApiFuture<WriteResult> apiFutureWriteResult = db.collection(COLLECTION_NAME).document(pass.getId()).set(pass);
             return apiFutureWriteResult.get().getUpdateTime().toString();
         } catch (InterruptedException | ExecutionException e) {
             return e.getMessage();
         }
     }
 
-    public Textbook getTextbook(String name) {
+    public ParkingPass getParkingPass(String id) {
         Firestore db = FirestoreClient.getFirestore();
         try {
-            DocumentReference document = db.collection(COLLECTION_NAME).document(name);
+            DocumentReference document = db.collection(COLLECTION_NAME).document(id);
             ApiFuture<DocumentSnapshot> future = document.get();
 
             DocumentSnapshot doc = future.get();
 
             if (doc.exists()) {
-                return doc.toObject(Textbook.class);
+                return doc.toObject(ParkingPass.class);
             } else {
                 return null;
             }
@@ -54,31 +49,31 @@ public class TextbookService {
             return null;
         }
     }
-    
-    public List<Textbook> getTextbooksAll() {
-       try {
+
+
+    public List<ParkingPass> getParkingPassAll() {
+        try {
             Firestore db = FirestoreClient.getFirestore();
 
             Iterable<DocumentReference> iterable = db.collection(COLLECTION_NAME).listDocuments();
             Iterator<DocumentReference> iterator = iterable.iterator();
 
-            List<Textbook> textbookList = new ArrayList<>();
+            List<ParkingPass> passList = new ArrayList<>();
 
             while (iterator.hasNext()) {
                 DocumentReference documentReferece = iterator.next();
                 ApiFuture<DocumentSnapshot> apiFuture = documentReferece.get();
                 DocumentSnapshot documentSnapshot = apiFuture.get();
 
-                Textbook book = documentSnapshot.toObject(Textbook.class);
-                System.out.println(book.getName());
-                textbookList.add(book);
+                ParkingPass pass = documentSnapshot.toObject(ParkingPass.class);
+                passList.add(pass);
             }
 
-            return textbookList;
+
+            return passList;
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            return Collections.emptyList();
+            return null;
         }
     }
-
 }

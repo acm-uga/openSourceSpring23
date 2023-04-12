@@ -4,41 +4,36 @@ import java.util.List;
 
 import org.jetbrains.annotations.NonBlocking;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.gcp.data.firestore.FirestoreTemplate;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
-import org.w3c.dom.Text;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.uga.backend.entity.ParkingPass;
 import com.uga.backend.entity.SearchByIdObject;
-import com.uga.backend.entity.SearchByNameObject;
-import com.uga.backend.entity.Textbook;
-import com.uga.backend.repo.TextbookRepository;
-import com.uga.backend.service.TextbookService;
+import com.uga.backend.service.ParkingPassService;
 
 import reactor.core.publisher.Mono;
 
 @Component
 @NonBlocking
-public class TextbookHandler {
-
+public class ParkingPassHandler {
     @Autowired
-    TextbookService textbookService;
+    ParkingPassService passService;
     
     ObjectMapper mapper  = new ObjectMapper();
-    public Mono<ServerResponse> saveTextbook(ServerRequest serverRequest) {
+    public Mono<ServerResponse> saveParkingPass(ServerRequest serverRequest) {
         Mono<String> body = serverRequest.bodyToMono(String.class);
         return body.flatMap(json -> {
             try {
-                Textbook textbook = mapper.readValue(json, Textbook.class);
-                textbookService.saveTextbook(textbook);
+                ParkingPass pass = mapper.readValue(json, ParkingPass.class);
+                passService.saveParkingPass(pass);
                 return ServerResponse  
                     .ok()
                     .contentType(MediaType.APPLICATION_JSON)
-                    .body(BodyInserters.fromValue(textbook));
+                    .body(BodyInserters.fromValue(pass));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
                 return ServerResponse
@@ -48,12 +43,12 @@ public class TextbookHandler {
         });
     }
 
-    public Mono<ServerResponse> getTextbookByName(ServerRequest serverRequest) {
+    public Mono<ServerResponse> getParkingPassById(ServerRequest serverRequest) {
         Mono<String> body = serverRequest.bodyToMono(String.class);
         return body.flatMap(json -> {
             try {
-                SearchByNameObject search = mapper.readValue(json, SearchByNameObject.class);
-                Textbook textbook = textbookService.getTextbook(search.getName());
+                SearchByIdObject search = mapper.readValue(json, SearchByIdObject.class);
+                ParkingPass textbook = passService.getParkingPass(search.getId());
                 return ServerResponse
                     .ok()   
                     .contentType(MediaType.APPLICATION_JSON)
@@ -67,36 +62,17 @@ public class TextbookHandler {
         });
     }
 
-    public Mono<ServerResponse> getTextbookById(ServerRequest serverRequest) {
-        Mono<String> body = serverRequest.bodyToMono(String.class);
-        return body.flatMap(json -> {
-            try {
-                SearchByIdObject search = mapper.readValue(json, SearchByIdObject.class);
-                Textbook textbook = textbookService.getTextbook(search.getId());
-                return ServerResponse
-                    .ok()
-                    .contentType(MediaType.APPLICATION_JSON)
-                    .body(BodyInserters.fromValue(textbook));
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-                return ServerResponse
-                    .badRequest()
-                    .body(BodyInserters.fromValue("Error getting textbook"));
-            }
-        });
-    }
-
-    public Mono<ServerResponse> getTextbooksAll() {
-       try {
-            List<Textbook> listOfTextbooks = textbookService.getTextbooksAll();
+    public Mono<ServerResponse> getParkingPassAll() {
+        try {
+            List<ParkingPass> parkingPassList = passService.getParkingPassAll();
             return ServerResponse
                     .ok()
                     .contentType(MediaType.APPLICATION_JSON)
-                    .body(BodyInserters.fromValue(listOfTextbooks));
-       } catch (Exception e) {
+                    .body(BodyInserters.fromValue(parkingPassList));
+        } catch (Exception e) {
             return ServerResponse
                     .badRequest()
                     .body(BodyInserters.fromValue(e.getMessage()));
-       }
+        }
     }
 }
