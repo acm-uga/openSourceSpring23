@@ -12,7 +12,7 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
   });
 
   const handleSubmit = () => {
-    onSubmit(addPassState);
+    onSubmit({ addPassState });
     onHide();
     postPass();
   };

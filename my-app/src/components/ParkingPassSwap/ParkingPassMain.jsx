@@ -58,17 +58,12 @@ const ParkingPassMain = () => {
     getPasses();
   }, []);
 
-  useEffect(() => {
-    setPassesToShow(filterPasses(filterState));
-  }, [passes]);
-
   if (passes.length === 0) {
     return <div>Loading Parking Passes...</div>;
   }
 
   const handleAddPass = newPass => {
-    const newPasses = [...passes, newPass];
-    setPasses(newPasses);
+    setPasses([...passes, newPass]);
   };
 
   return (
