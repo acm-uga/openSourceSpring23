@@ -7,10 +7,26 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
   const [seller, setSeller] = useState('');
   const [lot, setLot] = useState('');
 
-  const handleSubmit = () => {
-    onSubmit({ price, seller, lot });
-    onHide();
+  const [addPassState, setAddPassState] = useState({
+    price: 0,
+    lot: 'North Deck',
+    seller: '',
+    additionalDetails: '',
+    contactInfo: '',
+  });
+
+  const handleChange = event => {
+    const { name, value } = event.target;
+    setAddPassState(prevState => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async () => {
     postPass();
+    onSubmit(addPassState);
+    onHide();
   };
 
   const uniqueId = () => {
@@ -19,7 +35,7 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
     return dateString + randomness;
   };
 
-  const postPass = () => {
+  const postPass = async () => {
     fetch('http://localhost:8080/api/parking/save', {
       method: 'POST',
       headers: {
@@ -28,9 +44,7 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
       },
       body: JSON.stringify({
         id: uniqueId(),
-        price: price,
-        seller: seller,
-        lot: lot,
+        ...addPassState,
       }),
     });
   };
@@ -46,8 +60,9 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
             <Form.Label>Price</Form.Label>
             <Form.Control
               type="number"
-              value={price}
-              onChange={e => setPrice(e.target.value)}
+              name="price"
+              value={addPassState.price}
+              onChange={handleChange}
               style={{
                 width: '50%',
               }}
@@ -56,9 +71,10 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
           <Form.Group>
             <Form.Label>Seller</Form.Label>
             <Form.Control
+              name="seller"
               type="text"
-              value={seller}
-              onChange={e => setSeller(e.target.value)}
+              value={addPassState.seller}
+              onChange={handleChange}
               style={{
                 width: '50%',
               }}
@@ -67,8 +83,9 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
           <Form.Group>
             <Form.Label>Lot</Form.Label>
             <Form.Select
-              value={lot}
-              onChange={e => setLot(e.target.value)}
+              name="lot"
+              value={addPassState.lot}
+              onChange={handleChange}
               style={{
                 width: '50%',
               }}>
@@ -77,6 +94,30 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
               <option>East Deck</option>
               <option>STEM Deck</option>
             </Form.Select>
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Contact Info</Form.Label>
+            <Form.Control
+              name="contactInfo"
+              type="text"
+              value={addPassState.contactInfo}
+              onChange={handleChange}
+              style={{
+                width: '50%',
+              }}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Additional Details</Form.Label>
+            <Form.Control
+              name="additionalDetails"
+              type="text"
+              value={addPassState.addtionalDetails}
+              onChange={handleChange}
+              style={{
+                width: '50%',
+              }}
+            />
           </Form.Group>
         </Form>
       </Modal.Body>
