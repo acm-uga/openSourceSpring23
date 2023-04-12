@@ -1,55 +1,72 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import { Link, Route, Router } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './TextBook.css';
 import '../MainTheme.css';
-import Profile from '../ProfilePage/Profile';
+import BookBlock from './BookBlock.jsx';
 
-function BookBlock({ author, title, seller, price, condition, imageURL }) {
+const Bookshelf = () => {
+  const books = [
+    {
+      author: 'Alex',
+      title: 'The Art of Programming',
+      seller: 'Books R Us',
+      price: 29.99,
+      condition: 'New',
+      imageURL: 'https://m.media-amazon.com/images/I/61s6zH2bbIL._SX260_.jpg',
+    },
+    {
+      author: 'Yushus',
+      title: 'Data Science for Beginners',
+      seller: 'Bookworms',
+      price: 42.0,
+      condition: 'Used',
+      imageURL: 'https://m.media-amazon.com/images/I/61s6zH2bbIL._SX260_.jpg',
+    },
+    {
+      author: 'Gee Pea Tee',
+      title: 'Algorithms and Data Structures in Python',
+      seller: 'Techie Books',
+      price: 65.0,
+      condition: 'New',
+      imageURL: 'https://m.media-amazon.com/images/I/61s6zH2bbIL._SX260_.jpg',
+    },
+  ];
   return (
-    <div className="bookblock" style={{ width: 12 + 'rem' }}>
-      <img
-        className="card-img-top"
-        height={200}
-        src={imageURL}
-        alt="Card image cap"></img>
-      <div className="card-body">
-        <h6 className="card-title">Title: {title}</h6>
-        <h6 className="card-subtitle">Author: {author}</h6>
-        <br />
-        <div className="col">
-          {/* <Router> 
-    <Routes>
-    <Route path="/Profile" element={<Profile />}> 
-      <img className="profile-pic"
-          src="https://www.seekpng.com/png/full/428-4287240_no-avatar-user-circle-icon-png.png"
-          width="100"
-          height="100" />
-    </Route>
-    </Routes>
-    </Router> */}
-          <img
-            className="profile-pic"
-            src="https://www.seekpng.com/png/full/428-4287240_no-avatar-user-circle-icon-png.png"
-            width="100"
-            height="100"></img>
+    <div
+      style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+      {books.map((book, index) => (
+        <div key={index} style={{ padding: '10px' }}>
+          <BookBlock {...book} />
         </div>
-        <div>
-          <p className="card-text">Username: {seller}</p>
-        </div>
-        <p className="card-text">Price: ${price}</p> <br />
-        <p className="card-text">Condition: {condition}</p>
-        <a href="#" className="btn btn-primary">
-          View
-        </a>
-      </div>
+      ))}
     </div>
   );
-}
+};
 
-/* eslint-disable */
-function TextBook() {
+function TextBookPage() {
+  /*
+  const [textbooks, setTextbooks] = useState([]);
+
+  const getTextbooks = async () => {
+    const response = await fetch(
+      'http://localhost:8080/api/tickets/getTextbooksAll'
+    );
+    const json = await response.json();
+    setTextbooks(json);
+  };
+
+  useEffect(() => {
+    getTextbooks();
+  }, []);
+
+  if (textbooks.length === 0) {
+    return (
+      <div style={{ paddingTop: 'var(--top-height)' }}>
+        Loading Textbooks...
+      </div>
+    );
+  }
+*/
   return (
     <div className="textbook-container">
       <div className="side-tab">
@@ -74,34 +91,18 @@ function TextBook() {
           </select>
         </div>
       </div>
-
-      <div className="row px-4">
-        <div className="col-sm-3">
-          <BookBlock
-            author={'Bob Bobert'}
-            title={'Data Structures & Algos in Java'}
-            seller={'Yushus Komarlu'}
-            price={57.0}
-            condition={'New'}
-            imageURL={
-              'https://m.media-amazon.com/images/I/61s6zH2bbIL._SX260_.jpg'
-            }></BookBlock>
-        </div>
-
-        <div className="col-sm-3">
-          <BookBlock
-            author={'Bob Bobert'}
-            title={'Data Structures & Algos in Java'}
-            seller={'Yushus Komarlu'}
-            price={57.0}
-            condition={'New'}
-            imageURL={
-              'https://m.media-amazon.com/images/I/61s6zH2bbIL._SX260_.jpg'
-            }></BookBlock>
-        </div>
+      {/*      <div className="textbook-list">
+        <p> dynamic textbooks (if they exist)</p>
+        {textbooks.map((textbook, index) => {
+          return <Bookshelf {...textbook} key={index}></Bookshelf>;
+        })}
+      </div>
+      */}
+      <div>
+        <Bookshelf></Bookshelf>
       </div>
     </div>
   );
 }
 
-export default TextBook;
+export default TextBookPage;

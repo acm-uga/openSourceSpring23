@@ -24,7 +24,13 @@ const Ticket = ({ name, location, team, price, seller }) => {
         </div>
         <p className="card-text">Price: ${price}</p> <br />
         <p className="card-text">Location: {location}</p>
-        <a href="#" className="btn btn-primary">
+        <a href="localhost" className="btn btn-primary">
+          {' '}
+          {
+            {
+              /* put a real link in here*/
+            }
+          }
           View
         </a>
       </div>
