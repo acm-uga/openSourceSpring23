@@ -4,14 +4,12 @@
 }
 
 .side-tab-container {
-  border: solid;
   height: 100vh;
   background-color: #8b1911;
   padding: 2.5%;
 }
 
 .parking-pass-list-container {
-  border: solid;
   height: 100vh;
   padding-top: 2%;
 }
