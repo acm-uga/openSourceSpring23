@@ -1,40 +1,57 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Profile from '../ProfilePage/Profile';
+// ParkingPass.js
+import React, { useState } from 'react';
+import { Card } from 'react-bootstrap';
+import TicketDetailsModal from './TicketDetailsModal';
 
-const Ticket = ({ name, location, team, price, seller }) => {
+const Ticket = ({
+  price,
+  team,
+  seller,
+  contactInfo,
+  additionalDetails,
+  onTicketClick,
+}) => {
+  const [showModal, setShowModal] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="bookblock" style={{ width: 12 + 'rem' }}>
-      <div className="card-body">
-        <h6 className="card-title">Name: {name}</h6>
-        <h6 className="card-title">Team: {team}</h6>
-        <br />
-        <div className="col">
-          <img
-            className="profile-pic"
-            src="https://www.seekpng.com/png/full/428-4287240_no-avatar-user-circle-icon-png.png"
-            width="100"
-            height="100"
-            alt="profile pic"></img>
-        </div>
-        <div>
-          <p className="card-text">Username: {seller}</p>
-        </div>
-        <p className="card-text">Price: ${price}</p> <br />
-        <p className="card-text">Location: {location}</p>
-        <a href="localhost" className="btn btn-primary">
-          {' '}
-          {
-            {
-              /* put a real link in here*/
-            }
-          }
-          View
-        </a>
-      </div>
-    </div>
+    <Card
+      onMouseEnter={() => {
+        setIsHovered(true);
+      }}
+      onMouseLeave={() => {
+        setIsHovered(false);
+      }}
+      className="pass-container mb-4"
+      style={{
+        width: '18rem',
+        transform: isHovered ? 'scale(1.05)' : 'scale(1)',
+        boxShadow: isHovered ? '0 4px 8px rgba(0, 0, 0, 0.1)' : 'none',
+        transition: 'transform 0.2s, box-shadow 0.2s',
+      }}>
+      <Card.Body
+        onClick={() => {
+          setShowModal(true);
+        }}>
+        <Card.Title>Team: {team}</Card.Title>
+        <Card.Text>
+          Price: ${price}
+          <br />
+          Seller: {seller}
+          <br />
+        </Card.Text>
+      </Card.Body>
+      <TicketDetailsModal
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        team={team}
+        price={price}
+        seller={seller}
+        contactInfo={contactInfo}
+        additionalDetails={additionalDetails}
+      />
+    </Card>
   );
 };
+
 export default Ticket;

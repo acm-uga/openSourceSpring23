@@ -8,32 +8,37 @@ import com.google.cloud.firestore.annotation.DocumentId;
 @Document(collectionName = "tickets")
 public class Ticket {
     
-    @DocumentId
-    public String name;
+    public String id;
     public String location;
     public String team;
     public double price;
     public String seller;
+    public String contactInfo;
+    public String additionalDetails;
 
     public Ticket() {
 
     }
     
-    public Ticket(@JsonProperty("name") String name,
+    public Ticket(@JsonProperty("id") String id,
                   @JsonProperty("location") String location,
                   @JsonProperty("team") String team,
                   @JsonProperty("price") double price,
-                  @JsonProperty("seller") String seller) {
+                  @JsonProperty("seller") String seller,
+                  @JsonProperty("contactInfo") String contactInfo,
+                  @JsonProperty("additonalDetails") String additionalDetails) {
                     
-                    this.name = name;
+                    this.id = id;
                     this.location = location;
                     this.team = team;
                     this.price = price;
                     this.seller = seller;
+                    this.contactInfo = contactInfo;
+                    this.additionalDetails = additionalDetails;
                   }
     
-    public void setName(String name) {
-        this.name = name;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void setLocation(String location) {
@@ -52,8 +57,12 @@ public class Ticket {
         this.seller = seller;
     }
 
-    public String getName() {
-        return this.name;
+    public void setAdditionalDetails(String additionalDetails) {
+        this.additionalDetails = additionalDetails;
+    }
+
+    public String getId() {
+        return this.id;
     }
 
     public String getLocation() {
@@ -70,5 +79,9 @@ public class Ticket {
 
     public String getSeller() {
         return this.seller;
+    }
+
+    public String getAdditionalDetails() {
+        return this.additionalDetails;
     }
 }   

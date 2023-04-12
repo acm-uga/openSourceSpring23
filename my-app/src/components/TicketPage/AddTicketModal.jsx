@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 
-const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
-  const [addPassState, setAddPassState] = useState({
+const AddTicketModal = ({ show, onHide, onSubmit }) => {
+  const [addTicketState, setAddTicketState] = useState({
     price: 0,
-    lot: 'North Deck',
+    team: 'Florida',
     seller: '',
     additionalDetails: '',
     contactInfo: '',
@@ -13,15 +13,15 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
 
   const handleChange = event => {
     const { name, value } = event.target;
-    setAddPassState(prevState => ({
+    setAddTicketState(prevState => ({
       ...prevState,
       [name]: value,
     }));
   };
 
   const handleSubmit = async () => {
-    postPass();
-    onSubmit(addPassState);
+    postTicket();
+    onSubmit(addTicketState);
     onHide();
   };
 
@@ -31,8 +31,8 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
     return dateString + randomness;
   };
 
-  const postPass = async () => {
-    fetch('http://localhost:8080/api/parking/save', {
+  const postTicket = async () => {
+    fetch('http://localhost:8080/api/tickets/save', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
       },
       body: JSON.stringify({
         id: uniqueId(),
-        ...addPassState,
+        ...addTicketState,
       }),
     });
   };
@@ -48,7 +48,7 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
   return (
     <Modal show={show} onHide={onHide}>
       <Modal.Header closeButton>
-        <Modal.Title>Add Parking Pass</Modal.Title>
+        <Modal.Title>Add Game/Event Ticket</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form>
@@ -57,7 +57,7 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
             <Form.Control
               type="number"
               name="price"
-              value={addPassState.price}
+              value={addTicketState.price}
               onChange={handleChange}
               style={{
                 width: '50%',
@@ -69,7 +69,7 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
             <Form.Control
               name="seller"
               type="text"
-              value={addPassState.seller}
+              value={addTicketState.seller}
               onChange={handleChange}
               style={{
                 width: '50%',
@@ -77,18 +77,18 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
             />
           </Form.Group>
           <Form.Group>
-            <Form.Label>Lot</Form.Label>
+            <Form.Label>Team</Form.Label>
             <Form.Select
-              name="lot"
-              value={addPassState.lot}
+              name="team"
+              value={addTicketState.lot}
               onChange={handleChange}
               style={{
                 width: '50%',
               }}>
-              <option>North Deck</option>
-              <option>South Deck</option>
-              <option>East Deck</option>
-              <option>STEM Deck</option>
+              <option>Florida</option>
+              <option>Georgia Tech</option>
+              <option>Alabama</option>
+              <option>Clemson</option>
             </Form.Select>
           </Form.Group>
           <Form.Group>
@@ -96,7 +96,7 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
             <Form.Control
               name="contactInfo"
               type="text"
-              value={addPassState.contactInfo}
+              value={addTicketState.contactInfo}
               onChange={handleChange}
               style={{
                 width: '50%',
@@ -108,7 +108,7 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
             <Form.Control
               name="additionalDetails"
               type="text"
-              value={addPassState.addtionalDetails}
+              value={addTicketState.addtionalDetails}
               onChange={handleChange}
               style={{
                 width: '50%',
@@ -125,11 +125,11 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
           Cancel
         </Button>
         <Button variant="primary" onClick={handleSubmit}>
-          Add Parking Pass
+          Add Ticket
         </Button>
       </Modal.Footer>
     </Modal>
   );
 };
 
-export default AddParkingPassModal;
+export default AddTicketModal;
