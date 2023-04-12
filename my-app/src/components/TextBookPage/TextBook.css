@@ -45,3 +45,14 @@
 .search-button {
   height: 7vh;
 }
+
+.activityTable {
+  font-size: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  border-width: 1px;
+  border-color: black;
+}
+
+.profileTab {
+  width: auto;
+}
