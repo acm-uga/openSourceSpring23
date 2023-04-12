@@ -19,6 +19,10 @@
 #cs-search-input {
   height: 100%;
   width: 62.5vw;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 #cs-searchBtn {
@@ -43,6 +47,7 @@
 #cs-filterBtn {
   height: 100%;
   width: 10vw;
+  border-top-right-radius: 15px;
 }
 
 #cs-filter-content {
@@ -76,6 +81,23 @@
   border: 2px solid var(--color-primary);
 }
 
+.cs-page-titles {
+  color: black;
+  background-color: transparent;
+  border-radius: 15px;
+  border: 2px solid var(--color-primary);
+  height: 100%;
+  width: 100%;
+}
+
+#cs-addBtn {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
 /*CSS for cards*/
 
 .cs-content {
@@ -94,10 +116,11 @@
   height: 100px;
   margin-bottom: 20px;
   position: relative;
-  background-color: gray;
+  background-color: transparent;
   border-radius: 20px;
+  border: 1px solid black;
+  border-top: transparent;
   border-top-right-radius: 10px;
-  border-color: red;
   overflow: hidden;
 }
 
@@ -105,15 +128,9 @@
   width: 25%;
   height: 20%;
   position: absolute;
-  background-color: red;
-}
-
-#gap {
-  width: 70%;
-  height: 20%;
-  left: 25%;
-  position: absolute;
-  background-color: white;
+  background-color: #b00b13;
+  color: rgb(74, 186, 255);
+  font-size: 90%;
 }
 
 #tabs {
@@ -128,6 +145,7 @@
 
 .cs-content-tab-links {
   width: 50%;
+  height: 150%;
   position: relative;
   background-color: orange;
   border-top-left-radius: 10px;
@@ -143,7 +161,7 @@
   width: 60%;
   height: 40%;
   position: absolute;
-  background-color: blue;
+  background-color: rgba(0, 0, 255, 0.527);
 }
 
 #instructor {
@@ -182,10 +200,21 @@
 }
 
 #option {
-  top: 40%;
-  right: 2.5%;
+  bottom: 15%;
+  right: 5%;
   width: 10%;
   height: 40%;
   position: absolute;
   background-color: white;
+}
+
+#save {
+  top: 30%;
+  right: 0%;
+  width: 5%;
+  height: 20%;
+  font-size: 100%;
+  line-height: 0;
+  position: absolute;
+  background-color: rgb(255, 230, 0);
 }
