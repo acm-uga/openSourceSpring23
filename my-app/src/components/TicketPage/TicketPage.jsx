@@ -29,13 +29,10 @@ const TicketPage = () => {
         filterState.team === 'Any' || ticket.team === filterState.team;
       return priceFilter && teamFilter;
     });
-
-    console.log(filtered);
     return filtered;
   };
 
   const onFilterClick = () => {
-    console.log('click');
     setTicketsToShow(filterTickets(filterState));
   };
 
@@ -47,7 +44,7 @@ const TicketPage = () => {
     setFilterState(originalState);
   };
 
-  const getPasses = async () => {
+  const getTickets = async () => {
     const response = await fetch('http://localhost:8080/api/tickets/getAll');
     const json = await response.json();
     setTickets(json);
@@ -55,7 +52,7 @@ const TicketPage = () => {
   };
 
   useEffect(() => {
-    getPasses();
+    getTickets();
   }, []);
 
   useEffect(() => {
