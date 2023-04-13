@@ -24,7 +24,7 @@ public class Ticket {
                   @JsonProperty("price") double price,
                   @JsonProperty("seller") String seller,
                   @JsonProperty("contactInfo") String contactInfo,
-                  @JsonProperty("additonalDetails") String additionalDetails) {
+                  @JsonProperty("additionalDetails") String additionalDetails) {
                     
                     this.team = team;
                     this.price = price;
