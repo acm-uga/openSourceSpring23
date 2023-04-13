@@ -8,7 +8,6 @@ import javax.annotation.PostConstruct;
 
 import java.io.File;
 
-import org.springframework.cloud.gcp.data.firestore.FirestoreTemplate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +19,7 @@ import com.google.firebase.FirebaseOptions;
 
 @Service
 public class FirebaseIntialization {
-   
+  /* 
     @PostConstruct
     public void initialize() {
         try {
@@ -38,5 +37,5 @@ public class FirebaseIntialization {
             System.exit(1);
         }
 
-    }
+    } */
 }

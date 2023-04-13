@@ -1,15 +1,12 @@
 package com.uga.backend.entity;
 
-import org.springframework.cloud.gcp.data.firestore.Document;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.google.cloud.firestore.annotation.DocumentId;
+import com.google.cloud.spring.data.firestore.Document;
 
 @Document(collectionName = "tickets")
 public class Ticket {
     
     public String id;
-    public String location;
     public String team;
     public double price;
     public String seller;
@@ -21,7 +18,6 @@ public class Ticket {
     }
     
     public Ticket(@JsonProperty("id") String id,
-                  @JsonProperty("location") String location,
                   @JsonProperty("team") String team,
                   @JsonProperty("price") double price,
                   @JsonProperty("seller") String seller,
@@ -29,7 +25,6 @@ public class Ticket {
                   @JsonProperty("additonalDetails") String additionalDetails) {
                     
                     this.id = id;
-                    this.location = location;
                     this.team = team;
                     this.price = price;
                     this.seller = seller;
@@ -39,10 +34,6 @@ public class Ticket {
     
     public void setId(String id) {
         this.id = id;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
     }
 
     public void setTeam(String team) {
@@ -63,10 +54,6 @@ public class Ticket {
 
     public String getId() {
         return this.id;
-    }
-
-    public String getLocation() {
-        return this.location;
     }
 
     public String getTeam() {

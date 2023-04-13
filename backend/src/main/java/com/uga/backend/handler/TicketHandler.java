@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.jetbrains.annotations.NonBlocking;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.gcp.data.firestore.FirestoreTemplate;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.BodyInserters;

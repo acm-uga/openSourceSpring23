@@ -2,12 +2,10 @@ package com.uga.backend.entity;
 
 import java.util.ArrayList;
 
-import org.springframework.cloud.gcp.data.firestore.Document;
-import org.springframework.data.annotation.Id;
-
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.cloud.firestore.annotation.DocumentId;
+import com.google.cloud.spring.data.firestore.Document;
 
 @Document(collectionName = "courses")
 public class Course {

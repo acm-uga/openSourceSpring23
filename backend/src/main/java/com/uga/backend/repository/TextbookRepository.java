@@ -1,8 +1,8 @@
-package com.uga.backend.repo;
+package com.uga.backend.repository;
 
-import org.springframework.cloud.gcp.data.firestore.FirestoreReactiveRepository;
 import org.springframework.stereotype.Repository;
 
+import com.google.cloud.spring.data.firestore.FirestoreReactiveRepository;
 import com.uga.backend.entity.Textbook;
 
 @Repository
