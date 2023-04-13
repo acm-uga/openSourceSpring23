@@ -35,6 +35,9 @@ function HomeNavbar() {
               <Link to="/course-swap">Course Swap</Link>
             </li>
             <li>
+              <Link to="/tutor">Tutoring</Link>
+            </li>
+            <li>
               <Link to="/housing">Student Housing</Link>
             </li>
             <li>
