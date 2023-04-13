@@ -1,11 +1,10 @@
 package com.uga.backend.entity;
 
-import org.springframework.cloud.gcp.data.firestore.Document;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.cloud.firestore.annotation.DocumentId;
+import com.google.cloud.spring.data.firestore.Document;
 
-@Document(collectionName = "tickets")
+@Document
 public class Ticket {
     
     public String id;
