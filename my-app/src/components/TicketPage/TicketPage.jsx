@@ -88,7 +88,7 @@ const TicketPage = () => {
             onChange={handleChange}
             value={filterState.lot}
             style={{}}
-            name="lot">
+            name="team">
             <option>Any</option>
             <option>Florida</option>
             <option>Georgia Tech</option>
