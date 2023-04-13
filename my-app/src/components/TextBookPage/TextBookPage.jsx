@@ -4,11 +4,22 @@ import Card from 'react-bootstrap/Card';
 import { Link, Route, Router } from 'react-router-dom';
 import './TextBook.css';
 import '../MainTheme.css';
+import './TextBookModal.jsx';
 import Profile from '../ProfilePage/Profile';
 import { useEffect, useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import TextBookModal from './TextBookModal.jsx';
 
 /* eslint-disable */
 function TextBookPage() {
+  const [price, setPrice] = useState(false);
+  <div className={price ? 'hide popup' : 'show popup'}>
+    <input type="text" placeholder="$90"></input>
+  </div>;
+
+  const TogglePrice = () => {
+    setPrice(true);
+  };
   // Set the contentes of the profileTab
 
   //set onclick function so that it changes the show value from false to true and vice versa
@@ -20,7 +31,9 @@ function TextBookPage() {
       <div className="side-tab">
         <div className="side-list">
           {/* TODO: fix links/buttons */}
-          <button className="button">Price</button>
+          <button className="button" onClick={TogglePrice}>
+            Price
+          </button>
           <button className="button">Condition</button>
         </div>
       </div>
@@ -116,34 +129,10 @@ function BookBlock({ author, title, seller, price, condition, imageURL }) {
             onClick={ToggleProfile}
             width="100"
             height="100"></img>
-          <div className={profileTab ? 'hide popup' : 'show popup'}>
-            <h3>Yushus Komarlu</h3>
-            <table className="activityTable">
-              <tr>
-                <th>Date</th>
-                <th>Account Name</th>
-                <th>User Rating</th>
-                <th>Description</th>
-              </tr>
-              <tr>
-                <td>09/14/2022</td>
-                <td>Daniel Grigsby</td>
-                <td>5 Stars</td>
-                <td>
-                  Sold me "Psycology 101" in pristine condition for a reasonable
-                  price!
-                </td>
-              </tr>
-              <tr>
-                <td>11/13/2022</td>
-                <td>Venn Reddy</td>
-                <td>3.5 Stars</td>
-                <td>
-                  Swapped out his CSCI 1301 class for my CMLT 2400 class but he
-                  was a horrible communicator.
-                </td>
-              </tr>
-            </table>
+          <div>
+            <TextBookModal
+              show={profileTab}
+              onHide={() => setProfile(false)}></TextBookModal>
           </div>
           <div>
             <p className="card-text">Username: {seller}</p>

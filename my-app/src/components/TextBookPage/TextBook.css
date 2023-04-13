@@ -47,13 +47,23 @@
   height: 7vh;
 }
 
-.activityTable {
-  font-size: 10px;
-  font-family: 'Courier New', Courier, monospace;
-  border-width: 1px;
-  border-color: black;
-}
+/* table, th, td {
+  border:1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  padding: 50px;
+} */
 
-.profileTab {
-  width: auto;
+table {
+  border-collapse: collapse;
+  padding: 50px;
+}
+tr {
+  border: solid 1px black;
+  padding: 50px;
+}
+td {
+  border-right: solid 1px black;
+  border-left: solid 1px black;
+  padding: 50px;
 }
