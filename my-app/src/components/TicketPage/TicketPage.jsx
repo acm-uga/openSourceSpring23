@@ -48,9 +48,7 @@ const TicketPage = () => {
   };
 
   const getPasses = async () => {
-    const response = await fetch(
-      'http://localhost:8080/api/tickets/getTicketsAll'
-    );
+    const response = await fetch('http://localhost:8080/api/tickets/getAll');
     const json = await response.json();
     setTickets(json);
     setTicketsToShow(json);

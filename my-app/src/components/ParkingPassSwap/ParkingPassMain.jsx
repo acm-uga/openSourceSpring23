@@ -4,7 +4,6 @@ import { Container, Row, Col, Button, Select, Form } from 'react-bootstrap';
 import ParkingPass from './ParkingPass';
 import AddParkingPassModal from './AddParkingPassModal.jsx';
 import './ParkingPassMain.css';
-import ParkingPassDetailsModal from './ParkingPassDetailsModal';
 
 const ParkingPassMain = () => {
   const [passes, setPasses] = useState([]);
@@ -16,9 +15,7 @@ const ParkingPassMain = () => {
   });
 
   const getPasses = async () => {
-    const response = await fetch(
-      'http://localhost:8080/api/parking/getParkingPassAll'
-    );
+    const response = await fetch('http://localhost:8080/api/parking/getAll');
     const json = await response.json();
     setPasses(json);
     setPassesToShow(json);
