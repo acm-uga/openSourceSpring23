@@ -39,7 +39,6 @@ const AddTicketModal = ({ show, onHide, onSubmit }) => {
         'Accept-Type': 'application/json',
       },
       body: JSON.stringify({
-        id: uniqueId(),
         ...addTicketState,
       }),
     });
@@ -108,7 +107,7 @@ const AddTicketModal = ({ show, onHide, onSubmit }) => {
             <Form.Control
               name="additionalDetails"
               type="text"
-              value={addTicketState.addtionalDetails}
+              value={addTicketState.additionalDetails}
               onChange={handleChange}
               style={{
                 width: '50%',

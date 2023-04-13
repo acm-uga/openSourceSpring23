@@ -30,7 +30,6 @@ const ParkingPassMain = () => {
   };
 
   const filterPasses = filterState => {
-    console.log(filterState);
     return passes.filter(pass => {
       const priceFilter = pass.price <= filterState.maxPrice;
       const lotFilter =

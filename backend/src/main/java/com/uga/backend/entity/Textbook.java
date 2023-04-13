@@ -18,6 +18,7 @@ enum Condition {
 public class Textbook {
 
     @DocumentId
+    private String id;
     private String title;
     private String author;
     private String seller;
