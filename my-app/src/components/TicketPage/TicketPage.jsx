@@ -90,10 +90,18 @@ const TicketPage = () => {
             style={{}}
             name="team">
             <option>Any</option>
+            <option>UT Martin</option>
+            <option>Ball State</option>
+            <option>South Carolina</option>
+            <option>UAB</option>
+            <option>Auburn</option>
+            <option>Kentucky</option>
+            <option>Vanderbilt</option>
             <option>Florida</option>
+            <option>Missouri</option>
+            <option>Ole Miss</option>
+            <option>Tennessee</option>
             <option>Georgia Tech</option>
-            <option>Alabama</option>
-            <option>Clemson</option>
           </Form.Select>
           <Form.Label
             style={{
