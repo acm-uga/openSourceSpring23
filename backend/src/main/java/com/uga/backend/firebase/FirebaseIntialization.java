@@ -19,7 +19,7 @@ import com.google.firebase.FirebaseOptions;
 
 @Service
 public class FirebaseIntialization {
-   
+  /* 
     @PostConstruct
     public void initialize() {
         try {
@@ -37,5 +37,5 @@ public class FirebaseIntialization {
             System.exit(1);
         }
 
-    }
+    } */
 }

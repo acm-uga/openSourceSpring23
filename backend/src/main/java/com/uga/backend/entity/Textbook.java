@@ -1,7 +1,5 @@
 package com.uga.backend.entity;
 
-import org.springframework.data.annotation.Id;
-
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.cloud.firestore.annotation.DocumentId;
