@@ -3,6 +3,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.uga.backend.entity.Textbook;
 import com.uga.backend.repository.TextbookRepository;
 
+@CrossOrigin("http://localhost:3000")
 @RestController
 @RequestMapping("/api/textbooks")
 public class TextbookController {
