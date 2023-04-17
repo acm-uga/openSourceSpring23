@@ -1,0 +1,30 @@
+.main-container-feedback {
+  position: relative;
+  top: var(--top-height);
+}
+
+.feedback-body {
+  display: block;
+  padding-left: 30%;
+  padding-right: 30%;
+  margin-top: 1em;
+}
+
+.form-button {
+  display: inline;
+  cursor: pointer;
+  color: white;
+  background-color: var(--color-primary);
+  border: none;
+  margin-top: 1em;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: 0.25s;
+}
+
+.form-button:hover {
+  color: var(--color-primary);
+  background-color: white;
+  border: 1px solid var(--color-primary);
+  box-shadow: 0px 0px 15px #d9d9d9;
+}
