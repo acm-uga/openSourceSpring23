@@ -10,10 +10,6 @@ const FormLink =
 // Disbable eslint temporarily
 /* eslint-disable */
 function FeedbackPage() {
-  function GotoForm() {
-    window.location.href = FormLink;
-  }
-
   return (
     <div className="main-container-feedback">
       <b>
@@ -25,7 +21,10 @@ function FeedbackPage() {
           faculty member, your feedback is valuable and will be strongly
           considered as the website continues to grow.
         </div>
-        <button onClick={GotoForm} type="button" className="form-button">
+        <button
+          onClick={() => (window.location.href = FormLink)}
+          type="button"
+          className="form-button">
           Submit Feedback
         </button>
       </div>
