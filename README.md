@@ -102,3 +102,5 @@ Nikita Jha - Discord: @nikita-jha#6879
 Ivan Zheng - Discord: @IvanZ#8319   
 
 Sumin Lee - Discord: @이숨#6575
+
+Nathan Christian - Discord: NathanChr#1879

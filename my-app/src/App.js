@@ -10,6 +10,7 @@ import CourseSwapPage from './components/CourseSwapPage/CourseSwapPage';
 import CourseSwapPagePersonal from './components/CourseSwapPage/CourseSwapPagePersonal';
 import CourseSwapPageSaved from './components/CourseSwapPage/CourseSwapPageSaved';
 import FAQPage from './components/FAQPage/FAQPage';
+import FeedbackPage from './components/FeedbackPage/FeedbackPage';
 import CreateAccountPage from './components/CreateAccountPage/CreateAccountPage';
 import TextBookPage from './components/TextBookPage/TextBook';
 import ParkingPassMain from './components/ParkingPassSwap/ParkingPassMain';
@@ -42,6 +43,8 @@ function App() {
           <Route path="/textbooks" element={<TextBookPage />} />
 
           <Route path="/faq" element={<FAQPage />} />
+
+          <Route path="/feedback" element={<FeedbackPage />} />
 
           <Route path="/parking" element={<ParkingPassMain />} />
           <Route path="/tickets" element={<TicketPage />} />
