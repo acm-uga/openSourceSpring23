@@ -49,6 +49,9 @@ function HomeNavbar() {
             <li>
               <Link to="/faq">FAQ</Link>
             </li>
+            <li>
+              <Link to="/feedback">Feedback</Link>
+            </li>
           </ul>
         </nav>
       </div>
