@@ -16,7 +16,7 @@ const TicketDetailsModal = ({
         <Modal.Title>Ticket Details</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h5>Lot: {team}</h5>
+        <h5>Team: {team}</h5>
         <h5>Price: ${price}</h5>
         <h5>Seller: {seller}</h5>
         <h5>Contact Info: {contactInfo}</h5>

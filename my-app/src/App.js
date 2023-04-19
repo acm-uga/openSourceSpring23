@@ -14,6 +14,7 @@ import CreateAccountPage from './components/CreateAccountPage/CreateAccountPage'
 import TextBookPage from './components/TextBookPage/TextBook';
 import ParkingPassMain from './components/ParkingPassSwap/ParkingPassMain';
 import TicketPage from './components/TicketPage/TicketPage';
+import TutorPage from './components/TutorPage/TutorPage';
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
             element={<CourseSwapPagePersonal />}
           />
           <Route path="/course-swap/saved" element={<CourseSwapPageSaved />} />
+
+          <Route path="/tutor" element={<TutorPage />} />
 
           <Route path="/housing" element={<HousingPage />} />
 

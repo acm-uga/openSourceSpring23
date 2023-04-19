@@ -39,7 +39,6 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
         'Accept-Type': 'application/json',
       },
       body: JSON.stringify({
-        id: uniqueId(),
         ...addPassState,
       }),
     });
@@ -108,7 +107,7 @@ const AddParkingPassModal = ({ show, onHide, onSubmit }) => {
             <Form.Control
               name="additionalDetails"
               type="text"
-              value={addPassState.addtionalDetails}
+              value={addPassState.additionalDetails}
               onChange={handleChange}
               style={{
                 width: '50%',
