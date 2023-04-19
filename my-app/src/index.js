@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  //  You can disable React.StrictMode in your development environment if you do not want it to run the additional checks and render twice.
   <React.StrictMode>
     <App />
   </React.StrictMode>
